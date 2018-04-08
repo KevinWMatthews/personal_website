@@ -3,6 +3,7 @@ from flask import render_template, redirect, url_for
 from flask_wtf import FlaskForm
 from wtforms.fields import SubmitField, SelectField
 
+
 class ProductSelectForm(FlaskForm):
     product = SelectField('Products', choices=[
         ('blink_one', 'Blink Single LED'),
@@ -14,11 +15,6 @@ class ProductSelectForm(FlaskForm):
 def embedded_code():
     form = ProductSelectForm()
     if form.validate_on_submit():
-        if form.product.data == 'blink_one':
-            return redirect(url_for('blink_one'))
-        elif form.product.data == 'blink_two':
-            return redirect(url_for('blink_two'))
-        else:
-            print('Invalid selection')
-        return redirect(url_for('embedded_code'))
+        product_url = form.product.data
+        return redirect(url_for(product_url))
     return render_template('embedded_code.html', form=form)
