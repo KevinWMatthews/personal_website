@@ -13,10 +13,10 @@
 			<form method="POST">
 				{{ form.hidden_tag() }}
 				<p>
-				{{ form.product.label }}{{ form.product }}
+				{{ form.product.label }}{{ form.product() }}
 				</p>
 				<p>
-				{{ form.submit }}
+				{{ form.submit() }}
 				</p>
 			</form>
 		</center>
