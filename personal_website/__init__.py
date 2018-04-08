@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 from flask import Flask, render_template, redirect, url_for
 from flask_wtf import FlaskForm
 from wtforms.fields import SubmitField, SelectField
@@ -38,6 +36,3 @@ def blink_one():
 @app.route('/blink-two', methods=['GET'])
 def blink_two():
     return render_template('blink-two.html')
-
-if __name__ == '__main__':
-    app.run(debug=True)
