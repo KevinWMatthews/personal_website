@@ -26,7 +26,6 @@ $(function() {
     // SocketIO
     socket.on('connect', function() {
         console.log('Websocket connected');
-        socket.emit('my event', {data: 'I\'m connected!'});
     });
 
     socket.on('disconnect', function() {
@@ -35,6 +34,7 @@ $(function() {
 
     socket.on('message', function(msg) {
         console.log(msg);
+        $('#div_status-log').append('<p>' + msg + '</p>');
     });
 
     function log_post_success_to_console(rsp) {

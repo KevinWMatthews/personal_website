@@ -11,8 +11,11 @@ def blink_one():
 def run_tests():
     print('Blink one: run tests')
     dir = app.config['BUILD_DIR_BLINK_ONE_TEST']
+    websocket_send_message('make clean')
     make_commands.make_clean(dir, send_output=websocket_send_message)
+    websocket_send_message('make')
     make_commands.make_default(dir, send_output=websocket_send_message)
+    websocket_send_message('make test')
     make_commands.make_test(dir, send_output=websocket_send_message)
 
     return jsonify('Flask ran blink one, tests')

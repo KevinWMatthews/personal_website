@@ -47,7 +47,7 @@ def capture_process_output(process, send_output):
             send_output(output.strip())
 
 def make_default(dir, send_output=print):
-    command = 'make CLICOLOR_FORCE=1'
+    command = 'make'    # CLICOLOR_FORCE=1'
     print('Executing command: {}'.format(command))
     process = execute_with_real_time_output(command, dir)
     if not process:
@@ -56,7 +56,7 @@ def make_default(dir, send_output=print):
     capture_process_output(process, send_output)
 
 def make_clean(dir, send_output=print):
-    command = 'make clean CLICOLOR_FORCE=1'
+    command = 'make clean'  # CLICOLOR_FORCE=1'
     print('Executing command: {}'.format(command))
     process = execute_with_real_time_output(command, dir)
     if not process:
@@ -65,7 +65,7 @@ def make_clean(dir, send_output=print):
     capture_process_output(process, send_output)
 
 def make_test(dir, send_output=print):
-    command = 'make test CLICOLOR_FORCE=1'
+    command = 'make test'   # CLICOLOR_FORCE=1'
     print('Executing command: {}'.format(command))
     process = execute_with_real_time_output(command, dir)
     if not process:
