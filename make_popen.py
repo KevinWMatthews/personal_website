@@ -26,7 +26,7 @@ except subprocess.CalledProcessError:
 print(result)
 print(result.stdout)
 
-command = 'make'
+command = 'make CLICOLOR_FORCE=1'
 args = shlex.split(command)
 try:
     # Use Popen - run blocks until the subprocess is complete
@@ -34,9 +34,12 @@ try:
     # process = subprocess.Popen(args, stdout=sys.stdout)
     # So does this??
     # process = subprocess.Popen(args)
-    # This prints all output without color
-    process = subprocess.Popen(args, stdout=subprocess.PIPE)
-    # process = subprocess.Popen(args, stdout=subprocess.PIPE, universal_newlines=True)
+    # This prints all output without color and with b''
+    # process = subprocess.Popen(args, stdout=subprocess.PIPE)
+    # Returns byte literals that must be decoded
+    # process = subprocess.Popen(args, stdout=subprocess.PIPE)
+    # Returns strings that can be printed directly.
+    process = subprocess.Popen(args, stdout=subprocess.PIPE, universal_newlines=True)
 except FileNotFoundError:
     print('file not found')
     exit()
@@ -52,6 +55,7 @@ while True:
 
     if output:
         print(output.strip())
+        # print(output.decode('utf-8').strip())
 
 
 
