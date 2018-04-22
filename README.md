@@ -26,6 +26,7 @@ $ pip install -r requirements.txt
 
 ```
 $ export FLASK_APP=personal_website.py
+$ export PERSONAL_WEBSITE_SETTINGS=/path/to/your/settings.cfg
 $ flask run
 ```
 
