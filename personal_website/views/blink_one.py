@@ -8,4 +8,9 @@ def blink_one():
 @app.route('/blink-one/run-tests', methods=['POST'])
 def run_tests():
     print('Blink one: run tests')
-    return jsonify('Python works')
+    return jsonify('Flask ran blink one, tests')
+
+@app.route('/blink-one/run-production', methods=['POST'])
+def run_production():
+    print('Blink one: run production')
+    return jsonify('Flask ran blink one, production')
