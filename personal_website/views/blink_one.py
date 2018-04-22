@@ -6,7 +6,6 @@ import shlex, subprocess
 def blink_one():
     return render_template('blink-one.html')
 
-c_code_dir = '/home/kevin/coding/c/led_controller/build'
 @app.route('/blink-one/run-tests', methods=['POST'])
 def run_tests():
     print('Blink one: run tests')
