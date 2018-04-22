@@ -13,11 +13,23 @@ This will be my website.
 
 Create and activate a virtual environment
 ```
-virtualenv -p python3 venv
-source venv/bin/activate
+$ virtualenv -p python3 venv
+$ source venv/bin/activate
 ```
 
 Install requirements
 ```
-pip install -r requirements.txt
+$ pip install -r requirements.txt
+```
+
+### Run
+
+```
+$ export FLASK_APP=personal_website.py
+$ flask run
+```
+
+To run in debug mode,
+```
+$ export FLASK_DEBUG=1
 ```
