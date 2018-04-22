@@ -1,4 +1,4 @@
-from personal_website import app
+from personal_website import app, socketio
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    socketio.run(debug=True)
