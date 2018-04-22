@@ -6,8 +6,9 @@ from wtforms.fields import SubmitField, SelectField
 
 class ProductSelectForm(FlaskForm):
     product = SelectField('Products', choices=[
-        ('blink_one', 'Blink Single LED'),
-        ('blink_two', 'Blink Two LEDs')],
+            ('blink_one', 'Blink Single LED'),
+            ('blink_two', 'Blink Two LEDs'),
+        ],
     )
     submit = SubmitField('Submit')
 
