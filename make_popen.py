@@ -1,4 +1,5 @@
 import shlex, subprocess, os
+import sys
 
 # Returns:
 #   None if the process is running
@@ -29,10 +30,16 @@ command = 'make'
 args = shlex.split(command)
 try:
     # Use Popen - run blocks until the subprocess is complete
-    process = subprocess.Popen(args, stdout=subprocess.PIPE, universal_newlines=True)
+    # This prints to the system console with color
+    # process = subprocess.Popen(args, stdout=sys.stdout)
+    # So does this??
+    # process = subprocess.Popen(args)
+    # This prints all output without color
+    process = subprocess.Popen(args, stdout=subprocess.PIPE)
+    # process = subprocess.Popen(args, stdout=subprocess.PIPE, universal_newlines=True)
 except FileNotFoundError:
     print('file not found')
-    # stop
+    exit()
 
 while True:
     output = process.stdout.readline()
