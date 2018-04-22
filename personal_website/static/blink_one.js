@@ -33,8 +33,12 @@ $(function() {
     });
 
     socket.on('message', function(msg) {
-        console.log(msg);
         $('#div_status-log').append('<p>' + msg + '</p>');
+    });
+
+    socket.on('clear log', function(msg) {
+        console.log('Clear status log');
+        $('#div_status-log').html('');
     });
 
     function log_post_success_to_console(rsp) {
