@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 from personal_website import app
 
 if __name__ == '__main__':
