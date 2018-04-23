@@ -1,6 +1,7 @@
 from personal_website import app, socketio, make_commands
 from flask import render_template, jsonify
 from flask_socketio import send, emit
+import eventlet
 import shlex, subprocess
 
 @app.route('/blink-one', methods=['GET'])
@@ -39,7 +40,9 @@ def websocket_disconnected():
     print('SocketIO disconnected')
 
 def websocket_send_message(msg):
-    socketio.send(msg, namespace='/blink-one')
+    gt = eventlet.spawn( socketio.send, msg, namespace='/blink-one' )
+    gt.wait()
 
 def websocket_clear_log():
-    socketio.emit('clear log', '', namespace='/blink-one')
+    gt = eventlet.spawn( socketio.emit, 'clear log', '', namespace='/blink-one' )
+    gt.wait()
