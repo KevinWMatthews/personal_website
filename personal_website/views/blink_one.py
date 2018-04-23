@@ -26,8 +26,11 @@ def run_tests():
 def run_production():
     print('Blink one: run production')
     dir = app.config['BUILD_DIR_BLINK_ONE_PRODUCTION']
-    make_commands.make_clean(dir)
-    make_commands.make_default(dir)
+    websocket_clear_log()
+    websocket_send_message('make clean')
+    make_commands.make_clean(dir, send_output=websocket_send_message)
+    websocket_send_message('make')
+    make_commands.make_default(dir, send_output=websocket_send_message)
     #TODO Hook up production code to webpage elements
     return jsonify('Flask ran blink one, production')
 
