@@ -1,12 +1,9 @@
 from flask import Flask
 from flask_socketio import SocketIO
+from config import Config
 
 app = Flask(__name__)
-app.config.from_envvar('PERSONAL_WEBSITE_SETTINGS')
-app.config['SECRET_KEY'] = 'Set from an environment variable'
+app.config.from_object(Config)
 socketio = SocketIO(app)
 
-from personal_website.views import index
-from personal_website.views import embedded_code
-from personal_website.views import blink_one
-from personal_website.views import blink_two
+from personal_website.views import index, embedded_code, blink_one, blink_two
