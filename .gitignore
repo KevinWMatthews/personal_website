@@ -6,3 +6,6 @@ __pycache__/
 
 # Ignore test settings
 test.cfg
+
+# Ignore local environment file
+.env

@@ -22,15 +22,18 @@ Install requirements
 $ pip install -r requirements.txt
 ```
 
+### Configuration
+
+Using `python-dotenv` package.
+Configuration is done in `.flaskenv` and `.env`.
+```
+FLASK_ENV=development           # Enable debug mode using Werkzeug
+# or
+FLASK_ENV=production            # Run with production servers
+
+
 ### Run
 
 ```
-$ export FLASK_APP=personal_website.py
-$ export PERSONAL_WEBSITE_SETTINGS=/path/to/your/settings.cfg
 $ flask run
-```
-
-To run in debug mode,
-```
-$ export FLASK_DEBUG=1
 ```
