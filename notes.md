@@ -27,7 +27,13 @@ Blocking, async, or defer?
 [Stack Overflow](https://stackoverflow.com/questions/436411/where-should-i-put-script-tags-in-html-markup)
 
 
+## Debugging CSS
+
+[Mozilla link](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS)
+
+
 ## Awesome links
 
 [W3 (spec?)](https://www.w3.org/TR/html/)
 [MDN](https://developer.mozilla.org/en-US/)
+[W3 CSS Validator](http://jigsaw.w3.org/css-validator/)
