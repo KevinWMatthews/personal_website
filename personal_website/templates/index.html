@@ -5,13 +5,29 @@
 </head>
 
 <body>
-	<div>
-		<center>
-			<h1>Hello!</h1>
-			<h2>My name is Kevin and I write code.</h2>
-			<p><a href="https://github.com/KevinWMatthews/personal_website">This website</a> is some of it.</p>
-			<a href="{{ url_for('embedded_code') }}">Here is some code for embedded systems.</p>
-		</center>
+<div class="overflow-wrap">
+
+	<section id="home">
+		<div class="">
+			<p>Hello! My name is Kevin and I write code.</p>
+			<a href="#projects">Learn more</a>
+		</div>
+	</section>
+
+	<div class="navbar">
+		<a href="#home" class="">Home</a>
+		<a href="#projects" class="">Project</a>
+		<a href="#about" class="">About Me</a>
 	</div>
+
+	<section id="projects">
+		<p>Projects here!</p>
+	</section>
+
+	<section id="about">
+		<p>about me o_O</p>
+	</section>
+
+</div>
 </body>
 </html>
