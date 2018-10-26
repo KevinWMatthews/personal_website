@@ -32,6 +32,11 @@ Blocking, async, or defer?
 [Mozilla link](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS)
 
 
+## CSS Selectors
+
+`::before`
+
+
 ## Awesome links
 
 [W3 (spec?)](https://www.w3.org/TR/html/)
