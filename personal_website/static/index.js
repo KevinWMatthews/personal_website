@@ -11,10 +11,7 @@ $(function() {
     }
   });
 
-  $('.nav').on('click', (ev) => {
-    $('#nav').addClass('fixed');
-  });
-  $('#learnMore').on('click', (ev) => {
+  $('.nav-link').on('click', (ev) => {
     $('#nav').addClass('fixed');
   });
 });
