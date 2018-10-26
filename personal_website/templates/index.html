@@ -3,6 +3,9 @@
 <head>
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 	<title>Kevin's Blog</title>
+
+	<script defer src="{{ url_for('static', filename='jquery-3.3.1.min.js')}}"></script>
+	<script defer src="{{ url_for('static', filename='index.js') }}"></script>
 </head>
 
 <body>
@@ -15,11 +18,11 @@
 		</div>
 	</section>
 
-	<div class="navbar">
+	<nav id="nav" class="nav">
 		<a href="#home" class="">Home</a>
 		<a href="#projects" class="">Project</a>
 		<a href="#about" class="">About Me</a>
-	</div>
+	</nav>
 
 	<section id="projects" class="full-height">
 		<p>Projects here!</p>
