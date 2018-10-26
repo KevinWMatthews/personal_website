@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 	<title>Kevin's Blog</title>
 </head>
 
 <body>
 <div class="overflow-wrap">
 
-	<section id="home">
-		<div class="">
+	<section id="home" class="full-height">
+		<div>
 			<p>Hello! My name is Kevin and I write code.</p>
 			<a href="#projects">Learn more</a>
 		</div>
@@ -20,11 +21,11 @@
 		<a href="#about" class="">About Me</a>
 	</div>
 
-	<section id="projects">
+	<section id="projects" class="full-height">
 		<p>Projects here!</p>
 	</section>
 
-	<section id="about">
+	<section id="about" class="full-height">
 		<p>about me o_O</p>
 	</section>
 
