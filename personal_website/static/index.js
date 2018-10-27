@@ -1,16 +1,9 @@
-$(function() {
-  $('.nav-link').on('click', function(ev) {
-    // Hash is the part of the URL after and including the '#'
-    if (this.hash === "") {
-      return;
-    }
-
+let navLinks = document.getElementsByClassName('nav-link');
+for (link of navLinks) {
+  link.addEventListener('click', function(ev) {
     ev.preventDefault();
-    let dest = this.hash;
-    console.log($(dest).offset());
-    $('html, body').animate({
-      // CSS properties that will gradually be implemented. Wild!
-      scrollTop: $(dest).offset().top,
-    }, 500);
+    let hash = this.hash;
+    let dest = hash.split('#')[1];
+    document.getElementById(dest).scrollIntoView();
   });
-});
+}

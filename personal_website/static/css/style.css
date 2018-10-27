@@ -1,9 +1,10 @@
 html, body {
     height: 100%;
     margin: 0;
+    scroll-behavior: smooth;
 }
 section {
-    padding-top: 0vh;
+    padding-top: 10vh;
     padding-right: 0vh;
     padding-bottom: 0vh;
     padding-left: 0vh;
