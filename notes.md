@@ -37,6 +37,11 @@ Blocking, async, or defer?
 `::before`
 
 
+## Arrow functions
+
+They do not have their own `this` keyword.
+[MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+
 ## Awesome links
 
 [W3 (spec?)](https://www.w3.org/TR/html/)
