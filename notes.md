@@ -32,11 +32,6 @@ Blocking, async, or defer?
 [Mozilla link](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Debugging_CSS)
 
 
-## CSS Selectors
-
-`::before`
-
-
 ## Arrow functions
 
 They do not have their own `this` keyword.

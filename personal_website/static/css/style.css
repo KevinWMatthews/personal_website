@@ -37,3 +37,18 @@ nav.fixed {
     max-width: 100%;
     float: left;
 }
+.slideInLeft {
+    animation-name: slideInLeft;
+    animation-duration: 2s;
+}
+
+@keyframes slideInLeft {
+    from {
+        margin-left: 100%;
+        width: 100%;
+    }
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}
