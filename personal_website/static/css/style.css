@@ -41,6 +41,10 @@ nav.fixed {
     animation-name: slideInLeft;
     animation-duration: 2s;
 }
+.slideDown {
+    animation-name: slideDown;
+    animation-duration: 0.7s;
+}
 
 @keyframes slideInLeft {
     from {
@@ -50,5 +54,13 @@ nav.fixed {
     to {
         margin-left: 0%;
         width: 100%;
+    }
+}
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0%);
     }
 }

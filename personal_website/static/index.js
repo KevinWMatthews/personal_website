@@ -4,10 +4,10 @@ $(function() {
   $(window).on('scroll', (ev) => {
     let scrollPos = $(window).scrollTop();
     if (scrollPos >= navStartPos) {
-      $('#nav').addClass('fixed');
+      $('#nav').addClass('fixed slideDown');
     }
     else {
-      $('#nav').removeClass('fixed');
+      $('#nav').removeClass('fixed slideDown');
     }
   });
 
@@ -17,7 +17,6 @@ $(function() {
       return;
     }
 
-    $('#nav').addClass('fixed');
     ev.preventDefault();
     let dest = this.hash;
     console.log($(dest).offset());
