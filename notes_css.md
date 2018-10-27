@@ -14,6 +14,11 @@ I have a lot to learn.
 `::after`
 
 
+## Combinators
+
+[w3schools](https://www.w3schools.com/css/css_combinators.asp)
+
+
 ## Box Model
 
 [MDN box model](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
@@ -24,3 +29,10 @@ I have a lot to learn.
 
 Seamlessly switch between two CSS properties
 [MDN CSS Animations](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations)
+
+
+## Scrolling effects
+
+Try to avoid javascript - scrolling is ascynchronous to rendering
+
+[MDN Article](https://developer.mozilla.org/en-US/docs/Mozilla/Performance/Scroll-linked_effects)

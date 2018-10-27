@@ -3,23 +3,20 @@ html, body {
     margin: 0;
 }
 section {
-    padding-top: 200px;
-    padding-right: 0;
-    padding-bottom: 0;
-    padding-left: 0;
+    padding-top: 0vh;
+    padding-right: 0vh;
+    padding-bottom: 0vh;
+    padding-left: 0vh;
     box-sizing: border-box;
 }
 nav {
-    padding-top: 0;
-    padding-right: 0;
-    padding-bottom: 0;
-    padding-left: 0;
-}
-nav.fixed {
-    top: 0;
-    bottom: inherit;
-    left: 0;
-    position: fixed;
+    top: 0px;
+    position: sticky;
+    padding-top: 0vh;
+    padding-right: 0vh;
+    padding-bottom: 0vh;
+    padding-left: 0vh;
+    box-sizing: border-box;
 }
 .full-height {
     height: 100vh;

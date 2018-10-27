@@ -1,16 +1,4 @@
 $(function() {
-  let navStartPos = $('#nav').position().top;
-
-  $(window).on('scroll', (ev) => {
-    let scrollPos = $(window).scrollTop();
-    if (scrollPos >= navStartPos) {
-      $('#nav').addClass('fixed slideDown');
-    }
-    else {
-      $('#nav').removeClass('fixed slideDown');
-    }
-  });
-
   $('.nav-link').on('click', function(ev) {
     // Hash is the part of the URL after and including the '#'
     if (this.hash === "") {
