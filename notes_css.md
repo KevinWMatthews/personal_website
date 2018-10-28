@@ -41,3 +41,33 @@ Seamlessly switch between two CSS properties
 Try to avoid javascript - scrolling is ascynchronous to rendering
 
 [MDN Article](https://developer.mozilla.org/en-US/docs/Mozilla/Performance/Scroll-linked_effects)
+
+
+## Display
+
+[Root display reference](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
+
+[Outside](https://developer.mozilla.org/en-US/docs/Web/CSS/display-outside) vs [inside](https://developer.mozilla.org/en-US/docs/Web/CSS/display-inside) layout.
+Neither are [internal](https://developer.mozilla.org/en-US/docs/Web/CSS/display-internal).
+
+### Outside
+
+  * block -> line breaks before and after
+  * inline -> no line breaks
+
+
+### Inside
+
+
+### Legacy
+
+Some keywords, such as `inline-block`, are [legacy](https://developer.mozilla.org/en-US/docs/Web/CSS/display-legacy).
+
+
+
+## Notes
+
+Inline elements (span): can not set width/height from CSS.
+Block elements (div): take entire line. Can set height
+
+Transform only works on block elements (box model).
