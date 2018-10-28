@@ -25,11 +25,30 @@ nav {
 .header {
     font-size: 26pt;
 }
-.card-wrap {
-    /* display: none; */
-    position: relative;
+
+.card {
 }
-.card:nth-of-type(1) {
+.card-bg {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0.5s, opacity 0.5s;
+    max-width: 100%;
+}
+.card:hover .card-bg {
+    visibility: hidden;
+    opacity: 0;
+}
+.card-text {
+    visibility: hidden;
+    opacity: 0;
+    animation: fadeOut 0.0s;
+    transition: visibility 0.5s, opacity 0.5s;
+}
+.card:hover .card-text {
+    opacity: 1;
+    visibility: visible;
+}
+#divCBg {
     background-image: url('../images/c.png');
     background-position: center;
     background-size: auto;
@@ -37,7 +56,7 @@ nav {
     height: 220px;
     width: 234px;
 }
-.card:nth-of-type(2) {
+#divPythonBg {
     background-image: url('../images/python.png');
     background-position: center;
     background-size: auto;
@@ -45,7 +64,7 @@ nav {
     height: 200px;
     width: 200px;
 }
-.card:nth-child(3) {
+#divRustBg {
     background-image: url('../images/rust.jpeg');
     background-position: center;
     background-size: auto;
@@ -53,25 +72,6 @@ nav {
     height: 200px;
     width: 200px;
 }
-/* transition-timing-function */
-.card {
-    max-width: 100%;
-    float: left;
-    /* transition-duration: 1.5s; */
-}
-.card:hover {
-    opacity: 0;
-    transition-property: opacity;
-}
-/* will need to set z-index? */
-/* .cardText {
-    opacity: 0;
-    pointer-events: none;
-}
-.cardText:hover {
-    opacity: 1;
-    transition-property: opacity;
-} */
 
 
 .slideInLeft {

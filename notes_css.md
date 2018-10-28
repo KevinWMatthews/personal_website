@@ -25,6 +25,11 @@ I have a lot to learn.
 [MDN box sizing](https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing)
 
 
+## Transitions
+
+Set of [animated properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties)
+
+
 ## Animations
 
 Seamlessly switch between two CSS properties
