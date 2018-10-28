@@ -7,15 +7,15 @@ for (link of navLinks) {
     document.getElementById(dest).scrollIntoView();
   });
 }
-
-let cards = document.getElementsByClassName('card');
-for (card of cards) {
-  card.addEventListener('mouseover', function(ev) {
-    console.log('they see me hoverin');
-    this.classList.add('fadeOut');
-  });
-  card.addEventListener('mouseleave', function(ev) {
-    console.log('aint no moe');
-    this.classList.remove('fadeOut');
-  })
-}
+// 
+// let cards = document.getElementsByClassName('card');
+// for (card of cards) {
+//   card.addEventListener('mouseover', function(ev) {
+//     console.log('they see me hoverin');
+//     this.classList.toggle('fade');
+//   });
+//   card.addEventListener('mouseleave', function(ev) {
+//     console.log('aint no moe');
+//     this.classList.toggle('fade');
+//   })
+// }

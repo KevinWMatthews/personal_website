@@ -53,10 +53,27 @@ nav {
     height: 200px;
     width: 200px;
 }
+/* transition-timing-function */
 .card {
     max-width: 100%;
     float: left;
+    /* transition-duration: 1.5s; */
 }
+.card:hover {
+    opacity: 0;
+    transition-property: opacity;
+}
+/* will need to set z-index? */
+/* .cardText {
+    opacity: 0;
+    pointer-events: none;
+}
+.cardText:hover {
+    opacity: 1;
+    transition-property: opacity;
+} */
+
+
 .slideInLeft {
     animation-name: slideInLeft;
     animation-duration: 2s;
@@ -65,16 +82,8 @@ nav {
     animation-name: slideDown;
     animation-duration: 0.7s;
 }
-.fadeIn {
-    opacity: 1;
-    transition-property: opacity;
-    transition-duration: 0.5s;
-}
-.fadeOut {
-    opacity: 0;
-    transition-property: opacity;
-    transition-duration: 0.5s;
-}
+
+
 
 @keyframes slideInLeft {
     from {
