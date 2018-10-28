@@ -47,15 +47,16 @@ nav {
     visibility: hidden;
     opacity: 0;
 }
-.card-text {
+.card > button {
     position: relative;
     top: -50%;
+    width: 50%;
     transform: translate(0, -100%);
     visibility: hidden;
     opacity: 0;
     transition: visibility 0.5s, opacity 0.5s;
 }
-.card:hover .card-text {
+.card:hover > button {
     opacity: 1;
     visibility: visible;
 }
