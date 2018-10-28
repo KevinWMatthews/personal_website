@@ -25,6 +25,10 @@ nav {
 .header {
     font-size: 26pt;
 }
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
 
 .card {
 }
