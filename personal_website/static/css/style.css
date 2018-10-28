@@ -36,7 +36,8 @@ nav {
     visibility: visible;
     opacity: 1;
     transition: visibility 0.5s, opacity 0.5s;
-    max-width: 100%;
+    height: 200px;
+    width: 200px;
 }
 .card:hover .card-bg {
     visibility: hidden;
@@ -55,26 +56,20 @@ nav {
 #divCBg {
     background-image: url('../images/c.png');
     background-position: center;
-    background-size: auto;
+    background-size: contain;
     background-repeat: no-repeat;
-    height: 220px;
-    width: 234px;
 }
 #divPythonBg {
     background-image: url('../images/python.png');
     background-position: center;
-    background-size: auto;
+    background-size: contain;
     background-repeat: no-repeat;
-    height: 200px;
-    width: 200px;
 }
 #divRustBg {
     background-image: url('../images/rust.jpeg');
     background-position: center;
-    background-size: auto;
+    background-size: contain;
     background-repeat: no-repeat;
-    height: 200px;
-    width: 200px;
 }
 
 
