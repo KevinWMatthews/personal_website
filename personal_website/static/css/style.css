@@ -65,6 +65,16 @@ nav {
     animation-name: slideDown;
     animation-duration: 0.7s;
 }
+.fadeIn {
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 0.5s;
+}
+.fadeOut {
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.5s;
+}
 
 @keyframes slideInLeft {
     from {
