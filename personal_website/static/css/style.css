@@ -33,6 +33,7 @@ nav {
 .card {
 }
 .card-bg {
+    animation: fadeIn 1.5s;
     visibility: visible;
     opacity: 1;
     transition: visibility 0.5s, opacity 0.5s;
@@ -100,5 +101,13 @@ nav {
     }
     to {
         transform: translateY(0%);
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to: {
+        opacity: 1;
     }
 }
