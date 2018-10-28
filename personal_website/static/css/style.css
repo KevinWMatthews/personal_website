@@ -77,7 +77,12 @@ nav {
     background-size: contain;
     background-repeat: no-repeat;
 }
-
+#divCssBg {
+    background-image: url('../images/css3.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 
 .slideInLeft {
     animation-name: slideInLeft;
