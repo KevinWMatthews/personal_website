@@ -15,18 +15,18 @@ def index():
         return redirect(url_for('css3_blog'))
     return redirect(url_for('index'))
 
-@app.route('/c', methods=['GET'])
+@app.route('/blog/c', methods=['GET'])
 def c_blog():
     return render_template('c_blog.html')
 
-@app.route('/python', methods=['GET'])
+@app.route('/blog/python', methods=['GET'])
 def python_blog():
     return render_template('python_blog.html')
 
-@app.route('/rust', methods=['GET'])
+@app.route('/blog/rust', methods=['GET'])
 def rust_blog():
     return render_template('rust_blog.html')
 
-@app.route('/css3', methods=['GET'])
+@app.route('/blog/css3', methods=['GET'])
 def css3_blog():
     return render_template('css3_blog.html')
