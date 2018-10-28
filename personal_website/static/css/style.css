@@ -47,7 +47,6 @@ nav {
 .card-text {
     visibility: hidden;
     opacity: 0;
-    animation: fadeOut 0.0s;
     transition: visibility 0.5s, opacity 0.5s;
 }
 .card:hover .card-text {
