@@ -6,15 +6,15 @@ def index():
     if request.method == 'GET':
         return render_template('index.html')
     if 'btnC' in request.form.keys():
-        return redirect(url_for('c_lang'))
+        return redirect(url_for('c_blog'))
     elif 'btnCss' in request.form.keys():
-        return redirect(url_for('css3'))
+        return redirect(url_for('css3_blog'))
     return redirect(url_for('index'))
 
-@app.route('/c-lang', methods=['GET'])
-def c_lang():
-    return render_template('c-lang.html')
+@app.route('/c', methods=['GET'])
+def c_blog():
+    return render_template('c_blog.html')
 
 @app.route('/css3', methods=['GET'])
-def css3():
-    return render_template('css3.html')
+def css3_blog():
+    return render_template('css3_blog.html')
