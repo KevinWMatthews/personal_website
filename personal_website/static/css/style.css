@@ -83,6 +83,10 @@ nav {
     background-size: contain;
     background-repeat: no-repeat;
 }
+.post {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
 @keyframes fadeIn {
     from {
         opacity: 0;
