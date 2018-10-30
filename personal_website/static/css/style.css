@@ -29,6 +29,11 @@ a {
     border: 1px solid var(--main-color);
     padding: 2vh 2vh 2vh 2vh;
     text-decoration-line: none;
+    transition: all 0.5s;
+}
+a:hover {
+    background-color: var(--main-color);
+    color: var(--background-color);
 }
 .full-height {
     height: 100vh;
