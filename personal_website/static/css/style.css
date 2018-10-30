@@ -23,6 +23,7 @@ nav {
     padding-bottom: 0vh;
     padding-left: 0vh;
     box-sizing: border-box;
+    top: 3vh;
 }
 a {
     color: var(--main-color);
