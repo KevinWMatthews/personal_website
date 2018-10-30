@@ -1,3 +1,8 @@
+:root {
+    --main-color: #C50000;
+    --background-color: white;  /* lame */
+}
+
 html, body {
     height: 100%;
     margin: 0;
@@ -20,8 +25,8 @@ nav {
     box-sizing: border-box;
 }
 a {
-    color: #C50000;
-    border: 1px solid #C50000;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
     padding: 2vh 2vh 2vh 2vh;
     text-decoration-line: none;
 }
