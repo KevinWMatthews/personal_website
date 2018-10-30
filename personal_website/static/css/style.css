@@ -19,6 +19,12 @@ nav {
     padding-left: 0vh;
     box-sizing: border-box;
 }
+a {
+    color: #C50000;
+    border: 1px solid #C50000;
+    padding: 2vh 2vh 2vh 2vh;
+    text-decoration-line: none;
+}
 .full-height {
     height: 100vh;
 }
