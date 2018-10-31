@@ -46,6 +46,9 @@ a {
     left: 1vh;
 }
 a:hover {
+    text-decoration: underline;
+}
+a.active {
     background-color: var(--main-color);
     color: var(--background-color);
 }
