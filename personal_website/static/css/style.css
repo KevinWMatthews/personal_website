@@ -35,7 +35,7 @@ nav {
     top: 50%;
     transform: translate(0, -50%);
 }
-a {
+.nav-link {
     position: relative;
     color: var(--background-color);
     text-decoration-line: none;
@@ -45,10 +45,11 @@ a {
     padding-right: 3vh;
     left: 1vh;
 }
-a:hover {
+.nav-link:hover {
     text-decoration: underline;
 }
-a.active {
+/* Add focus */
+.nav-link.active {
     background-color: var(--alt-color);
     color: var(--background-color);
 }
