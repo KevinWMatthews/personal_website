@@ -30,6 +30,7 @@ Configuration is done in `.flaskenv` and `.env`.
 FLASK_ENV=development           # Enable debug mode using Werkzeug
 # or
 FLASK_ENV=production            # Run with production servers
+```
 
 
 ### Run
@@ -37,3 +38,9 @@ FLASK_ENV=production            # Run with production servers
 ```
 $ flask run
 ```
+
+
+## Links
+
+  * [Adobe Color](https://color.adobe.com/create/color-wheel/)
+  * Javascript Visualizations using [PTS](https://ptsjs.org/)
