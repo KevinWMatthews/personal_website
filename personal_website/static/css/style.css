@@ -12,9 +12,9 @@ html, body {
 }
 section {
     padding-top: 10vh;
-    padding-right: 0vh;
-    padding-bottom: 0vh;
-    padding-left: 0vh;
+    padding-bottom: 5vh;
+    padding-right: 2vh;
+    padding-left: 2vh;
     box-sizing: border-box;
 }
 nav {
@@ -131,10 +131,6 @@ nav {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-}
-.post {
-    padding-top: 2vh;
-    padding-bottom: 2vh;
 }
 @keyframes fadeIn {
     from {

@@ -1,3 +1,16 @@
 .blog-wrap {
     text-align: left;
 }
+.blog-post {
+    box-sizing: border-box;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    margin-left: 0vh;
+    margin-right: 0vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    border-style: solid;
+    border-width: 1px;
+}
