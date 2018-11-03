@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/blog.css') }}">
   <title>Hello, World! in C</title>
+	<script defer src="{{ url_for('static', filename='blog.js') }}"></script>
 </head>
   <body>
     <header id="post-header" class="post-header">
@@ -21,15 +22,12 @@
         and Linux.</p>
 
       <p>Here is a simple example:</p>
-      <pre>
-<code>
-int main(int argc, char *argv[])
+      <pre class="runCode"><code>int main(int argc, char *argv[])
 {
   printf("Hello, World!");
   return 0;
 }
-</code>
-      </pre>
+</code></pre>
       <p>Just the basics.</p>
     </article>
 

@@ -1,3 +1,6 @@
+:root {
+    --code-color: #cccccc;
+}
 .blog-wrap {
     text-align: left;
 }
@@ -32,13 +35,19 @@
     margin-right: 15%;
 }
 pre {
-    border: 1px solid grey;
-    border-radius: 7px;
-    padding-left: 10px;
-    padding-right: 10px;
+    position: relative;
 }
 code {
+    display: block;
+    background-color: var(--code-color);
     font-family: Menlo, "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco, Consolas, monospace;
     font-size: 12px;
     line-height: 1.5;
+}
+pre > .buttons {
+    position: absolute;
+    right: 5px;
+}
+pre > .output {
+    margin-top: 10px;
 }
