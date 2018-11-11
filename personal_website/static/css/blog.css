@@ -1,6 +1,20 @@
 :root {
     --code-color: #cccccc;
 }
+
+html, body {
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+    text-align: center;
+}
+section {
+    padding-top: 10vh;
+    padding-bottom: 5vh;
+    padding-right: 2vh;
+    padding-left: 2vh;
+    box-sizing: border-box;
+}
 .blog-wrap {
     text-align: left;
 }
