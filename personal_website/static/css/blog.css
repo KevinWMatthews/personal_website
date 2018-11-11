@@ -1,4 +1,7 @@
 :root {
+    --nav-background: black;
+    --nav-foreground: white;
+    --nav-highlight: blue;
     --code-color: #cccccc;
 }
 
@@ -7,6 +10,28 @@ html, body {
     margin: 0;
     scroll-behavior: smooth;
     text-align: center;
+}
+nav {
+    top: 0;
+    position: sticky;
+    height: 7vh;
+    background-color: var(--nav-background);
+    text-align: left;
+}
+.nav-wrap {
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.link {
+    color: var(--nav-foreground);
+    text-decoration-line: none;
+    padding-left: 3vh;
+    padding-right: 3vh;
+    font-size: 24px;
+}
+.link:hover {
+    color: var(--nav-highlight);
 }
 section {
     padding-top: 10vh;
