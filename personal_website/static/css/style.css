@@ -60,6 +60,8 @@ nav {
     font-size: 16px;
     padding-top: 2vh;
     padding-bottom: 2vh;
+    padding-left: 3vh;
+    padding-right: 3vh;
     transition: color 0.5s, background-color 0.5s, visibility 0.5s, opacity 0.5s;
 }
 .button:hover {
