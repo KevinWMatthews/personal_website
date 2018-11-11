@@ -1,16 +1,62 @@
-let navLinks = document.getElementsByClassName('nav-link');
-for (link of navLinks) {
+// Execute after CSS is loaded
+let nav_height = 0;
+window.addEventListener('load', () => {
+  nav_height = document.getElementById('nav').getBoundingClientRect().height;
+});
+
+
+// For all in-document links, scroll manually to avoid changing the page's URL
+let links = document.getElementsByClassName('link');
+for (link of links) {
   link.addEventListener('click', function(ev) {
-    // Scroll manually to avoid changing the page's URL
     ev.preventDefault();
     let hash = this.hash;
     let dest = hash.split('#')[1];
     document.getElementById(dest).scrollIntoView();
-
-    // Set class for "active" link for css effect
-    for (link of navLinks) {
-      link.classList.remove('active');
-    }
-    this.classList.add('active');
   });
+}
+
+// Scroll handler for visual effects
+let is_requesting = false;
+window.addEventListener('scroll', function(ev) {
+  if (!is_requesting) {
+    is_requesting = true;
+    window.requestAnimationFrame(function() {
+      updateNavLinks(window.scrollY);
+      is_requesting = false;
+    });
+  }
+});
+
+// Update visual effects for active nav link, if needed
+let active_link_index = 0;
+function updateNavLinks(scroll_pos) {
+  let current_link_index = getCurrentNavLinkIndex(scroll_pos);
+  if (active_link_index != current_link_index) {
+    active_link_index = current_link_index;
+    highlightNavLink(active_link_index);
+  }
+}
+
+// Determine which nav link is active based on scroll position
+// Sections must be in the same order as their respective nav links!
+let sections = document.getElementsByTagName('section');
+function getCurrentNavLinkIndex(scroll_pos) {
+  let index = 0;
+  for (section of sections) {
+    let position = section.offsetTop;
+    if (scroll_pos >= position - nav_height) {
+      index += 1;
+    }
+  }
+  return index;
+}
+
+// Highlight active nav link
+// Assumes that links already exist in a file-scope variable
+function highlightNavLink(active_index) {
+  for (link of links) {
+    link.classList.remove('active');
+  }
+  links[active_index].classList.add('active');
 }
