@@ -2,6 +2,10 @@
     --nav-background: black;
     --nav-foreground: white;
     --nav-highlight: blue;
+    --header-link-primary: black;
+    --header-link-highlight: blue;
+    --in-text-link-primary: blue;
+    --in-text-link-highlight: black;
     --code-color: #cccccc;
     --margin: 15%;
 }
@@ -77,4 +81,18 @@ code {
 }
 .blog-post {
     text-align: left;
+}
+.header-link {
+    color: var(--header-link-primary);
+    text-decoration-line: none;
+}
+.header-link:hover {
+    color: var(--header-link-highlight);
+}
+.in-text-link {
+    color: var(--in-text-link-primary);
+    text-decoration-line: none;
+}
+.in-text-link:hover {
+    text-decoration-line: underline;
 }
