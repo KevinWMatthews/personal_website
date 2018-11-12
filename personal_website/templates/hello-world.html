@@ -2,6 +2,10 @@
 
 {% block title %}Hello, World{% endblock title %}
 
+{% block styles %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/blog.css') }}">
+{% endblock styles %}
+
 {% block header %}
       <h1>Hello, World!</h1>
       <p>...an introduction to this blog.</p>

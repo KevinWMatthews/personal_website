@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/blog.css') }}">
+    {% block styles %}{% endblock styles %}
     <title>{% block title %}{% endblock title %}</title>
   </head>
   <body>
