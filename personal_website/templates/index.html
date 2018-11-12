@@ -1,5 +1,12 @@
 {% extends "base.html" %}
 
+{% macro card(id, url, text) -%}
+				<div class="card">
+					<div class="card-bg" id="{{ id }}"></div>
+					<a href="{{ url_for(url) }}" class="button-link">{{ text }}</a>
+				</div>
+{%- endmacro %}
+
 {% block title %}Kevin's Blog{% endblock title %}
 
 {% block styles %}
@@ -34,22 +41,10 @@
 				<h1>Blog</h1>
 			</div>
 			<div class="flex">
-				<div class="card">
-					<div class="card-bg" id="divCBg"></div>
-					<a href="{{ url_for('c_blog') }}" class="button-link">C</a>
-				</div>
-				<div class="card">
-					<div class="card-bg" id="divPythonBg"></div>
-					<a href="{{ url_for('python_blog') }}" class="button-link">Python</a>
-				</div>
-				<div class="card">
-					<div class="card-bg" id="divRustBg"></div>
-					<a href="{{ url_for('rust_blog') }}" class="button-link">Rust</a>
-				</div>
-				<div class="card">
-					<div class="card-bg" id="divCssBg"></div>
-					<a href="{{ url_for('css3_blog') }}" class="button-link">CSS</a>
-				</div>
+				{{ card('divCBg', 'c_blog', 'C') }}
+				{{ card('divPythonBg', 'python_blog', 'Python') }}
+				{{ card('divRustBg', 'rust_blog', 'Rust') }}
+				{{ card('divCssBg', 'css3_blog', 'CSS') }}
 			</div>
 		</section>
 
