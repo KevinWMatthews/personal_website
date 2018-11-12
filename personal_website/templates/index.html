@@ -1,12 +1,5 @@
 {% extends "base.html" %}
 
-{% macro card(id, url, text) -%}
-				<div class="card">
-					<div class="card-bg" id="{{ id }}"></div>
-					<a href="{{ url_for(url) }}" class="button-link">{{ text }}</a>
-				</div>
-{%- endmacro %}
-
 {% block title %}Kevin's Blog{% endblock title %}
 
 {% block styles %}
@@ -56,3 +49,11 @@
 		</section>
 	</div>
 {% endblock content %}
+
+
+{% macro card(id, url, text) -%}
+				<div class="card">
+					<div class="card-bg" id="{{ id }}"></div>
+					<a href="{{ url_for(url) }}" class="button-link">{{ text }}</a>
+				</div>
+{%- endmacro %}
