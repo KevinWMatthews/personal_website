@@ -3,7 +3,7 @@ from flask import render_template
 
 all_blog_posts = [
     blog_post.BlogPost(
-        'c-hello-world',
+        'hello-world',
         'Hello, World!',
         'Introduction to this blog.',
         ),
