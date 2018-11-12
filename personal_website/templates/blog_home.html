@@ -22,7 +22,7 @@
       {% for post in posts %}
       <article class="blog-post">
         <h2><a href="{{ url_for('blog_post', post=post.url) }}">{{ post.title }}</a></h2>
-        <p>{{ post.short_text }}</p>
+        <p>{{ post.short_text|safe }}</p>
       </article>
       {% endfor %}
     </section>
