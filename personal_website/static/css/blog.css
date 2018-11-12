@@ -21,7 +21,6 @@ header {
 section {
     margin-right: var(--margin);
     margin-left: var(--margin);
-    text-align: left;
 }
 footer {
     margin-left: var(--margin);
@@ -52,17 +51,17 @@ code {
     top: 50%;
     transform: translate(0, -50%);
 }
-.link {
+.nav-link {
     color: var(--nav-foreground);
     text-decoration-line: none;
     padding-left: 3vh;
     padding-right: 3vh;
     font-size: 24px;
 }
-.link:hover {
+.nav-link:hover {
     color: var(--nav-highlight);
 }
-.blog-post {
+.blog-card {
     box-sizing: border-box;
     margin-top: 1vh;
     margin-bottom: 1vh;
@@ -74,4 +73,5 @@ code {
     padding-right: 2vh;
     border-style: solid;
     border-width: 1px;
+    text-align: left;
 }
