@@ -3,52 +3,52 @@
 {% block title %}Hello, World{% endblock title %}
 
 {% block styles %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/blog.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/blog.css') }}">
 {% endblock styles %}
 
 {% block navbar %}
-    <nav>
-      <div class="nav-wrap">
-        <a href="{{ url_for('index') }}" class="nav-link">Landing</a>
-        <a href="{{ url_for('blog_home') }}" class="nav-link">Home</a>
-      </div>
-    </nav>
+  <nav>
+    <div class="nav-wrap">
+      <a href="{{ url_for('index') }}" class="nav-link">Landing</a>
+      <a href="{{ url_for('blog_home') }}" class="nav-link">Home</a>
+    </div>
+  </nav>
 {% endblock navbar %}
 
 {% block header %}
-    <header>
-      <h1>Hello, World!</h1>
-      <p>...an introduction to this blog.</p>
-    </header>
+  <header>
+    <h1>Hello, World!</h1>
+    <p>...an introduction to this blog.</p>
+  </header>
 {% endblock header %}
 
 {% block content %}
-    <section>
-      <article class="blog-post">
-        <h2>What is this blog all about?</h2>
-        <p>This series of posts is about good practices in software development.</p>
-        <p>It has examples of design patterns, testing strategies, language
-          semantics, and third-party libraries. This is a collection of what I've
-          had occasion to learn, so there is a bias toward embedded systems.</p>
+  <section>
+    <article class="blog-post">
+      <h2>What is this blog all about?</h2>
+      <p>This series of posts is about good practices in software development.</p>
+      <p>It has examples of design patterns, testing strategies, language
+        semantics, and third-party libraries. This is a collection of what I've
+        had occasion to learn, so there is a bias toward embedded systems.</p>
 
-        <p>The goal of each post is to actually "do" the thing in question, so
-          code examples are part of example projects.</p>
-        <p>These are available on GitHub.</p>
-        <code>
+      <p>The goal of each post is to actually "do" the thing in question, so
+        code examples are part of example projects.</p>
+      <p>These are available on GitHub.</p>
+      <code>
 <pre>
 int main(int argc, char *argv[])
 {
-  printf("Hello, World!\n");
-  return 0;
+    printf("Hello, World!\n");
+    return 0;
 }
 </pre>
-        </code>
-        <p>Welcome and enjoy!</p>
-      </article>
-    </section>
+      </code>
+      <p>Welcome and enjoy!</p>
+    </article>
+  </section>
 {% endblock content %}
 
 {% block footer %}
-    <footer>
-    </footer>
+  <footer>
+  </footer>
 {% endblock footer %}
