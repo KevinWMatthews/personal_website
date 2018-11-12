@@ -4,7 +4,13 @@
 
 {% block styles %}
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/blog.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='highlight.js/styles/atom-one-dark.css') }}">
 {% endblock styles %}
+
+{% block deferred_scripts %}
+	<script src="{{ url_for('static', filename='highlight.js/highlight.pack.js') }}"></script>
+	<script src="{{ url_for('static', filename='blog.js') }}"></script>
+{% endblock deferred_scripts %}
 
 {% block navbar %}
 	{% include '_blog_navbar.html' %}
@@ -25,25 +31,33 @@
 			The system handles this gracefully in some circumstances, not in others.
 			This can lead to socket reuse errors, open filed descriptors, etc.</p>
 
-			<p>A program can exit with two (at least?) status codes,</br>
-			success or failure:</p>
-			<code>
-<pre>
-#include &lt;stdlib.h&gt;
+			<p>The standard library provides two built-in exit codes:</p>
+			<code>EXIT_SUCCESS</code>
+
+<pre><code>#include &lt;stdlib.h&gt;
 
 int main(void)
 {
-    // Report succees
+    // Terminate program and report succees
     exit(EXIT_SUCCESS);
 
-    // Alternatively, report failure
-    // exit(EXIT_FAILURE);
-
-    // Program never reaches here - exits above.
+    // Program never reaches here - exits above
     return 0;
 }
-</pre>
-</code>
+</code></pre>
+
+			<code>EXIT_FAILURE</code>
+<pre><code>#include &lt;stdlib.h&gt;
+
+int main(void)
+{
+    // Terminate program and report failure
+    exit(EXIT_FAILURE);
+
+    // Program never reaches here - exits above
+    return 0;
+}
+</code></pre>
 
 		</article>
 	</section>
