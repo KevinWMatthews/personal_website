@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Exit Callbacks in C{% endblock title %}
+
+{% block styles %}
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/blog.css') }}">
+{% endblock styles %}
+
+{% block navbar %}
+	{% include '_blog_navbar.html' %}
+{% endblock navbar %}
+
+{% block header %}
+	<header>
+		<h1>Exit Callbacks Using C stdlib</h1>
+		<p>Clean up when a program terminates.</p>
+	</header>
+{% endblock header %}
+
+{% block content %}
+	<section>
+		<article class="blog-post">
+			<h2>Introduction</h2>
+			<p>Unexpectedly exiting a C program can leave resources unreleased.
+			The system handles this gracefully in some circumstances, not in others.
+			This can lead to socket reuse errors, open filed descriptors, etc.</p>
+
+			<p>A program can exit with two (at least?) status codes,</br>
+			success or failure:</p>
+			<code>
+<pre>
+#include &lt;stdlib.h&gt;
+
+int main(void)
+{
+    // Report succees
+    exit(EXIT_SUCCESS);
+
+    // Alternatively, report failure
+    // exit(EXIT_FAILURE);
+
+    // Program never reaches here - exits above.
+    return 0;
+}
+</pre>
+</code>
+
+		</article>
+	</section>
+{% endblock content %}
+
+{% block footer %}
+	<footer></footer>
+{% endblock footer %}

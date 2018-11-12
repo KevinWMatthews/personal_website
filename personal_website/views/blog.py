@@ -8,14 +8,14 @@ all_blog_posts = [
         'Introduction to this blog.',
         ),
     blog_post.BlogPost(
-        '',
-        'Test-Driven Design on AVR',
-        'Work in progress... based on <a href="https://github.com/KevinWMatthews/c-libATtiny861" class="in-text-link">this GitHub repo</a>.'
+        'c-exit-callbacks',
+        'Exit Callbacks using stdlib',
+        'Construct from this skeleton <a href="https://github.com/KevinWMatthews/c-terminate_program" class="in-text-link">this GitHub repo</a>.',
         ),
     blog_post.BlogPost(
         '',
-        'Exit Callbacks using stdlib',
-        'Construct from this skeleton <a href="https://github.com/KevinWMatthews/c-terminate_program" class="in-text-link">this GitHub repo</a>.',
+        'Test-Driven Design on AVR',
+        'Work in progress... based on <a href="https://github.com/KevinWMatthews/c-libATtiny861" class="in-text-link">this GitHub repo</a>.'
         ),
     blog_post.BlogPost(
         '',
