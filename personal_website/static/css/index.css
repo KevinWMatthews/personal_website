@@ -30,6 +30,15 @@ nav {
     z-index: 99;
     text-align: left;
 }
+h1 {
+    font-size: 26pt;
+}
+
+.full-height {
+    height: 100vh;
+}
+.link {
+}
 .nav-link-wrap {
     position: relative;
     top: 50%;
@@ -48,12 +57,11 @@ nav {
 .nav-link:hover {
     text-decoration: underline;
 }
-/* Add focus */
 .nav-link.active {
     background-color: var(--alt-color);
     color: var(--background-color);
 }
-.link-button {
+.button-link {
     color: var(--main-color);
     background-color: var(--background-color);
     border: 1px solid var(--main-color);
@@ -65,16 +73,11 @@ nav {
     padding-right: 3vh;
     transition: color 0.5s, background-color 0.5s, visibility 0.5s, opacity 0.5s;
 }
-.link-button:hover {
+.button-link:hover {
     background-color: var(--main-color);
     color: var(--background-color);
 }
-.full-height {
-    height: 100vh;
-}
-.header {
-    font-size: 26pt;
-}
+
 .flex {
     display: flex;
     flex-wrap: wrap;
@@ -97,7 +100,7 @@ nav {
     visibility: hidden;
     opacity: 0;
 }
-.card > .link-button {
+.card > .button-link {
     position: absolute;
     display: block;
     top: 50%;
@@ -107,10 +110,11 @@ nav {
     visibility: hidden;
     opacity: 0;
 }
-.card:hover > .link-button {
+.card:hover > .button-link {
     opacity: 1;
     visibility: visible;
 }
+
 #divCBg {
     background-image: url('../images/c.png');
     background-position: center;
@@ -135,6 +139,7 @@ nav {
     background-size: contain;
     background-repeat: no-repeat;
 }
+
 @keyframes fadeIn {
     from {
         opacity: 0;
