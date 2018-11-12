@@ -42,16 +42,13 @@ pre {
     position: relative;
 }
 code {
-    display: block;
-    background-color: var(--code-color);
+    background: var(--code-color);
     font-family: Menlo, "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco, Consolas, monospace;
     font-size: 12px;
     line-height: 1.5;
 }
-
-/* Override the default background color for code blocks */
-.hljs {
-    background: var(--code-color);
+pre > code {
+    display: block;
 }
 
 /* Specific classes */
@@ -100,4 +97,8 @@ code {
 }
 .in-text-link:hover {
     text-decoration-line: underline;
+}
+/* Override the default background color for code blocks */
+.hljs {
+    background: var(--code-color);
 }
