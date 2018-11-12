@@ -34,19 +34,19 @@
 			<div class="flex">
 				<div class="card">
 					<div class="card-bg" id="divCBg"></div>
-					<button class="button" type="submit" id="btnC" name="btnC">C</button>
+					<a href="{{ url_for('c_blog') }}">C</a>
 				</div>
 				<div class="card">
 					<div class="card-bg" id="divPythonBg"></div>
-					<button class="button" type="submit" id="btnPython" name="btnPython">Python</button>
+					<a href="{{ url_for('python_blog') }}">Python</a>
 				</div>
 				<div class="card">
 					<div class="card-bg" id="divRustBg"></div>
-					<button class="button" type="submit" id="btnRust" name="btnRust">Rust</button>
+					<a href="{{ url_for('rust_blog') }}">Rust</a>
 				</div>
 				<div class="card">
 					<div class="card-bg" id="divCssBg"></div>
-					<button class="button" type="submit" id="btnCss" name="btnCss">CSS</button>
+					<a href="{{ url_for('css3_blog') }}">CSS</a>
 				</div>
 			</div>
 		</form>
