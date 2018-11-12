@@ -14,15 +14,15 @@
 	<section id="home" class="full-height">
 		<div>
 			<p>Hello! My name is Kevin and I write code.</p>
-			<a href="#blog" class="button link">Learn more</a>
+			<a href="#blog" class="link-button local-link">Learn more</a>
 		</div>
 	</section>
 
 	<nav id="nav">
-		<div class="link-wrap">
-			<a href="#home" class="link nav-link active">Home</a>
-			<a href="#blog" class="link nav-link">Blog</a>
-			<a href="#about" class="link nav-link">About Me</a>
+		<div class="nav-link-wrap">
+			<a href="#home" class="local-link nav-link active">Home</a>
+			<a href="#blog" class="local-link nav-link">Blog</a>
+			<a href="#about" class="local-link nav-link">About Me</a>
 		</div>
 	</nav>
 
@@ -33,19 +33,19 @@
 		<div class="flex">
 			<div class="card">
 				<div class="card-bg" id="divCBg"></div>
-				<a href="{{ url_for('c_blog') }}">C</a>
+				<a href="{{ url_for('c_blog') }}" class="link-button">C</a>
 			</div>
 			<div class="card">
 				<div class="card-bg" id="divPythonBg"></div>
-				<a href="{{ url_for('python_blog') }}">Python</a>
+				<a href="{{ url_for('python_blog') }}" class="link-button">Python</a>
 			</div>
 			<div class="card">
 				<div class="card-bg" id="divRustBg"></div>
-				<a href="{{ url_for('rust_blog') }}">Rust</a>
+				<a href="{{ url_for('rust_blog') }}" class="link-button">Rust</a>
 			</div>
 			<div class="card">
 				<div class="card-bg" id="divCssBg"></div>
-				<a href="{{ url_for('css3_blog') }}">CSS</a>
+				<a href="{{ url_for('css3_blog') }}" class="link-button">CSS</a>
 			</div>
 		</div>
 	</section>
