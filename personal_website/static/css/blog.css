@@ -49,6 +49,11 @@ code {
     line-height: 1.5;
 }
 
+/* Override the default background color for code blocks */
+.hljs {
+    background: var(--code-color);
+}
+
 /* Specific classes */
 .nav-wrap {
     position: relative;
