@@ -44,7 +44,7 @@ pre {
 code {
     background: var(--code-color);
     font-family: Menlo, "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco, Consolas, monospace;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.5;
 }
 pre > code {
