@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/blog.css') }}">
-    <title>C Language</title>
-  </head>
-  <body>
-    <nav>
-      <div class="nav-wrap">
-        <a href="{{ url_for('index') }}" class="nav-link">Landing</a>
-        <a href="{{ url_for('blog_home') }}" class="nav-link">Home</a>
-      </div>
-    </nav>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/blog.css') }}">
+		<title>C Language</title>
+	</head>
+	<body>
+		<nav>
+			<div class="nav-wrap">
+				<a href="{{ url_for('index') }}" class="nav-link">Landing</a>
+				<a href="{{ url_for('blog_home') }}" class="nav-link">Home</a>
+			</div>
+		</nav>
 
-    <header id="home" class="">
-      <h1>{{ '{{' }} Blog Name Here {{ '}}' }}</h1>
-      <p>Tips and tricks, with tests</p>
-    </header>
+		<header id="home" class="">
+			<h1>{{ '{{' }} Blog Name Here {{ '}}' }}</h1>
+			<p>Tips and tricks, with tests</p>
+		</header>
 
-    <section>
-      {% for post in posts %}
-      <article class="blog-card">
-        <h2><a href="{{ url_for('blog_post', post=post.url) }}" class="header-link">{{ post.title }}</a></h2>
-        <p>{{ post.short_text|safe }}</p>
-      </article>
-      {% endfor %}
-    </section>
+		<section>
+			{% for post in posts %}
+			<article class="blog-card">
+				<h2><a href="{{ url_for('blog_post', post=post.url) }}" class="header-link">{{ post.title }}</a></h2>
+				<p>{{ post.short_text|safe }}</p>
+			</article>
+			{% endfor %}
+		</section>
 
-    <footer>
-    </footer>
-  </body>
+		<footer>
+		</footer>
+	</body>
 </html>
