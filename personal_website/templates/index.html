@@ -30,26 +30,24 @@
 		<div class="header">
 			Blog
 		</div>
-		<form class="" action="" method="post">
-			<div class="flex">
-				<div class="card">
-					<div class="card-bg" id="divCBg"></div>
-					<a href="{{ url_for('c_blog') }}">C</a>
-				</div>
-				<div class="card">
-					<div class="card-bg" id="divPythonBg"></div>
-					<a href="{{ url_for('python_blog') }}">Python</a>
-				</div>
-				<div class="card">
-					<div class="card-bg" id="divRustBg"></div>
-					<a href="{{ url_for('rust_blog') }}">Rust</a>
-				</div>
-				<div class="card">
-					<div class="card-bg" id="divCssBg"></div>
-					<a href="{{ url_for('css3_blog') }}">CSS</a>
-				</div>
+		<div class="flex">
+			<div class="card">
+				<div class="card-bg" id="divCBg"></div>
+				<a href="{{ url_for('c_blog') }}">C</a>
 			</div>
-		</form>
+			<div class="card">
+				<div class="card-bg" id="divPythonBg"></div>
+				<a href="{{ url_for('python_blog') }}">Python</a>
+			</div>
+			<div class="card">
+				<div class="card-bg" id="divRustBg"></div>
+				<a href="{{ url_for('rust_blog') }}">Rust</a>
+			</div>
+			<div class="card">
+				<div class="card-bg" id="divCssBg"></div>
+				<a href="{{ url_for('css3_blog') }}">CSS</a>
+			</div>
+		</div>
 	</section>
 
 	<section id="about" class="full-height">

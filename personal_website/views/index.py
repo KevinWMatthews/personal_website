@@ -6,14 +6,6 @@ from flask import render_template, request, redirect, url_for
 def index():
     if request.method == 'GET':
         return render_template('index.html')
-    if 'btnC' in request.form.keys():
-        return redirect(url_for('c_blog'))
-    elif 'btnPython' in request.form.keys():
-        return redirect(url_for('python_blog'))
-    elif 'btnRust' in request.form.keys():
-        return redirect(url_for('rust_blog'))
-    elif 'btnCss' in request.form.keys():
-        return redirect(url_for('css3_blog'))
     return redirect(url_for('index'))
 
 @app.route('/blog/c', methods=['GET'])
