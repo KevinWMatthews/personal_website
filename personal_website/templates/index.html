@@ -1,62 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
+{% extends "base.html" %}
+
+{% block title %}Kevin's Blog{% endblock title %}
+
+{% block styles %}
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
-	<title>Kevin's Blog</title>
+{% endblock styles %}
 
+{% block deferred_scripts %}
 	<script defer src="{{ url_for('static', filename='index.js') }}"></script>
-</head>
+{% endblock deferred_scripts %}
 
-<body>
-<div class="overflow-wrap">
-
-	<section id="home" class="full-height">
-		<div>
-			<p>Hello! My name is Kevin and I write code.</p>
-			<a href="#blog" class="button-link local-link">Learn more</a>
-		</div>
-	</section>
-
-	<nav id="nav">
-		<div class="nav-link-wrap">
-			<a href="#home" class="nav-link local-link active">Home</a>
-			<a href="#blog" class="nav-link local-link">Blog</a>
-			<a href="#about" class="nav-link local-link">About Me</a>
-		</div>
-	</nav>
-
-	<section id="blog" class="full-height">
-		<div>
-			<h1>Blog</h1>
-		</div>
-		<div class="flex">
-			<div class="card">
-				<div class="card-bg" id="divCBg"></div>
-				<a href="{{ url_for('c_blog') }}" class="button-link">C</a>
+{% block navbar %}{# Navbar is in the content of the page #}{% endblock navbar %}
+{% block header %}{% endblock header %}
+{% block content %}
+	<div class="overflow-wrap">
+		<section id="home" class="full-height">
+			<div>
+				<p>Hello! My name is Kevin and I write code.</p>
+				<a href="#blog" class="button-link local-link">Learn more</a>
 			</div>
-			<div class="card">
-				<div class="card-bg" id="divPythonBg"></div>
-				<a href="{{ url_for('python_blog') }}" class="button-link">Python</a>
-			</div>
-			<div class="card">
-				<div class="card-bg" id="divRustBg"></div>
-				<a href="{{ url_for('rust_blog') }}" class="button-link">Rust</a>
-			</div>
-			<div class="card">
-				<div class="card-bg" id="divCssBg"></div>
-				<a href="{{ url_for('css3_blog') }}" class="button-link">CSS</a>
-			</div>
-		</div>
-	</section>
+		</section>
 
-	<section id="about" class="full-height">
-		<h1>About</h1>
-		<div>
-			<p>o_O</p>
-		</div>
-	</section>
+		<nav id="nav">
+			<div class="nav-link-wrap">
+				<a href="#home" class="nav-link local-link active">Home</a>
+				<a href="#blog" class="nav-link local-link">Blog</a>
+				<a href="#about" class="nav-link local-link">About Me</a>
+			</div>
+		</nav>
 
-</div>
-</body>
-</html>
+		<section id="blog" class="full-height">
+			<div>
+				<h1>Blog</h1>
+			</div>
+			<div class="flex">
+				<div class="card">
+					<div class="card-bg" id="divCBg"></div>
+					<a href="{{ url_for('c_blog') }}" class="button-link">C</a>
+				</div>
+				<div class="card">
+					<div class="card-bg" id="divPythonBg"></div>
+					<a href="{{ url_for('python_blog') }}" class="button-link">Python</a>
+				</div>
+				<div class="card">
+					<div class="card-bg" id="divRustBg"></div>
+					<a href="{{ url_for('rust_blog') }}" class="button-link">Rust</a>
+				</div>
+				<div class="card">
+					<div class="card-bg" id="divCssBg"></div>
+					<a href="{{ url_for('css3_blog') }}" class="button-link">CSS</a>
+				</div>
+			</div>
+		</section>
+
+		<section id="about" class="full-height">
+			<h1>About</h1>
+			<div>
+				<p>o_O</p>
+			</div>
+		</section>
+	</div>
+{% endblock content %}
