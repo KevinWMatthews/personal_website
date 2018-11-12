@@ -3,8 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/blog.css') }}">
-    <title>Hello, World! in C</title>
-    <script defer src="{{ url_for('static', filename='blog.js') }}"></script>
+    <title>Hello, World!</title>
   </head>
   <body>
     <header>
@@ -12,15 +11,18 @@
       <p>...an introduction to this blog.</p>
     </header>
 
-    <article>
-      <h2>What is this blog all about?</h2>
-      <p>This series of posts is about good practices in C.</p>
-      <p>It has examples of design patterns, testing strategies,
-        and third-party libraries. There is a bias towards Linux and
-        embedded systems, but using C is the primary focus.</p>
+    <section>
+      <article class="blog-post">
+        <h2>What is this blog all about?</h2>
+        <p>This series of posts is about good practices in software development.</p>
+        <p>It has examples of design patterns, testing strategies, language
+          semantics, and third-party libraries. This is a collection of what I've
+          had occasion to learn, so there is a bias toward embedded systems.</p>
 
-      <p>Code examples illustrate actual projects on GitHub.</p>
-      <code>
+        <p>The goal of each post is to actually "do" the thing in question, so
+          code examples are part of example projects.</p>
+        <p>These are available on GitHub.</p>
+        <code>
 <pre>
 int main(int argc, char *argv[])
 {
@@ -28,9 +30,10 @@ int main(int argc, char *argv[])
   return 0;
 }
 </pre>
-      </code>
-      <p>Welcome and enjoy!</p>
-    </article>
+        </code>
+        <p>Welcome and enjoy!</p>
+      </article>
+    </section>
 
     <footer>
     </footer>
