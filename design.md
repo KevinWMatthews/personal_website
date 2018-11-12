@@ -12,4 +12,5 @@ Long-term, posts will come from a database?
 Short-term, put the posts in Python.
 We need:
     post name/URL
+    title
     short text/intro
