@@ -32,13 +32,13 @@
 			This can lead to socket reuse errors, open filed descriptors, etc.</p>
 
 			<p>The standard library provides two built-in exit codes:</p>
-			<code>EXIT_SUCCESS</code>
+			<code>EXIT_SUCCESS</code> for normal operation:
 
 <pre><code>#include &lt;stdlib.h&gt;
 
 int main(void)
 {
-    // Terminate program and report succees
+    // Terminate program and report success
     exit(EXIT_SUCCESS);
 
     // Program never reaches here - exits above
@@ -46,7 +46,7 @@ int main(void)
 }
 </code></pre>
 
-			<code>EXIT_FAILURE</code>
+			and <code>EXIT_FAILURE</code> when errors occur:
 <pre><code>#include &lt;stdlib.h&gt;
 
 int main(void)
