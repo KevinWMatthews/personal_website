@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}About Me{% endblock title %}
+
+{% block styles %}
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/blog.css') }}">
+{% endblock styles %}
+
+{% block navbar %}
+	{% include '_blog_navbar.html' %}
+{% endblock navbar %}
+
+{% block header %}
+	<header id="home" class="">
+		<h1>About Me</h1>
+	</header>
+{% endblock header %}
+
+{% block content %}
+	<section>
+		<article class="blog-post">
+			<h2>Who is this guy?</h2>
+			<p>I'm Kevin. Embedded developer by day, web developer by night, aspiring
+				to a high level of crafstmanship.</p>
+			<p>Much of my daily work is in C, but I've learned and used varying degrees of
+				Python, Ruby, JavaScript, C++, and Rust. I'm hooked on fast feedback loops,
+				automated tests, and solutions that are designed to evolve.</p>
+			<p>I strive to write clean, thoughtful, testable code. It's a work in
+				progress, but I want to be proud of what I ship.</p>
+			<p>I'll always do it, but I love to do it well. You'll see my face light up when
+			we get it right.</p>
+		</article>
+	</section>
+{% endblock content %}
+
+{% block footer %}
+	<footer></footer>
+{% endblock footer %}

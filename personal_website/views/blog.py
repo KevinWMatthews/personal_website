@@ -52,6 +52,10 @@ def blog_home():
 def blog_post(post):
     return render_template('{}.html'.format(post))
 
+@app.route('/blog/about-me', methods=['GET'])
+def about_me():
+    return render_template('about_me.html')
+
 @app.route('/blog/about-this-blog', methods=['GET'])
 def blog_about():
     return render_template('blog_about.html')
