@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}Kevin's Blog{% endblock title %}
+{% block title %}Kevin's Webpage{% endblock title %}
 
 {% block styles %}
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
@@ -14,9 +14,10 @@
 {% block header %}{% endblock header %}
 {% block content %}
 	<div class="overflow-wrap">
-		<section id="home" class="full-height">
-			<div>
-				<p>Hello! My name is Kevin and I write code.</p>
+		<section id="home" class="full-height flex">
+			<div class="intro-wrap">
+				<p class="intro">Hello!<br>
+				I'm Kevin and I write code.</p>
 				<a href="#blog" class="button-link local-link">Learn more</a>
 			</div>
 		</section>
