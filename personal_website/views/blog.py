@@ -70,5 +70,11 @@ def blog_about():
 
 @app.route('/blog/category/<category>', methods=['GET'])
 def blog_by_category(category):
-    # Get list of blog posts
-    return render_template('blog_home.html', posts='')
+    # Convert to database - do this just to get off the ground.
+    # Sanitize input!!
+    posts_in_category = []
+    for post in all_blog_posts:
+        for tag in post.tags:
+            if tag == category:
+                posts_in_category.append(post)
+    return render_template('blog_home.html', posts=posts_in_category)
