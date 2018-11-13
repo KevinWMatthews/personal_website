@@ -51,3 +51,7 @@ def blog_home():
 @app.route('/blog/<post>', methods=['GET'])
 def blog_post(post):
     return render_template('{}.html'.format(post))
+
+@app.route('/blog/about-this-blog', methods=['GET'])
+def blog_about():
+    return render_template('blog_about.html')

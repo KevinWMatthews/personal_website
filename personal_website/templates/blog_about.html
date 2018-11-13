@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}About This Blog{% endblock title %}
+
+{% block styles %}
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/blog.css') }}">
+{% endblock styles %}
+
+{% block navbar %}
+	{% include '_blog_navbar.html' %}
+{% endblock navbar %}
+
+{% block header %}
+	<header id="home" class="">
+		<h1>About This Blog</h1>
+	</header>
+{% endblock header %}
+
+{% block content %}
+	<section>
+		<article class="blog-post">
+			<h2>What is this blog all about?</h2>
+			<p>This series of posts is about good practices in software development.</p>
+			<p>The examples are built around design patterns, testing strategies, language
+				semantics, and third-party libraries. It is a collection of what I've
+				had occasion to learn, so there is a bias toward embedded systems.</p>
+
+			<p>The goal of each post is to actually do the thing in question, so
+				code examples are part of working projects. These are available on GitHub.</p>
+		</article>
+	</section>
+{% endblock content %}
+
+{% block footer %}
+	<footer></footer>
+{% endblock footer %}
