@@ -59,3 +59,8 @@ def about_me():
 @app.route('/blog/about-this-blog', methods=['GET'])
 def blog_about():
     return render_template('blog_about.html')
+
+@app.route('/blog/category/<category>', methods=['GET'])
+def blog_by_category(category):
+    # Get list of blog posts
+    return render_template('blog_home.html', posts='')
