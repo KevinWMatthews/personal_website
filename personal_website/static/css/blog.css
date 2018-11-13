@@ -38,9 +38,6 @@ nav {
     background-color: var(--nav-background);
     text-align: left;
 }
-pre {
-    position: relative;
-}
 code {
     background: var(--code-color);
     font-family: Menlo, "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco, Consolas, monospace;
