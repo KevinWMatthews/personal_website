@@ -6,7 +6,8 @@
     --header-link-highlight: blue;
     --in-text-link-primary: blue;
     --in-text-link-highlight: black;
-    --code-color: #f1f1f1;
+    --code-background: #e0e0e0;
+    --code-border: #808080;
     --margin: 15%;
 }
 
@@ -39,13 +40,14 @@ nav {
     text-align: left;
 }
 code {
-    background: var(--code-color);
+    background-color: var(--code-background);
     font-family: Menlo, "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco, Consolas, monospace;
     font-size: 14px;
     line-height: 1.5;
 }
 pre > code {
     display: block;
+    border: 1px solid var(--code-border);
 }
 
 /* Specific classes */
@@ -94,8 +96,4 @@ pre > code {
 }
 .in-text-link:hover {
     text-decoration-line: underline;
-}
-/* Override the default background color for code blocks */
-.hljs {
-    background: var(--code-color);
 }
