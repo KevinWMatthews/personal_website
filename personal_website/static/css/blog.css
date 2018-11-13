@@ -44,10 +44,12 @@ code {
     font-family: Menlo, "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco, Consolas, monospace;
     font-size: 14px;
     line-height: 1.5;
+    padding: 2px 3px 2px 3px;
 }
 pre > code {
     display: block;
     border: 1px solid var(--code-border);
+    padding: 8px 5px 8px 5px;
 }
 
 /* Specific classes */
