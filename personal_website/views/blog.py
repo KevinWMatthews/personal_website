@@ -10,7 +10,7 @@ all_blog_posts = [
     ),
     blog_post.BlogPost(
         'c-exit-callbacks',
-        'Exit Callbacks using stdlib',
+        'Exit Callbacks using C stdlib',
         'Construct from this skeleton <a href="https://github.com/KevinWMatthews/c-terminate_program" class="in-text-link">this GitHub repo</a>.',
         ['C', 'stdlib'],
     ),
@@ -22,19 +22,19 @@ all_blog_posts = [
     ),
     blog_post.BlogPost(
         'work-in-progress',
-        'TLS Using OpenSS',
+        'TLS in C Using OpenSSL',
         'Experimental but functional. Based on <a href="https://github.com/KevinWMatthews/c-tls_demo" class="in-text-link">this GitHub repo</a>.',
         ['C', 'Crypto'],
     ),
     blog_post.BlogPost(
         'work-in-progress',
-        'Varargs (variadics)',
+        'Varargs (variadics) in C',
         'Closest thing to the splat operator that C can provide. Based on <a href="https://github.com/KevinWMatthews/c-varargs_demo" class="in-text-link">this GitHub repo</a>.',
         ['C'],
     ),
     blog_post.BlogPost(
         'work-in-progress',
-        'Parsing Command Line Options',
+        'Parsing Command Line Options in C',
         'Better than strcmp() on argv. Based on <a href="https://github.com/KevinWMatthews/c-getopt_demo" class="in-text-link">this GitHub repo</a>.',
         ['C'],
     ),
@@ -48,7 +48,7 @@ all_blog_posts = [
         'work-in-progress',
         'Memory Semantics',
         'Dive under the hood. Based on <a href="https://youtu.be/-dc5vqt2tgA" class="in-text-link">this awesome video</a>.',
-        ['C'],
+        ['C', 'Memory'],
     ),
     blog_post.BlogPost(
         'work-in-progress',
