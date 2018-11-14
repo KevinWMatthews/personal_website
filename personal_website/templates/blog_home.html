@@ -4,15 +4,15 @@
 
 {% block styles %}
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/blog.css') }}">
-{% endblock styles %}
+{%- endblock styles %}
 
 {% block navbar %}
-	{% include '_blog_navbar.html' %}
-{% endblock navbar %}
+{% include '_blog_navbar.html' %}
+{%- endblock navbar %}
 
 {% block flash -%}
 	{% with messages = get_flashed_messages() -%}
-	{% if messages -%}
+	{% if messages %}
 	<section id="messages" class="messages">
 		<div>
 			{% for message in messages -%}
@@ -29,20 +29,20 @@
 		<h1>{{ '{{' }} Blog Name Here {{ '}}' }}</h1>
 		<p>Tips and tricks, with tests</p>
 	</header>
-{% endblock header %}
+{%- endblock header %}
 
 {% block content %}
 	<section>
-		{% for post in posts %}
+		{%- for post in posts %}
 		<article class="blog-card">
 			<h2><a href="{{ url_for('blog_post', post=post.url) }}" class="header-link">{{ post.title }}</a></h2>
 			<p>{{ post.short_text|safe }}</p>
 		</article>
-		{% endfor %}
+		{%- endfor %}
 	</section>
-{% endblock content %}
+{%- endblock content %}
 
 {% block footer %}
 	<footer>
 	</footer>
-{% endblock footer %}
+{%- endblock footer %}

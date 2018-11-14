@@ -5,23 +5,23 @@
 {% block styles %}
 	<link rel="stylesheet" href="{{ url_for('static', filename='highlight.js/styles/highlight.css') }}">
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/blog.css') }}">
-{% endblock styles %}
+{%- endblock styles %}
 
 {% block deferred_scripts %}
 	<script src="{{ url_for('static', filename='highlight.js/highlight_c.pack.js') }}"></script>
 	<script src="{{ url_for('static', filename='blog.js') }}"></script>
-{% endblock deferred_scripts %}
+{%- endblock deferred_scripts %}
 
 {% block navbar %}
-	{% include '_blog_navbar.html' %}
-{% endblock navbar %}
+{% include '_blog_navbar.html' %}
+{%- endblock navbar %}
 
 {% block header %}
 	<header>
 		<h1>Hello, World!</h1>
 		<p>...an introduction to this blog.</p>
 	</header>
-{% endblock header %}
+{%- endblock header %}
 
 {% block content %}
 	<section>
@@ -38,9 +38,9 @@
 			<p>Welcome and enjoy!</p>
 		</article>
 	</section>
-{% endblock content %}
+{%- endblock content %}
 
 {% block footer %}
 	<footer>
 	</footer>
-{% endblock footer %}
+{%- endblock footer %}

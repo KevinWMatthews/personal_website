@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-	{% block styles %}{% endblock styles %}
+	{%- block styles %}{% endblock styles %}
 	<title>{% block title %}{% endblock title %}</title>
-	{% block deferred_scripts %}{% endblock deferred_scripts %}
+	{%- block deferred_scripts %}{% endblock deferred_scripts %}
 </head>
 <body>
-	{% block navbar %}{% endblock navbar %}
-	{% block flash %}{% endblock flash %}
-	{% block header %}{% endblock header %}
-	{% block content %}{% endblock content %}
-	{% block footer %}{% endblock footer %}
+	{%- block navbar %}{% endblock navbar %}
+	{%- block flash %}{% endblock flash %}
+	{%- block header %}{% endblock header %}
+	{%- block content %}{% endblock content %}
+	{%- block footer %}{% endblock footer %}
 </body>
 </html>
