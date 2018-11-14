@@ -56,6 +56,12 @@ all_blog_posts = [
         'Do you follow this core contributor\'s advice? Based on <a href="https://youtu.be/anrOzOapJ2E">this talk</a>.',
         ['Python'],
     ),
+    blog_post.BlogPost(
+        'work-in-progress',
+        'Rust Memory Semantics',
+        'Work in progress... copy vs. move semantics.',
+        ['Rust', 'Memory'],
+    )
 ]
 
 @app.route('/blog', methods=['GET'])
