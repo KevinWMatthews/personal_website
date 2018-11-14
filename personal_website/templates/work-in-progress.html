@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Work in Progress{% endblock title %}
+
+{% block styles %}
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/blog.css') }}">
+{%- endblock styles %}
+
+{% block navbar %}
+{% include '_blog_navbar.html' %}
+{%- endblock navbar %}
+
+{% block header %}
+	<header>
+		<h1>Work in Progress</h1>
+	</header>
+{%- endblock header %}
+
+{% block content %}
+	<section>
+		<article class="blog-post">
+			<h2>Coming Soon...</h2>
+			<p>I have more ideas than I can put in writing.</p>
+		</article>
+	</section>
+{%- endblock content %}
+
+{% block footer %}
+	<footer>
+	</footer>
+{%- endblock footer %}
