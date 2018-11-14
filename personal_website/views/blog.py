@@ -53,7 +53,7 @@ all_blog_posts = [
     blog_post.BlogPost(
         'work-in-progress',
         'Python Language Semantics',
-        'Do you follow this core contributor\'s advice? Based on <a href="https://youtu.be/anrOzOapJ2E">this talk</a>.',
+        'Do you follow this core contributor\'s advice? Based on <a href="https://youtu.be/anrOzOapJ2E" class="in-text-link">this talk</a>.',
         ['Python'],
     ),
     blog_post.BlogPost(
