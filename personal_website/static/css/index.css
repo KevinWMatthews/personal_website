@@ -4,8 +4,7 @@
     --alt-color: blue;
 }
 
-html, body {
-    height: 100%;
+body {
     margin: 0;
     scroll-behavior: smooth;
     text-align: center;
