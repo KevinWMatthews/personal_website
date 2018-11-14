@@ -2,6 +2,7 @@
     --main-color: black;
     --background-color: white;
     --alt-color: blue;
+    --margin: 10%;
 }
 
 body {
@@ -14,6 +15,8 @@ section {
     padding-bottom: 5vh;
     padding-right: 2vh;
     padding-left: 2vh;
+    margin-left: var(--margin);
+    margin-right: var(--margin);
     box-sizing: border-box;
 }
 nav {
