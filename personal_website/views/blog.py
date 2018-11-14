@@ -1,5 +1,5 @@
 from personal_website import app, blog_post
-from flask import render_template
+from flask import render_template, flash
 
 all_blog_posts = [
     blog_post.BlogPost(
@@ -77,4 +77,5 @@ def blog_by_category(category):
         for tag in post.tags:
             if tag == category:
                 posts_in_category.append(post)
+    flash('Category: {}'.format(category))
     return render_template('blog_home.html', posts=posts_in_category)

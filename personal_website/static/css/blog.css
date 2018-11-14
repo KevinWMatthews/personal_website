@@ -1,4 +1,5 @@
 :root {
+    --border-color: black;
     --nav-background: black;
     --nav-foreground: white;
     --nav-highlight: blue;
@@ -21,7 +22,7 @@ html, body {
 header {
     margin-left: var(--margin);
     margin-right: var(--margin);
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--border-color);
 }
 section {
     margin-right: var(--margin);
@@ -30,7 +31,7 @@ section {
 footer {
     margin-left: var(--margin);
     margin-right: var(--margin);
-    border-top: 1px solid black;
+    border-top: 1px solid var(--border-color);
 }
 nav {
     top: 0;
@@ -67,6 +68,12 @@ pre > code {
 }
 .nav-link:hover {
     color: var(--nav-highlight);
+}
+.messages {
+    text-align: left;
+    margin-top: 2vh;
+    padding: 3vh 2vh 3vh 2vh;
+    border: 1px solid var(--border-color);
 }
 .blog-card {
     box-sizing: border-box;
