@@ -61,7 +61,13 @@ all_blog_posts = [
         'Rust Memory Semantics',
         'Work in progress... copy vs. move semantics.',
         ['Rust', 'Memory'],
-    )
+    ),
+    blog_post.BlogPost(
+        'work-in-progress',
+        'CSS Effects',
+        'Work in progress... transitions, animations, etc.',
+        ['CSS'],
+    ),
 ]
 
 @app.route('/blog', methods=['GET'])
