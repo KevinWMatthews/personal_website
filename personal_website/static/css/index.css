@@ -22,10 +22,8 @@ section {
 nav {
     top: 0px;
     position: sticky;
-    padding-top: 0vh;
-    padding-right: 0vh;
-    padding-bottom: 0vh;
-    padding-left: 0vh;
+    padding-left: var(--margin);
+    padding-right: var(--margin);
     box-sizing: border-box;
     height: 7vh;
     background-color: var(--main-color);
