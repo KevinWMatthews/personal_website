@@ -23,6 +23,8 @@ header {
     margin-left: var(--margin);
     margin-right: var(--margin);
     border-bottom: 1px solid var(--border-color);
+    padding-top: 3vh;
+    padding-bottom: 3vh;
 }
 section {
     margin-right: var(--margin);
