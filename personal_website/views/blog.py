@@ -50,6 +50,12 @@ all_blog_posts = [
         'Dive under the hood. Based on <a href="https://youtu.be/-dc5vqt2tgA" class="in-text-link">this awesome video</a>.',
         ['C'],
     ),
+    blog_post.BlogPost(
+        'work-in-progress',
+        'Python Language Semantics',
+        'Do you follow this core contributor\'s advice? Based on <a href="https://youtu.be/anrOzOapJ2E">this talk</a>.',
+        ['Python'],
+    ),
 ]
 
 @app.route('/blog', methods=['GET'])
