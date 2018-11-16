@@ -174,12 +174,32 @@ h1 {
     background-size: contain;
     background-repeat: no-repeat;
 }
+
 #divRustBg {
-    background-image: url('../images/rust.jpeg');
+    background-image: url('../images/rust-logo-128x128-blk-v2.png');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    opacity: 1;
+    transition: opacity 1s;
 }
+#divRustBg:hover {
+    opacity: 0;
+}
+#divRustBgAlt {
+    opacity: 0;
+    background-image: url('../images/rust-logo-128x128.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: opacity 1s;
+    transform: translateY(-100%);
+}
+#divRustBgAlt:hover {
+    opacity: 1;
+}
+
+
 #divCssBg {
     background-image: url('../images/css3.png');
     background-position: center;
