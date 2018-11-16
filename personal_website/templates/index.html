@@ -57,6 +57,23 @@
 	</div>
 {% endblock content %}
 
+{% block footer %}
+	<footer>
+		<div class="flex icon-wrap">
+			<div class="icon">
+				<a href="http://github.com/KevinWMatthews/">
+					<div class="flex icon-link" id="divGithub"></div>
+				</a>
+			</div>
+			<div class="icon">
+				<a id="linkedin" href="https://www.linkedin.com/in/KevinWMatthews">
+					<div class="flex icon-link" id="divLinkedin"></div>
+				</a>
+			</div>
+		</div>
+		<p class="footnote">&copy;2018 by Kevin Matthews</p>
+	</footer>
+{% endblock footer %}
 
 {% macro card(id, text) -%}
 				<div class="card">

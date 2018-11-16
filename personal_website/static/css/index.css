@@ -19,6 +19,11 @@ section {
     margin-right: var(--margin);
     box-sizing: border-box;
 }
+footer {
+    margin-left: var(--margin);
+    margin-right: var(--margin);
+    border-top: 1px solid var(--main-color);
+}
 nav {
     top: 0px;
     position: sticky;
@@ -120,7 +125,43 @@ h1 {
     opacity: 1;
     visibility: visible;
 }
+.icon-wrap {
+    margin-top: 5vh;
+}
+.icon {
+    margin: 1vh;
+}
+.icon-link {
+    width: 64px;
+    height: 64px;
+    border: 1px black solid;
+    background-position: center;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-color: var(--background-color);
+    transition: background-color 0.5s ease-in-out;
+}
+.icon-link:hover {
+    background-color: var(--main-color);
+}
+.footnote {
+    margin-bottom: 10vh;
+}
 
+#divGithub {
+    background-image: url('../images/GitHub-Mark-32px.png');
+}
+#divGithub:hover {
+    background-image: url('../images/GitHub-Mark-Light-32px.png');
+}
+#divLinkedin {
+    background-image: url('../images/In-Black-34px-R.png');
+    /* Compensate for the "registered" symbol when centering horizontally */
+    background-position: 68%;
+}
+#divLinkedin:hover {
+    background-image: url('../images/In-White-34px-R.png');
+}
 #divCBg {
     background-image: url('../images/c.png');
     background-position: center;
