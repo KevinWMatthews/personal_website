@@ -143,6 +143,7 @@ h1 {
 }
 .icon-link:hover {
     background-color: var(--main-color);
+    transition-delay: 0.1s;
 }
 .footnote {
     margin-bottom: 10vh;
