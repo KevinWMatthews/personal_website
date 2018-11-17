@@ -203,10 +203,10 @@ h1 {
 
 
 #divCssBg {
-    background-image: url('../images/css3.png');
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-image: url('../images/css3-logo-91x128-blk.png');
+}
+#divCssBgAlt {
+    background-image: url('../images/css3-logo-91x128.png');
 }
 
 @keyframes fadeIn {
