@@ -9,3 +9,6 @@ test.cfg
 
 # Ignore local environment file
 .env
+
+# Ignore python build directories
+build/
