@@ -102,14 +102,27 @@ h1 {
 .card-bg {
     height: inherit;
     width: inherit;
+    opacity: 1;
+    transition: opacity 1s;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
-.card:hover .card-bg {
+.card-bg:hover {
+    opacity: 0;
 }
 .card-bg-alt {
     height: inherit;
     width: inherit;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: opacity 1s;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
-.card:hover .card-bg-alt {
+.card-bg-alt:hover {
+    opacity: 1;
 }
 
 .card > .button-link {
@@ -179,27 +192,11 @@ h1 {
 
 #divRustBg {
     background-image: url('../images/rust-logo-128x128-blk-v2.png');
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    opacity: 1;
-    transition: opacity 1s;
-}
-#divRustBg:hover {
-    opacity: 0;
 }
 #divRustBgAlt {
-    opacity: 0;
     background-image: url('../images/rust-logo-128x128.png');
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    transition: opacity 1s;
-    transform: translateY(-100%);
 }
-#divRustBgAlt:hover {
-    opacity: 1;
-}
+
 
 
 #divCssBg {
