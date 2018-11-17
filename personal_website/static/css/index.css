@@ -163,6 +163,30 @@ h1 {
     margin-bottom: 10vh;
 }
 
+#divCBg {
+    background-image: url('../images/c-logo-119x128-blk.png');
+}
+#divCBgAlt {
+    background-image: url('../images/c-logo-119x128.png');
+}
+#divPythonBg {
+    background-image: url('../images/python-logo-128x128-blk.png');
+}
+#divPythonBgAlt {
+    background-image: url('../images/python-logo-128x128.png');
+}
+#divRustBg {
+    background-image: url('../images/rust-logo-128x128-blk-v2.png');
+}
+#divRustBgAlt {
+    background-image: url('../images/rust-logo-128x128.png');
+}
+#divCssBg {
+    background-image: url('../images/css3-logo-91x128-blk.png');
+}
+#divCssBgAlt {
+    background-image: url('../images/css3-logo-91x128.png');
+}
 #divGithub {
     background-image: url('../images/GitHub-Mark-32px.png');
 }
@@ -176,37 +200,6 @@ h1 {
 }
 #divLinkedin:hover {
     background-image: url('../images/In-White-34px-R.png');
-}
-#divCBg {
-    background-image: url('../images/c-logo-119x128-blk.png');
-}
-#divCBgAlt {
-    background-image: url('../images/c-logo-119x128.png');
-}
-#divPythonBg {
-    background-image: url('../images/python-logo-128x128-blk.png');
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-#divPythonBgAlt {
-    background-image: url('../images/python-logo-128x128.png');
-}
-
-#divRustBg {
-    background-image: url('../images/rust-logo-128x128-blk-v2.png');
-}
-#divRustBgAlt {
-    background-image: url('../images/rust-logo-128x128.png');
-}
-
-
-
-#divCssBg {
-    background-image: url('../images/css3-logo-91x128-blk.png');
-}
-#divCssBgAlt {
-    background-image: url('../images/css3-logo-91x128.png');
 }
 
 @keyframes fadeIn {
