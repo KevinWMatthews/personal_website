@@ -36,6 +36,7 @@ nav {
     background-color: var(--nav-color);
     z-index: 99;
     text-align: left;
+    overflow: hidden;
 }
 h1 {
     font-size: 26pt;
