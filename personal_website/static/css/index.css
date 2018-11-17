@@ -1,7 +1,7 @@
 :root {
-    --main-color: black;
+    --primary-color: black;
     --background-color: white;
-    --alt-color: blue;
+    --highlight-color: blue;
     --margin: 10%;
 }
 
@@ -22,7 +22,7 @@ section {
 footer {
     margin-left: var(--margin);
     margin-right: var(--margin);
-    border-top: 1px solid var(--main-color);
+    border-top: 1px solid var(--primary-color);
 }
 nav {
     top: 0px;
@@ -31,7 +31,7 @@ nav {
     padding-right: var(--margin);
     box-sizing: border-box;
     height: 7vh;
-    background-color: var(--main-color);
+    background-color: var(--primary-color);
     z-index: 99;
     text-align: left;
 }
@@ -68,13 +68,13 @@ h1 {
     text-decoration: underline;
 }
 .nav-link.active {
-    background-color: var(--alt-color);
+    background-color: var(--highlight-color);
     color: var(--background-color);
 }
 .button-link {
-    color: var(--main-color);
+    color: var(--primary-color);
     background-color: var(--background-color);
-    border: 1px solid var(--main-color);
+    border: 1px solid var(--primary-color);
     font-size: 16px;
     text-decoration: none;
     padding-top: 2vh;
@@ -84,7 +84,7 @@ h1 {
     transition: color 0.5s, background-color 0.5s, visibility 0.5s, opacity 0.5s;
 }
 .button-link:hover {
-    background-color: var(--main-color);
+    background-color: var(--primary-color);
     color: var(--background-color);
 }
 
@@ -154,7 +154,7 @@ h1 {
     transition: background-color 0.5s ease-in-out;
 }
 .icon-link:hover {
-    background-color: var(--main-color);
+    background-color: var(--primary-color);
     transition-delay: 0.1s;
 }
 .footnote {
