@@ -42,7 +42,7 @@ function updateNavLinks(scroll_pos) {
 // Sections must be in the same order as their respective nav links!
 let sections = document.getElementsByTagName('section');
 function getCurrentNavLinkIndex(scroll_pos) {
-  let index = 0;
+  let index = -1;
   for (section of sections) {
     let position = section.offsetTop;
     if (scroll_pos >= position - nav_height) {
@@ -53,10 +53,10 @@ function getCurrentNavLinkIndex(scroll_pos) {
 }
 
 // Highlight active nav link
-// Assumes that links already exist in a file-scope variable
+let nav_links = document.getElementsByClassName('nav-link');
 function highlightNavLink(active_index) {
-  for (link of links) {
+  for (link of nav_links) {
     link.classList.remove('active');
   }
-  links[active_index].classList.add('active');
+  nav_links[active_index].classList.add('active');
 }
