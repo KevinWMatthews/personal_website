@@ -75,6 +75,12 @@ section #about {
 footer {
     grid-area: footer;
 }
+
+.about-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 70vh);
+    justify-content: center;
+}
 .flex {
     display: flex;
     flex-wrap: wrap;
