@@ -178,16 +178,19 @@ h1 {
     background-image: url('../images/In-White-34px-R.png');
 }
 #divCBg {
-    background-image: url('../images/c.png');
+    background-image: url('../images/c-logo-119x128-blk.png');
+}
+#divCBgAlt {
+    background-image: url('../images/c-logo-119x128.png');
+}
+#divPythonBg {
+    background-image: url('../images/python-logo-128x128-blk.png');
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
 }
-#divPythonBg {
-    background-image: url('../images/python.png');
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
+#divPythonBgAlt {
+    background-image: url('../images/python-logo-128x128.png');
 }
 
 #divRustBg {
