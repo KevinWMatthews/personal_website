@@ -105,6 +105,13 @@ h1 {
 }
 .card:hover .card-bg {
 }
+.card-bg-alt {
+    height: inherit;
+    width: inherit;
+}
+.card:hover .card-bg-alt {
+}
+
 .card > .button-link {
     position: absolute;
     display: block;
