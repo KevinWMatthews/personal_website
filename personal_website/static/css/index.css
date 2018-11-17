@@ -100,16 +100,10 @@ h1 {
     width: 200px;
 }
 .card-bg {
-    /* animation: fadeIn 1.5s; */
-    /* visibility: visible; */
-    /* opacity: 1; */
-    /* transition: visibility 0.5s, opacity 0.5s; */
     height: inherit;
     width: inherit;
 }
 .card:hover .card-bg {
-    /* visibility: hidden; */
-    /* opacity: 0; */
 }
 .card > .button-link {
     position: absolute;
