@@ -187,41 +187,41 @@ footer {
     margin-bottom: 10vh;
 }
 
-#divCBg {
+#div_c_bg {
     background-image: url('../images/c-logo-119x128-blk.png');
 }
-#divCBgAlt {
+#div_c_bg_alt {
     background-image: url('../images/c-logo-119x128.png');
 }
-#divPythonBg {
+#div_python_bg {
     background-image: url('../images/python-logo-128x128-blk.png');
 }
-#divPythonBgAlt {
+#div_python_bg_alt {
     background-image: url('../images/python-logo-128x128.png');
 }
-#divRustBg {
+#div_rust_bg {
     background-image: url('../images/rust-logo-128x128-blk-v2.png');
 }
-#divRustBgAlt {
+#div_rust_bg_alt {
     background-image: url('../images/rust-logo-128x128.png');
 }
-#divCssBg {
+#div_css_bg {
     background-image: url('../images/css3-logo-91x128-blk.png');
 }
-#divCssBgAlt {
+#div_css_bg_alt {
     background-image: url('../images/css3-logo-91x128.png');
 }
-#divGithub {
+#div_git_hub {
     background-image: url('../images/GitHub-Mark-32px.png');
 }
-#divGithub:hover {
+#div_git_hub:hover {
     background-image: url('../images/GitHub-Mark-Light-32px.png');
 }
-#divLinkedin {
+#div_linkedin {
     background-image: url('../images/In-Black-34px-R.png');
     /* Compensate for the "registered" symbol when centering horizontally */
     background-position: 68%;
 }
-#divLinkedin:hover {
+#div_linkedin:hover {
     background-image: url('../images/In-White-34px-R.png');
 }

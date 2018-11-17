@@ -33,10 +33,10 @@
 				<h1>Blog</h1>
 			</div>
 			<div class="flex">
-				{{ card('divCBg', 'C') }}
-				{{ card('divPythonBg', 'Python') }}
-				{{ card('divRustBg', 'Rust') }}
-				{{ card('divCssBg', 'CSS') }}
+				{{ card('c', 'C') }}
+				{{ card('python', 'Python') }}
+				{{ card('rust', 'Rust') }}
+				{{ card('css', 'CSS') }}
 			</div>
 		</section>
 
@@ -63,12 +63,12 @@
 		<div class="flex footer-wrap">
 			<div class="icon">
 				<a href="http://github.com/KevinWMatthews/">
-					<div class="flex icon-link" id="divGithub"></div>
+					<div class="flex icon-link" id="div_github"></div>
 				</a>
 			</div>
 			<div class="icon">
 				<a id="linkedin" href="https://www.linkedin.com/in/KevinWMatthews">
-					<div class="flex icon-link" id="divLinkedin"></div>
+					<div class="flex icon-link" id="div_linkedin"></div>
 				</a>
 			</div>
 		</div>
@@ -76,12 +76,13 @@
 	</footer>
 {% endblock footer %}
 
-{% macro card(id, text) -%}
+{# 'language' is tightly-coupled for now: db category, user-facing text #}
+{% macro card(id, language) -%}
 				<div class="card-wrap">
-					<a href="{{ url_for('blog_by_category', category=text) }}" class="button-link">{{ text }}</a>
+					<a href="{{ url_for('blog_by_category', category=language) }}" class="button-link">{{ language }}</a>
 					<div class="card">
-						<a class="card-bg" id="{{ id }}" href="{{ url_for('blog_by_category', category=text) }}"></a>
-						<a class="card-bg-alt" id="{{ id }}Alt" href="{{ url_for('blog_by_category', category=text) }}"></a>
+						<a class="card-bg" id="div_{{ id }}_bg" href="{{ url_for('blog_by_category', category=language) }}"></a>
+						<a class="card-bg-alt" id="div_{{ id }}_bg_alt" href="{{ url_for('blog_by_category', category=language) }}"></a>
 					</div>
 				</div>
 {%- endmacro %}
