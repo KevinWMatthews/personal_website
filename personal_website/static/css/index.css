@@ -129,6 +129,7 @@ footer {
     width: 200px;
 }
 .card-bg {
+    display: block;
     height: inherit;
     width: inherit;
     opacity: 1;
@@ -142,6 +143,7 @@ footer {
     opacity: 0;
 }
 .card-bg-alt {
+    display: block;
     height: inherit;
     width: inherit;
     transform: translateY(-100%);
