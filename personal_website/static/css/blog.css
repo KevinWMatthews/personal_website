@@ -1,14 +1,10 @@
 :root {
-    --border-color: black;
-    --nav-background: black;
-    --nav-foreground: white;
-    --nav-highlight: blue;
-    --header-link-primary: black;
-    --header-link-highlight: blue;
-    --in-text-link-primary: blue;
-    --in-text-link-highlight: black;
-    --code-background: #e0e0e0;
-    --code-border: #808080;
+    --background-color: white;
+    --primary-color: grey;
+    --text-color: black;
+    --nav-color: black;
+    --code-background-color: #e0e0e0;
+    --code-background-color: #808080;
     --margin: 15%;
 }
 
@@ -23,7 +19,7 @@ body {
 header {
     margin-left: var(--margin);
     margin-right: var(--margin);
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--nav-color);
     padding-top: 3vh;
     padding-bottom: 3vh;
 }
@@ -34,17 +30,17 @@ section {
 footer {
     margin-left: var(--margin);
     margin-right: var(--margin);
-    border-top: 1px solid var(--border-color);
+    border-top: 1px solid var(--nav-color);
 }
 nav {
     top: 0;
     position: sticky;
     height: 7vh;
-    background-color: var(--nav-background);
+    background-color: var(--nav-color);
     text-align: left;
 }
 code {
-    background-color: var(--code-background);
+    background-color: var(--code-background-color);
     font-family: Menlo, "Bitstream Vera Sans Mono", "DejaVu Sans Mono", Monaco, Consolas, monospace;
     font-size: 14px;
     line-height: 1.5;
@@ -52,8 +48,11 @@ code {
 }
 pre > code {
     display: block;
-    border: 1px solid var(--code-border);
+    border: 1px solid var(--code-background-color);
     padding: 8px 5px 8px 5px;
+}
+strong {
+    color: var(--text-color);
 }
 
 /* Specific classes */
@@ -63,20 +62,20 @@ pre > code {
     transform: translate(0, -50%);
 }
 .nav-link {
-    color: var(--nav-foreground);
+    color: var(--background-color);
     text-decoration-line: none;
     padding-left: 3vh;
     padding-right: 3vh;
     font-size: 24px;
 }
 .nav-link:hover {
-    color: var(--nav-highlight);
+    color: var(--primary-color);
 }
 .messages {
     text-align: left;
     margin-top: 2vh;
     padding: 3vh 2vh 3vh 2vh;
-    border: 1px solid var(--border-color);
+    border: 1px solid var(--nav-color);
 }
 .blog-card {
     box-sizing: border-box;
@@ -96,14 +95,14 @@ pre > code {
     text-align: left;
 }
 .header-link {
-    color: var(--header-link-primary);
+    color: var(--primary-color);
     text-decoration-line: none;
 }
 .header-link:hover {
-    color: var(--header-link-highlight);
+    color: var(--text-color);
 }
 .in-text-link {
-    color: var(--in-text-link-primary);
+    color: var(--primary-color);
     text-decoration-line: none;
 }
 .in-text-link:hover {
