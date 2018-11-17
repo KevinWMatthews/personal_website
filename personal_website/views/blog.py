@@ -70,7 +70,7 @@ all_blog_posts = [
     ),
 ]
 
-@app.route('/blog', methods=['GET'])
+@app.route('/blog/', methods=['GET'])
 def blog_home():
     return render_template('blog_home.html', posts=all_blog_posts)
 
