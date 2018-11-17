@@ -46,9 +46,9 @@ p {
     color: var(--text-color);
 }
 
-
-.full-height {
-    height: 100vh;
+.container {
+    display: grid;
+    grid-auto-rows: minmax(100vh, auto);
 }
 .flex {
     display: flex;
