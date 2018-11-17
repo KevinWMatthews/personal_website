@@ -80,12 +80,9 @@ footer {
     justify-content: center;
     align-items: center;
 }
-.intro-wrap {
-    /* transform: translate(0vh, -10vh); */
-}
 .intro {
     font-size: 42px;
-    /* margin-top: 15%; */
+    margin-top: 15%;
 }
 .nav-link {
     display: flex;
@@ -164,7 +161,7 @@ footer {
     margin-left: auto;
     margin-right: auto;
 }
-.icon-wrap {
+.footer-wrap {
     margin-top: 5vh;
 }
 .icon {
