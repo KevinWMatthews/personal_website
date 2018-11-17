@@ -211,10 +211,10 @@ footer {
 #div_css_bg_alt {
     background-image: url('../images/css3-logo-91x128.png');
 }
-#div_git_hub {
+#div_github {
     background-image: url('../images/GitHub-Mark-32px.png');
 }
-#div_git_hub:hover {
+#div_github:hover {
     background-image: url('../images/GitHub-Mark-Light-32px.png');
 }
 #div_linkedin {
