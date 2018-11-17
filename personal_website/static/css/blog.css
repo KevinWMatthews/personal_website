@@ -76,6 +76,8 @@ strong {
     margin-top: 2vh;
     padding: 3vh 2vh 3vh 2vh;
     border: 1px solid var(--nav-color);
+    font-weight: bold;
+    color: var(--text-color);
 }
 .blog-card {
     box-sizing: border-box;
