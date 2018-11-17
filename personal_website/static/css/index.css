@@ -7,9 +7,11 @@
     --margin: 10%;
 }
 
+html  {
+    scroll-behavior: smooth;
+}
 body {
     margin: 0;
-    scroll-behavior: smooth;
     text-align: center;
     box-sizing: border-box;
 }

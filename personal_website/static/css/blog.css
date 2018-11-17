@@ -13,9 +13,11 @@
 }
 
 /* Generic elements */
+html {
+    scroll-behavior: smooth;
+}
 body {
     margin: 0;
-    scroll-behavior: smooth;
     text-align: center;
 }
 header {
