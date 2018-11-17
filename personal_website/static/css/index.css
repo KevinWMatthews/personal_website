@@ -94,6 +94,11 @@ h1 {
     justify-content: center;
     align-items: center;
 }
+.card-wrap {
+    width: 200px;
+    height: 300px;
+    margin: 2vh 2vh 2vh 2vh;
+}
 .card {
     position: relative;
     height: 200px;
@@ -107,6 +112,7 @@ h1 {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    margin-top: 5vh;
 }
 .card-bg:hover {
     opacity: 0;
@@ -124,20 +130,12 @@ h1 {
 .card-bg-alt:hover {
     opacity: 1;
 }
-
-.card > .button-link {
-    position: absolute;
+.card-wrap > .button-link {
+    position: relative;
     display: block;
-    top: 50%;
-    margin-left: 15%;
     width: 50%;
-    transform: translate(0%, -50%);
-    visibility: hidden;
-    /* opacity: 0; */
-}
-.card:hover > .button-link {
-    /* opacity: 1; */
-    /* visibility: visible; */
+    margin-left: auto;
+    margin-right: auto;
 }
 .icon-wrap {
     margin-top: 5vh;

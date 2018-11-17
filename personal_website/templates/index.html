@@ -76,9 +76,11 @@
 {% endblock footer %}
 
 {% macro card(id, text) -%}
-				<div class="card">
-					<div class="card-bg" id="{{ id }}"></div>
-					<div class="card-bg-alt" id="{{ id }}Alt"></div>
+				<div class="card-wrap">
 					<a href="{{ url_for('blog_by_category', category=text) }}" class="button-link">{{ text }}</a>
+					<div class="card">
+						<div class="card-bg" id="{{ id }}"></div>
+						<div class="card-bg-alt" id="{{ id }}Alt"></div>
+					</div>
 				</div>
 {%- endmacro %}
