@@ -81,7 +81,7 @@ h1 {
     padding-bottom: 2vh;
     padding-left: 3vh;
     padding-right: 3vh;
-    transition: color 0.5s, background-color 0.5s, visibility 0.5s, opacity 0.5s;
+    transition: color 0.5s, background-color 0.5s, opacity 0.5s;
 }
 .button-link:hover {
     background-color: var(--primary-color);
@@ -198,13 +198,4 @@ h1 {
 }
 #divLinkedin:hover {
     background-image: url('../images/In-White-34px-R.png');
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to: {
-        opacity: 1;
-    }
 }
