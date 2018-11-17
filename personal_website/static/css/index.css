@@ -11,15 +11,13 @@ body {
     margin: 0;
     scroll-behavior: smooth;
     text-align: center;
+    box-sizing: border-box;
 }
 section {
     padding-top: 10vh;
-    padding-bottom: 5vh;
-    padding-right: 2vh;
-    padding-left: 2vh;
+    padding-bottom: 10vh;
     margin-left: var(--margin);
     margin-right: var(--margin);
-    box-sizing: border-box;
 }
 footer {
     margin-left: var(--margin);
@@ -30,7 +28,6 @@ nav {
     display: flex;
     position: sticky;
     top: 0px;
-    height: 7vh;
     padding-left: var(--margin);
     padding-right: var(--margin);
     text-align: left;
@@ -46,9 +43,36 @@ p {
     color: var(--text-color);
 }
 
-.container {
+.grid-container {
     display: grid;
-    grid-auto-rows: minmax(100vh, auto);
+    grid-template-columns: 100%;
+    grid-template-areas:
+        "home"
+        "navbar"
+        "blog"
+        "about"
+        "footer";
+    grid-template-rows:
+        [home] 100vh
+        [navbar] 7vh
+        [blog] minmax(100vh, auto)
+        [about] minmax(100vh, auto)
+        [footer] 25vh;
+}
+nav {
+    grid-area: navbar;
+}
+section #home {
+    grid-area: home;
+}
+section #blog {
+    grid-area: blog;
+}
+section #about {
+    grid-area: about;
+}
+footer {
+    grid-area: footer;
 }
 .flex {
     display: flex;
@@ -57,11 +81,11 @@ p {
     align-items: center;
 }
 .intro-wrap {
-    transform: translate(0vh, -10vh);
+    /* transform: translate(0vh, -10vh); */
 }
 .intro {
     font-size: 42px;
-    margin-top: 0;
+    /* margin-top: 15%; */
 }
 .nav-link {
     display: flex;

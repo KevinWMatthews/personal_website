@@ -11,9 +11,15 @@
 {% endblock deferred_scripts %}
 
 {% block navbar %}{# Navbar is in the content of the page #}{% endblock navbar %}
+
 {% block header %}{% endblock header %}
 {% block content %}
-	<div class="container">
+		<nav id="nav">
+			<a href="#home" class="nav-link local-link active">Home</a>
+			<a href="#blog" class="nav-link local-link">Blog</a>
+			<a href="#about" class="nav-link local-link">About</a>
+		</nav>
+
 		<section id="home">
 			<div class="intro-wrap">
 				<p class="intro">Hello! I'm Kevin.<br>
@@ -21,12 +27,6 @@
 				<a href="#blog" class="button-link local-link">Learn more</a>
 			</div>
 		</section>
-
-		<nav id="nav">
-			<a href="#home" class="nav-link local-link active">Home</a>
-			<a href="#blog" class="nav-link local-link">Blog</a>
-			<a href="#about" class="nav-link local-link">About</a>
-		</nav>
 
 		<section id="blog">
 			<div>
@@ -52,7 +52,6 @@
 					of what I deploy so I aspire to a high level of crafstmanship.</p>
 			</div>
 		</section>
-	</div>
 {% endblock content %}
 
 {% block footer %}
