@@ -27,16 +27,16 @@ footer {
     border-top: 1px solid var(--nav-color);
 }
 nav {
+    display: flex;
     top: 0px;
     position: sticky;
     padding-left: var(--margin);
     padding-right: var(--margin);
-    box-sizing: border-box;
     height: 7vh;
     background-color: var(--nav-color);
     z-index: 99;
     text-align: left;
-    overflow: hidden;
+    align-items: center;
 }
 h1 {
     font-size: 26pt;
@@ -57,18 +57,15 @@ p {
     font-size: 42px;
     margin-top: 0;
 }
-.nav-link-wrap {
-    position: relative;
-    top: 50%;
-    transform: translate(0, -50%);
-}
 .nav-link {
-    position: relative;
+    display: flex;
     color: var(--background-color);
     text-decoration-line: none;
     transition: all 0.5s;
     font-size: 24px;
     padding-left: 3vh;
+    height: 100%;
+    align-items: center;
     padding-right: 3vh;
     left: 1vh;
 }
