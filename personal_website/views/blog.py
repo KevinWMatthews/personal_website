@@ -74,19 +74,19 @@ all_blog_posts = [
 def blog_home():
     return render_template('blog_home.html', posts=all_blog_posts)
 
-@app.route('/blog/<post>', methods=['GET'])
+@app.route('/blog/<post>.html', methods=['GET'])
 def blog_post(post):
     return render_template('{}.html'.format(post))
 
-@app.route('/blog/about-me', methods=['GET'])
+@app.route('/blog/about-me.html', methods=['GET'])
 def about_me():
     return render_template('blog_about_me.html')
 
-@app.route('/blog/about-this-blog', methods=['GET'])
+@app.route('/blog/about-this-blog.html', methods=['GET'])
 def blog_about():
     return render_template('blog_about.html')
 
-@app.route('/blog/category/<category>', methods=['GET'])
+@app.route('/blog/category/<category>.html', methods=['GET'])
 def blog_by_category(category):
     # Convert to database - do this just to get off the ground.
     # Sanitize input!!
