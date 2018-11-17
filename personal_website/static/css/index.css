@@ -1,7 +1,9 @@
 :root {
     --primary-color: black;
+    --text-color: black;
+    --nav-color: black;
+    --border-color: black;
     --background-color: white;
-    --highlight-color: blue;
     --margin: 10%;
 }
 
@@ -22,7 +24,7 @@ section {
 footer {
     margin-left: var(--margin);
     margin-right: var(--margin);
-    border-top: 1px solid var(--primary-color);
+    border-top: 1px solid var(--nav-color);
 }
 nav {
     top: 0px;
@@ -31,13 +33,18 @@ nav {
     padding-right: var(--margin);
     box-sizing: border-box;
     height: 7vh;
-    background-color: var(--primary-color);
+    background-color: var(--nav-color);
     z-index: 99;
     text-align: left;
 }
 h1 {
     font-size: 26pt;
+    color: var(--text-color);
 }
+p {
+    color: var(--text-color);
+}
+
 
 .full-height {
     height: 100vh;
@@ -68,13 +75,13 @@ h1 {
     text-decoration: underline;
 }
 .nav-link.active {
-    background-color: var(--highlight-color);
+    background-color: var(--primary-color);
     color: var(--background-color);
 }
 .button-link {
-    color: var(--primary-color);
+    color: var(--text-color);
     background-color: var(--background-color);
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--border-color);
     font-size: 16px;
     text-decoration: none;
     padding-top: 2vh;
@@ -146,7 +153,7 @@ h1 {
 .icon-link {
     width: 64px;
     height: 64px;
-    border: 1px black solid;
+    border: 1px var(--border-color) solid;
     background-position: center;
     background-size: auto;
     background-repeat: no-repeat;
