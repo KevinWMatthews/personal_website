@@ -98,10 +98,14 @@ function change_background_color(picker) {
   root.style.setProperty('--background-color', '#' + picker.toString());
 }
 
+let modal = document.getElementById('colorpicker_modal');
+let modal_close = document.getElementById('colorpicker_close');
 let tst = document.getElementById('tst');
 tst.addEventListener('click', function(ev) {
   console.log('click');
-  let hi = document.getElementById('hi');
-  console.log(hi);
-  hi.showModal();
+  modal.style.display = 'block';
+});
+modal_close.addEventListener('click', () => {
+  console.log('close');
+  modal.style.display = 'none'
 });

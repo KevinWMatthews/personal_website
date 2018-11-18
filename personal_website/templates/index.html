@@ -7,6 +7,7 @@
 {% endblock styles %}
 
 {% block deferred_scripts %}
+	<script defer src="{{ url_for('static', filename='jscolor-2.0.5/jscolor.js') }}"></script>
 	<script defer src="{{ url_for('static', filename='index.js') }}"></script>
 {% endblock deferred_scripts %}
 
@@ -20,11 +21,39 @@
 			<a href="#about" class="nav-link local-link">About</a>
 		</nav>
 
+		<dialog id="hi">
+			<p>hi</p>
+		</dialog>
+
+		<div id="colorpicker_modal" class="modal">
+			<div class="modal-content">
+				<span id="colorpicker_close" class="close">&times;</span>
+				<p>modal text here</p>
+			</div>
+		</div>
+
 		<section id="home">
 			<div class="intro-wrap">
 				<p class="intro">Hello! I'm Kevin.<br>
 				 I like to write code.</p>
 				<a href="#blog" class="button-link local-link">Learn more</a>
+				<button type="button" name="button" id="tst">tst</button>
+				<p>
+					<label>Highlight</label>
+					<input id="color_highlight" class="jscolor {onFineChange:'change_text_color(this)'}">
+				</p>
+				<p>
+					<label>Text</label>
+					<input id="color_text" class="jscolor {onFineChange:'change_text_color(this)'}">
+				</p>
+				<p>
+					<label>Nav Bar</label>
+					<input id="color_nav" class="jscolor {onFineChange:'change_nav_color(this)'}">
+				</p>
+				<p>
+					<label>Background</label>
+					<input id="color_bg" class="jscolor {onFineChange:'change_background_color(this)'}">
+				</p>
 			</div>
 		</section>
 
