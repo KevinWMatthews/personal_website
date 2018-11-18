@@ -69,6 +69,10 @@ window.addEventListener('load', () => {
   let picker = document.getElementById('color_primary');
   picker.value = color;
 
+  color = root_style.getPropertyValue('--secondary-color');
+  picker = document.getElementById('color_secondary');
+  picker.value = color;
+
   color = root_style.getPropertyValue('--nav-color');
   picker = document.getElementById('color_nav');
   picker.value = color;
