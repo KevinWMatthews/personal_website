@@ -28,17 +28,17 @@ window.addEventListener('scroll', function(ev) {
   }
 });
 
-// Update visual effects for active nav link, if needed
-let active_link_index = 0;
+// Update visual effects for current nav link, if needed
+let current_link_index = 0;
 function updateNavLinks(scroll_pos) {
-  let current_link_index = getCurrentNavLinkIndex(scroll_pos);
-  if (active_link_index != current_link_index) {
-    active_link_index = current_link_index;
-    highlightNavLink(active_link_index);
+  let new_index = getCurrentNavLinkIndex(scroll_pos);
+  if (current_link_index != new_index) {
+    current_link_index = new_index;
+    highlightNavLink(current_link_index);
   }
 }
 
-// Determine which nav link is active based on scroll position
+// Determine which nav link should be highlighted based on scroll position
 // Sections must be in the same order as their respective nav links!
 let sections = document.getElementsByTagName('section');
 function getCurrentNavLinkIndex(scroll_pos) {
@@ -52,13 +52,14 @@ function getCurrentNavLinkIndex(scroll_pos) {
   return index;
 }
 
-// Highlight active nav link
-let nav_links = document.getElementsByClassName('nav-link');
-function highlightNavLink(active_index) {
+// Highlight current nav link
+let nav_links = document.querySelectorAll('nav > a');
+console.log(nav_links);
+function highlightNavLink(current_index) {
   for (link of nav_links) {
-    link.classList.remove('active');
+    link.classList.remove('current');
   }
-  nav_links[active_index].classList.add('active');
+  nav_links[current_index].classList.add('current');
 }
 
 // Colorpickers

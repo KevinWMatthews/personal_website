@@ -55,7 +55,6 @@ strong {
     color: var(--text-color);
 }
 
-/* Specific classes */
 .nav-wrap {
     position: relative;
     top: 50%;

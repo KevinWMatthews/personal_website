@@ -154,14 +154,14 @@ nav > button {
 nav > a:hover, nav > a:focus {
     color: var(--primary-color);
 }
-.nav-link.active {
+.current {
     background-color: var(--primary-color);
     color: var(--background-color);
 }
-.nav-link.active:hover {
+.current:hover {
     background-color: var(--primary-color);
 }
-.nav-link.active:focus {
+.current:focus {
     color: var(--secondary-color);
 }
 
