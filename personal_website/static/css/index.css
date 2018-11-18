@@ -45,6 +45,41 @@ h1 {
 p {
     color: var(--text-color);
 }
+a {
+    text-decoration: none;
+    outline: none;
+}
+a:hover, a:focus {
+    text-decoration: underline;
+}
+.local-link:hover, .local-link:focus {
+    text-decoration: none;
+}
+button {
+    color: var(--primary-color);
+    box-sizing: border-box;
+    background-color: var(--background-color);
+    font-family: Arial sans-serif;
+    font-size: 16px;
+    padding-top: 0.8rem;
+    padding-right: 1.1rem;
+    padding-bottom: 0.8rem;
+    padding-left: 1.1rem;
+    transition: color 0.5s, background-color 0.5s;
+    border: 1px solid var(--primary-color);
+}
+button:hover {
+    color: var(--background-color);
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+button:focus {
+    outline: 2px solid var(--secondary-color);
+}
+button::-moz-focus-inner {
+    border:0;
+}
+
 
 .grid-container {
     display: grid;
@@ -101,16 +136,38 @@ footer {
     padding-right: 3vh;
     align-items: center;
     font-size: 24px;
-    text-decoration-line: none;
     color: var(--background-color);
     transition: all 0.5s;
 }
-.nav-link:hover {
-    text-decoration: underline;
+.nav-link:hover, .nav-link:focus {
+    color: var(--primary-color);
 }
 .nav-link.active {
     background-color: var(--primary-color);
     color: var(--background-color);
+}
+.nav-link.active:hover {
+    background-color: var(--primary-color);
+}
+.nav-link.active:focus {
+    color: var(--secondary-color);
+}
+
+.nav-size {
+    display: flex;
+    font-size: 24px;
+    padding-right: 3vh;
+    padding-left: 3vh;
+    height: 100%;
+}
+nav > button {
+    position: absolute;
+    right: var(--margin);
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: var(--nav-color);
+    color: var(--background-color);
+    border: none;
 }
 .button-link {
     color: var(--primary-color);
@@ -130,9 +187,11 @@ footer {
     color: var(--background-color);
     background-color: var(--primary-color);
 }
-.button-link:active {
+.button-link:focus {
     outline: 2px solid var(--secondary-color);
+    text-decoration: unerline;
 }
+
 .card-wrap {
     width: 200px;
     height: 300px;
@@ -304,24 +363,4 @@ footer {
 .close:focus {
     color: black;
     cursor: pointer;
-}
-button {
-    color: var(--primary-color);
-    box-sizing: border-box;
-    background-color: var(--background-color);
-    font-family: Arial sans-serif;
-    font-size: 16px;
-    padding-top: 0.8rem;
-    padding-right: 1.1rem;
-    padding-bottom: 0.8rem;
-    padding-left: 1.1rem;
-    transition: color 0.5s, background-color 0.5s;
-    border: 1px solid var(--primary-color);
-}
-button:hover {
-    color: var(--background-color);
-    background-color: var(--primary-color);
-}
-button:active {
-    outline: 2px solid var(--secondary-color);
 }
