@@ -22,7 +22,7 @@
         [about] minmax(100vh, auto)
         [footer] 25vh;
 }
-.about-grid {
+.grid-about {
     display: grid;
     grid-template-columns: minmax(0, 70vh);
     justify-content: center;
