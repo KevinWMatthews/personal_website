@@ -157,7 +157,14 @@ nav > button {
     border: none;
 }
 nav > a:hover, nav > a:focus {
-    color: var(--primary-color);
+    color: var(--secondary-color);
+}
+nav > button:hover {
+    color: var(--secondary-color);
+}
+nav > button:focus {
+    color: var(--secondary-color);
+    outline: none;
 }
 .nav-current {
     background-color: var(--primary-color);
