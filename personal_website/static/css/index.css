@@ -64,7 +64,7 @@ footer {
     grid-area: bg;
 }
 
-html  {
+html {
     scroll-behavior: smooth;
 }
 body {
