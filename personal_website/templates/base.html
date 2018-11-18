@@ -3,7 +3,11 @@
 <head>
 	<meta content-type="text/html" charset="utf-8">
 	{%- block styles %}{% endblock styles %}
-	<title>{% block title %}{% endblock title %}</title>
+	<title>
+		{%- block title %}{% endblock title %}
+		{%- if self.title() %} - {% endif -%}
+		kevinwmatthews.com
+	</title>
 	{%- block deferred_scripts %}{% endblock deferred_scripts %}
 </head>
 <body>
