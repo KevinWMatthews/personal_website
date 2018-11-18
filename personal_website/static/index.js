@@ -57,9 +57,9 @@ let nav_links = document.querySelectorAll('nav > a');
 console.log(nav_links);
 function highlightNavLink(current_index) {
   for (link of nav_links) {
-    link.classList.remove('current');
+    link.classList.remove('nav-current');
   }
-  nav_links[current_index].classList.add('current');
+  nav_links[current_index].classList.add('nav-current');
 }
 
 // Colorpickers

@@ -137,14 +137,14 @@ nav > button {
 nav > a:hover, nav > a:focus {
     color: var(--primary-color);
 }
-.current {
+.nav-current {
     background-color: var(--primary-color);
     color: var(--background-color);
 }
-.current:hover {
+.nav-current:hover {
     background-color: var(--primary-color);
 }
-.current:focus {
+.nav-current:focus {
     color: var(--secondary-color);
 }
 .flex {
