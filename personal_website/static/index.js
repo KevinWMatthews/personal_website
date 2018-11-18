@@ -54,7 +54,6 @@ function getCurrentNavLinkIndex(scroll_pos) {
 
 // Highlight current nav link
 let nav_links = document.querySelectorAll('nav > a');
-console.log(nav_links);
 function highlightNavLink(current_index) {
   for (link of nav_links) {
     link.classList.remove('nav-current');
