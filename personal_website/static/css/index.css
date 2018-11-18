@@ -290,9 +290,9 @@ nav > a:hover, nav > a:focus {
 }
 .modal-content {
     position: relative;
-    margin: 25% auto;
+    margin: 15% auto;
     border: 1px solid var(--nav-color);
-    width: 50%;
+    width: 350px;
     background-color: var(--background-color);
 }
 .modal-header {
