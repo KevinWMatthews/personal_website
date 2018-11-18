@@ -103,6 +103,7 @@ function change_background_color(picker) {
 let modal_show = document.getElementById('btn_show_color');
 modal_show.addEventListener('click', (ev) => {
   modal.style.display = 'block';
+  modal.style.backgroundColor = 'rgba(0, 0, 0, 0.25)';
 });
 
 let modal = document.getElementById('modal_colorpicker');
@@ -118,4 +119,13 @@ modal_close.addEventListener('click', (ev) => {
 let modal_x = document.getElementById('span_close_colorpicker');
 modal_x.addEventListener('click', (ev) => {
   modal.style.display = 'none';
+});
+
+window.addEventListener('mousedown', (ev) => {
+  if (document.getElementsByClassName('jscolor-active').length > 0) {
+    modal.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+  }
+  else {
+    modal.style.backgroundColor = 'rgba(0, 0, 0, 0.25)';
+  }
 });
