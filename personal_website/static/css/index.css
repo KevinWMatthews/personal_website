@@ -93,6 +93,7 @@ nav {
     text-align: left;
     align-items: center;
     background-color: var(--nav-color);
+    border-bottom: 3px solid var(--secondary-color);
     z-index: 1;
 }
 h1 {
