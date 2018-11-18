@@ -6,6 +6,42 @@
     --nav-color: black;
     --margin: 10%;
 }
+.grid-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas:
+        "home"
+        "navbar"
+        "blog"
+        "about"
+        "footer";
+    grid-template-rows:
+        [home] 100vh
+        [navbar] 7vh
+        [blog] minmax(100vh, auto)
+        [about] minmax(100vh, auto)
+        [footer] 25vh;
+}
+.about-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 70vh);
+    justify-content: center;
+}
+nav {
+    grid-area: navbar;
+}
+section #home {
+    grid-area: home;
+}
+section #blog {
+    grid-area: blog;
+}
+section #about {
+    grid-area: about;
+}
+footer {
+    grid-area: footer;
+}
 
 html  {
     scroll-behavior: smooth;
@@ -52,9 +88,6 @@ a {
 a:hover, a:focus {
     text-decoration: underline;
 }
-.local-link:hover, .local-link:focus {
-    text-decoration: none;
-}
 button {
     color: var(--primary-color);
     box-sizing: border-box;
@@ -78,56 +111,6 @@ button:focus {
 }
 button::-moz-focus-inner {
     border:0;
-}
-
-
-.grid-container {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-areas:
-        "home"
-        "navbar"
-        "blog"
-        "about"
-        "footer";
-    grid-template-rows:
-        [home] 100vh
-        [navbar] 7vh
-        [blog] minmax(100vh, auto)
-        [about] minmax(100vh, auto)
-        [footer] 25vh;
-}
-nav {
-    grid-area: navbar;
-}
-section #home {
-    grid-area: home;
-}
-section #blog {
-    grid-area: blog;
-}
-section #about {
-    grid-area: about;
-}
-footer {
-    grid-area: footer;
-}
-
-.about-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 70vh);
-    justify-content: center;
-}
-.flex {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-.intro {
-    font-size: 42px;
-    margin-top: 15%;
-    color: var(--text-color);
 }
 nav > a, nav > button {
     display: flex;
@@ -164,14 +147,19 @@ nav > a:hover, nav > a:focus {
 .current:focus {
     color: var(--secondary-color);
 }
-
-#btn_show_color {
-    /* Reduce padding on left to account for specific gear image */
-    padding-left: 2vh;
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
-#gear {
-    width: 4vh;
-    height: 4vh;
+.intro {
+    font-size: 42px;
+    margin-top: 15%;
+    color: var(--text-color);
+}
+.local-link:hover, .local-link:focus {
+    text-decoration: none;
 }
 .button-link {
     color: var(--primary-color);
@@ -195,7 +183,6 @@ nav > a:hover, nav > a:focus {
     outline: 2px solid var(--secondary-color);
     text-decoration: unerline;
 }
-
 .card-wrap {
     width: 200px;
     height: 300px;
@@ -264,47 +251,7 @@ nav > a:hover, nav > a:focus {
 .footnote {
     margin-bottom: 10vh;
 }
-
-#div_c_bg {
-    background-image: url('../images/c-logo-119x128-blk.png');
-}
-#div_c_bg_alt {
-    background-image: url('../images/c-logo-119x128.png');
-}
-#div_python_bg {
-    background-image: url('../images/python-logo-128x128-blk.png');
-}
-#div_python_bg_alt {
-    background-image: url('../images/python-logo-128x128.png');
-}
-#div_rust_bg {
-    background-image: url('../images/rust-logo-128x128-blk-v2.png');
-}
-#div_rust_bg_alt {
-    background-image: url('../images/rust-logo-128x128.png');
-}
-#div_css_bg {
-    background-image: url('../images/css3-logo-91x128-blk.png');
-}
-#div_css_bg_alt {
-    background-image: url('../images/css3-logo-91x128.png');
-}
-#div_github {
-    background-image: url('../images/GitHub-Mark-32px.png');
-}
-#div_github:hover {
-    background-image: url('../images/GitHub-Mark-Light-32px.png');
-}
-#div_linkedin {
-    background-image: url('../images/In-Black-34px-R.png');
-    /* Compensate for the "registered" symbol when centering horizontally */
-    background-position: 68%;
-}
-#div_linkedin:hover {
-    background-image: url('../images/In-White-34px-R.png');
-}
 .modal {
-    /* display: block; */
     display: none;
     position: fixed;
     z-index: 2;
@@ -361,10 +308,55 @@ nav > a:hover, nav > a:focus {
     font-weight: bold;
 }
 .modal-footer .close {
-
 }
 .close:hover,
 .close:focus {
     color: black;
     cursor: pointer;
+}
+#div_c_bg {
+    background-image: url('../images/c-logo-119x128-blk.png');
+}
+#div_c_bg_alt {
+    background-image: url('../images/c-logo-119x128.png');
+}
+#div_python_bg {
+    background-image: url('../images/python-logo-128x128-blk.png');
+}
+#div_python_bg_alt {
+    background-image: url('../images/python-logo-128x128.png');
+}
+#div_rust_bg {
+    background-image: url('../images/rust-logo-128x128-blk-v2.png');
+}
+#div_rust_bg_alt {
+    background-image: url('../images/rust-logo-128x128.png');
+}
+#div_css_bg {
+    background-image: url('../images/css3-logo-91x128-blk.png');
+}
+#div_css_bg_alt {
+    background-image: url('../images/css3-logo-91x128.png');
+}
+#div_github {
+    background-image: url('../images/GitHub-Mark-32px.png');
+}
+#div_github:hover {
+    background-image: url('../images/GitHub-Mark-Light-32px.png');
+}
+#div_linkedin {
+    background-image: url('../images/In-Black-34px-R.png');
+    /* Compensate for the "registered" symbol when centering horizontally */
+    background-position: 68%;
+}
+#div_linkedin:hover {
+    background-image: url('../images/In-White-34px-R.png');
+}
+#btn_show_color {
+    /* Reduce padding on left to account for specific gear image */
+    padding-left: 2vh;
+}
+#gear {
+    width: 4vh;
+    height: 4vh;
 }
