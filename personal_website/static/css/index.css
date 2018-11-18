@@ -129,17 +129,29 @@ footer {
     margin-top: 15%;
     color: var(--text-color);
 }
-.nav-link {
+nav > a, nav > button {
     display: flex;
-    height: 100%;
-    padding-left: 3vh;
-    padding-right: 3vh;
-    align-items: center;
     font-size: 24px;
+    padding-right: 3vh;
+    padding-left: 3vh;
+    height: 100%;
     color: var(--background-color);
     transition: all 0.5s;
 }
-.nav-link:hover, .nav-link:focus {
+nav > a {
+    align-items: center;
+    font-size: 24px;
+}
+nav > button {
+    position: absolute;
+    right: var(--margin);
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: var(--nav-color);
+    color: var(--background-color);
+    border: none;
+}
+nav > a:hover, nav > a:focus {
     color: var(--primary-color);
 }
 .nav-link.active {
@@ -153,22 +165,6 @@ footer {
     color: var(--secondary-color);
 }
 
-.nav-size {
-    display: flex;
-    font-size: 24px;
-    padding-right: 3vh;
-    padding-left: 3vh;
-    height: 100%;
-}
-nav > button {
-    position: absolute;
-    right: var(--margin);
-    padding-top: 0;
-    padding-bottom: 0;
-    background-color: var(--nav-color);
-    color: var(--background-color);
-    border: none;
-}
 #btn_show_color {
     /* Reduce padding on left to account for specific gear image */
     padding-left: 2vh;
