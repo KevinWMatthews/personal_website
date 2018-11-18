@@ -231,10 +231,14 @@ nav > a:hover, nav > a:focus {
 .footer-wrap {
     margin-top: 5vh;
 }
-.icon {
-    margin: 1vh;
-}
 .icon-link {
+    margin: 1vh;
+    position: relative;
+}
+.icon-link:focus {
+    outline: 2px solid var(--secondary-color);
+}
+.icon-image {
     width: 64px;
     height: 64px;
     border: 1px var(--primary-color) solid;
@@ -244,7 +248,7 @@ nav > a:hover, nav > a:focus {
     background-color: var(--background-color);
     transition: background-color 0.5s ease-in-out;
 }
-.icon-link:hover {
+.icon-image:hover {
     background-color: var(--primary-color);
     transition-delay: 0.1s;
 }
