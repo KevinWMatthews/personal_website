@@ -21,40 +21,13 @@
 			<a href="#about" class="nav-link local-link">About</a>
 		</nav>
 
-		<dialog id="hi">
-			<p>hi</p>
-		</dialog>
-
-		<div id="colorpicker_modal" class="modal">
-			<div class="modal-content">
-				<span id="colorpicker_close" class="close">&times;</span>
-				<p>modal text here</p>
-			</div>
-		</div>
-
 		<section id="home">
 			<div class="intro-wrap">
 				<p class="intro">Hello! I'm Kevin.<br>
 				 I like to write code.</p>
 				<a href="#blog" class="button-link local-link">Learn more</a>
-				<button type="button" name="button" id="tst">tst</button>
-				<p>
-					<label>Highlight</label>
-					<input id="color_highlight" class="jscolor {onFineChange:'change_text_color(this)'}">
-				</p>
-				<p>
-					<label>Text</label>
-					<input id="color_text" class="jscolor {onFineChange:'change_text_color(this)'}">
-				</p>
-				<p>
-					<label>Nav Bar</label>
-					<input id="color_nav" class="jscolor {onFineChange:'change_nav_color(this)'}">
-				</p>
-				<p>
-					<label>Background</label>
-					<input id="color_bg" class="jscolor {onFineChange:'change_background_color(this)'}">
-				</p>
-			</div>
+				<button type="button" name="button" id="btn_show_color">Color</button>
+				</div>
 		</section>
 
 		<section id="blog">
@@ -82,6 +55,39 @@
 				be proud of what I deploy.</p>
 			</div>
 		</section>
+
+		<div id="modal_colorpicker" class="modal">
+			<div class="modal-content">
+				<div class="modal-header">
+					<span class="modal-title">Title</span><span id="span_close_colorpicker" class="close">&times;</span>
+				</div>
+				<div class="modal-body">
+					<p>
+						<label for="color_primary">Primary</label>
+						<input id="color_primary" class="jscolor {onFineChange:'change_primary_color(this)'}">
+					</p>
+					<p>
+						<label for="color_secondary">Secondary</label>
+						<input id="color_secondary" class="jscolor {onFineChange:'change_secondary_color(this)'}">
+					</p>
+					<p>
+						<label for="color_text">Text</label>
+						<input id="color_text" class="jscolor {onFineChange:'change_text_color(this)'}">
+					</p>
+					<p>
+						<label for="color_nav">Border/Nav Bar</label>
+						<input id="color_nav" class="jscolor {onFineChange:'change_nav_color(this)'}">
+					</p>
+					<p>
+						<label for="color_bg">Background</label>
+						<input id="color_bg" class="jscolor {onFineChange:'change_background_color(this)'}">
+					</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" id="btn_close_colorpicker" class="button">Close</button>
+				</div>
+			</div>
+		</div>
 {% endblock content %}
 
 {% block footer %}

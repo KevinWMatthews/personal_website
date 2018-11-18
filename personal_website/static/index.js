@@ -66,7 +66,7 @@ window.addEventListener('load', () => {
   let root_style = getComputedStyle(document.documentElement);
 
   let color = root_style.getPropertyValue('--primary-color');
-  let picker = document.getElementById('color_highlight');
+  let picker = document.getElementById('color_primary');
   picker.value = color;
 
   color = root_style.getPropertyValue('--nav-color');
@@ -83,10 +83,11 @@ window.addEventListener('load', () => {
 });
 
 let root = document.documentElement;
-let highlight = root.style.getPropertyValue('--primary-color');
-console.log(highlight);
 function change_primary_color(picker) {
   root.style.setProperty('--primary-color', '#' + picker.toString());
+}
+function change_secondary_color(picker) {
+  root.style.setProperty('--secondary-color', '#' + picker.toString());
 }
 function change_text_color(picker) {
   root.style.setProperty('--text-color', '#' + picker.toString());
@@ -98,14 +99,21 @@ function change_background_color(picker) {
   root.style.setProperty('--background-color', '#' + picker.toString());
 }
 
-let modal = document.getElementById('colorpicker_modal');
-let modal_close = document.getElementById('colorpicker_close');
-let tst = document.getElementById('tst');
-tst.addEventListener('click', function(ev) {
-  console.log('click');
+let modal = document.getElementById('modal_colorpicker');
+let modal_x = document.getElementById('span_close_colorpicker');
+let modal_close = document.getElementById('btn_close_colorpicker');
+let show_color = document.getElementById('btn_show_color');
+show_color.addEventListener('click', function(ev) {
   modal.style.display = 'block';
 });
 modal_close.addEventListener('click', () => {
-  console.log('close');
-  modal.style.display = 'none'
+  modal.style.display = 'none';
+});
+modal_x.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+window.addEventListener('click', (ev) => {
+  if (ev.target == modal) {
+    modal.style.display = 'none';
+  }
 });

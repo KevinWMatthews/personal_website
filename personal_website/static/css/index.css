@@ -1,6 +1,7 @@
 :root {
     --background-color: white;
     --primary-color: grey;
+    --secondary-color: lightgrey;
     --text-color: black;
     --nav-color: black;
     --margin: 10%;
@@ -113,19 +114,24 @@ footer {
 }
 .button-link {
     color: var(--primary-color);
+    box-sizing: border-box;
     background-color: var(--background-color);
-    border: 1px solid var(--primary-color);
+    font-family: Arial sans-serif;
     font-size: 16px;
     text-decoration: none;
-    padding-top: 2vh;
-    padding-bottom: 2vh;
-    padding-left: 3vh;
-    padding-right: 3vh;
+    padding-top: 0.8rem;
+    padding-right: 1.1rem;
+    padding-bottom: 0.8rem;
+    padding-left: 1.1rem;
+    border: 1px solid var(--primary-color);
     transition: color 0.5s, background-color 0.5s, opacity 0.5s;
 }
 .button-link:hover {
     color: var(--background-color);
     background-color: var(--primary-color);
+}
+.button-link:active {
+    outline: 2px solid var(--secondary-color);
 }
 .card-wrap {
     width: 200px;
@@ -235,6 +241,7 @@ footer {
     background-image: url('../images/In-White-34px-R.png');
 }
 .modal {
+    /* display: block; */
     display: none;
     position: fixed;
     z-index: 2;
@@ -247,10 +254,74 @@ footer {
     background-color: rgba(0, 0, 0, 0.25);
 }
 .modal-content {
-    /* margin: 25% auto; */
-    /* padding: 0; */
-    border: 1px solid var(--border-color);
+    position: relative;
+    margin: 25% auto;
+    border: 1px solid var(--nav-color);
     width: 50%;
+    background-color: var(--background-color);
 }
-.close {
+.modal-header {
+    text-align: left;
+    padding-top: 0.5rem;
+    padding-right: 1rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    line-height: 1.5;
+    border-bottom: 1px solid var(--nav-color);
+}
+.modal-body {
+    padding-top: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    text-align: left;
+}
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    border-top: 1px solid var(--nav-color);
+}
+.modal-title {
+    font-weight: bold;
+}
+.modal-header .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-right: 0.5rem;
+    color: grey;
+    font-size: 24px;
+    font-weight: bold;
+}
+.modal-footer .close {
+
+}
+.close:hover,
+.close:focus {
+    color: black;
+    cursor: pointer;
+}
+button {
+    color: var(--primary-color);
+    box-sizing: border-box;
+    background-color: var(--background-color);
+    font-family: Arial sans-serif;
+    font-size: 16px;
+    padding-top: 0.8rem;
+    padding-right: 1.1rem;
+    padding-bottom: 0.8rem;
+    padding-left: 1.1rem;
+    transition: color 0.5s, background-color 0.5s;
+    border: 1px solid var(--primary-color);
+}
+button:hover {
+    color: var(--background-color);
+    background-color: var(--primary-color);
+}
+button:active {
+    outline: 2px solid var(--secondary-color);
 }
