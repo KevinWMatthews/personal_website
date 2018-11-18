@@ -60,3 +60,48 @@ function highlightNavLink(active_index) {
   }
   nav_links[active_index].classList.add('active');
 }
+
+// Colorpickers
+window.addEventListener('load', () => {
+  let root_style = getComputedStyle(document.documentElement);
+
+  let color = root_style.getPropertyValue('--primary-color');
+  let picker = document.getElementById('color_highlight');
+  picker.value = color;
+
+  color = root_style.getPropertyValue('--nav-color');
+  picker = document.getElementById('color_nav');
+  picker.value = color;
+
+  color = root_style.getPropertyValue('--text-color');
+  picker = document.getElementById('color_text');
+  picker.value = color;
+
+  color = root_style.getPropertyValue('--background-color');
+  picker = document.getElementById('color_bg');
+  picker.value = color;
+});
+
+let root = document.documentElement;
+let highlight = root.style.getPropertyValue('--primary-color');
+console.log(highlight);
+function change_primary_color(picker) {
+  root.style.setProperty('--primary-color', '#' + picker.toString());
+}
+function change_text_color(picker) {
+  root.style.setProperty('--text-color', '#' + picker.toString());
+}
+function change_nav_color(picker) {
+  root.style.setProperty('--nav-color', '#' + picker.toString());
+}
+function change_background_color(picker) {
+  root.style.setProperty('--background-color', '#' + picker.toString());
+}
+
+let tst = document.getElementById('tst');
+tst.addEventListener('click', function(ev) {
+  console.log('click');
+  let hi = document.getElementById('hi');
+  console.log(hi);
+  hi.showModal();
+});

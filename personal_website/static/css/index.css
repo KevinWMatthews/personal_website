@@ -13,6 +13,7 @@ body {
     margin: 0;
     text-align: center;
     box-sizing: border-box;
+    background-color: var(--background-color);
 }
 section {
     padding-top: 10vh;
@@ -111,7 +112,7 @@ footer {
     color: var(--background-color);
 }
 .button-link {
-    color: var(--text-color);
+    color: var(--primary-color);
     background-color: var(--background-color);
     border: 1px solid var(--primary-color);
     font-size: 16px;
