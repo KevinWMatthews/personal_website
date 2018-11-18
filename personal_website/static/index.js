@@ -99,21 +99,23 @@ function change_background_color(picker) {
   root.style.setProperty('--background-color', '#' + picker.toString());
 }
 
-let modal = document.getElementById('modal_colorpicker');
-let modal_x = document.getElementById('span_close_colorpicker');
-let modal_close = document.getElementById('btn_close_colorpicker');
-let show_color = document.getElementById('btn_show_color');
-show_color.addEventListener('click', function(ev) {
+// Modal show/hide
+let modal_show = document.getElementById('btn_show_color');
+modal_show.addEventListener('click', (ev) => {
   modal.style.display = 'block';
 });
-modal_close.addEventListener('click', () => {
-  modal.style.display = 'none';
-});
-modal_x.addEventListener('click', () => {
-  modal.style.display = 'none';
-});
+
+let modal = document.getElementById('modal_colorpicker');
 window.addEventListener('click', (ev) => {
   if (ev.target == modal) {
     modal.style.display = 'none';
   }
+});
+let modal_close = document.getElementById('btn_close_colorpicker');
+modal_close.addEventListener('click', (ev) => {
+  modal.style.display = 'none';
+});
+let modal_x = document.getElementById('span_close_colorpicker');
+modal_x.addEventListener('click', (ev) => {
+  modal.style.display = 'none';
 });
