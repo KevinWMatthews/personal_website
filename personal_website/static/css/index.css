@@ -169,6 +169,14 @@ nav > button {
     color: var(--background-color);
     border: none;
 }
+#btn_show_color {
+    /* Reduce padding on left to account for specific gear image */
+    padding-left: 2vh;
+}
+#gear {
+    width: 4vh;
+    height: 4vh;
+}
 .button-link {
     color: var(--primary-color);
     box-sizing: border-box;
