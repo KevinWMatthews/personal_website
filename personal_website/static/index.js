@@ -81,6 +81,11 @@ function initialize_colorpicker(picker_id, css_var) {
   picker.addEventListener('input', (ev) => {
     root.style.setProperty(css_var, ev.target.value);
   });
+
+  // Safari doesn't support color pickers but it does fire the change event.
+  picker.addEventListener('change', (ev) => {
+    root.style.setProperty(css_var, ev.target.value);
+  });
 }
 
 // Modal show/hide
