@@ -86,6 +86,11 @@ function initialize_colorpicker(picker_id, css_var) {
   picker.addEventListener('change', (ev) => {
     root.style.setProperty(css_var, ev.target.value);
   });
+
+  let modal = document.getElementById('modal_colorpicker');
+  picker.addEventListener('click', (ev) => {
+    modal.style.backgroundColor = 'rgba(0, 0, 0, 0.0)';
+  })
 }
 
 // Modal show/hide
@@ -108,13 +113,4 @@ modal_close.addEventListener('click', (ev) => {
 let modal_x = document.getElementById('span_close_colorpicker');
 modal_x.addEventListener('click', (ev) => {
   modal.style.display = 'none';
-});
-
-window.addEventListener('mousedown', (ev) => {
-  if (document.getElementsByClassName('jscolor-active').length > 0) {
-    modal.style.backgroundColor = 'rgba(0, 0, 0, 0)';
-  }
-  else {
-    modal.style.backgroundColor = 'rgba(0, 0, 0, 0.25)';
-  }
 });
