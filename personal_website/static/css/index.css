@@ -1,9 +1,11 @@
 :root {
-    --background-color: white;
-    --primary-color: grey;
-    --secondary-color: lightgrey;
-    --text-color: black;
-    --nav-color: black;
+    /* JavaScript treats all characters between ':' and ';' as the color value */
+    /* For ease and speed of parsing, remove all whitespace. */
+    --background-color:#f8f8ff;
+    --primary-color:#696969;
+    --secondary-color:#a9a9a9;
+    --text-color:#000000;
+    --nav-color:#000000;
     --margin: 10%;
 }
 .grid-container {

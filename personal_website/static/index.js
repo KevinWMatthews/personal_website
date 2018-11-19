@@ -63,6 +63,7 @@ function highlightNavLink(current_index) {
 
 // Colorpickers
 window.addEventListener('load', () => {
+  // Set values from CSS. Must wait until styleshees are loaded.
   let root_style = getComputedStyle(document.documentElement);
 
   let color = root_style.getPropertyValue('--primary-color');
