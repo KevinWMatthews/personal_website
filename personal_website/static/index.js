@@ -66,26 +66,18 @@ window.addEventListener('load', () => {
   // Set values from CSS. Must wait until styleshees are loaded.
   let root_style = getComputedStyle(document.documentElement);
 
-  let color = root_style.getPropertyValue('--primary-color');
-  let picker = document.getElementById('color_primary');
-  picker.value = color;
-
-  color = root_style.getPropertyValue('--secondary-color');
-  picker = document.getElementById('color_secondary');
-  picker.value = color;
-
-  color = root_style.getPropertyValue('--nav-color');
-  picker = document.getElementById('color_nav');
-  picker.value = color;
-
-  color = root_style.getPropertyValue('--text-color');
-  picker = document.getElementById('color_text');
-  picker.value = color;
-
-  color = root_style.getPropertyValue('--background-color');
-  picker = document.getElementById('color_bg');
-  picker.value = color;
+  set_colorpicker_from_css(root_style, 'color_primary', '--primary-color');
+  set_colorpicker_from_css(root_style, 'color_secondary', '--secondary-color');
+  set_colorpicker_from_css(root_style, 'color_nav', '--nav-color');
+  set_colorpicker_from_css(root_style, 'color_text', '--text-color');
+  set_colorpicker_from_css(root_style, 'color_bg', '--background-color');
 });
+
+function set_colorpicker_from_css(root_style, picker_id, css_var) {
+  let hex_color = root_style.getPropertyValue(css_var);
+  let picker = document.getElementById(picker_id);
+  picker.value = hex_color;
+}
 
 let root = document.documentElement;
 function change_primary_color(picker) {
