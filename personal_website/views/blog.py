@@ -46,6 +46,12 @@ all_blog_posts = [
     ),
     blog_post.BlogPost(
         '',
+        'CSS Layout',
+        'Coming soon... Boxen!',
+        ['CSS'],
+    ),
+    blog_post.BlogPost(
+        '',
         'TLS in C Using OpenSSL',
         'Coming soon.... Experimental but functional. Based on <a href="https://github.com/KevinWMatthews/c-tls_demo" class="in-text-link">this GitHub repo</a>.',
         ['C', 'Crypto'],
@@ -67,6 +73,12 @@ all_blog_posts = [
         'Parsing Command Line Options in C',
         'Coming soon.... Better than strcmp() on argv. Based on <a href="https://github.com/KevinWMatthews/c-getopt_demo" class="in-text-link">this GitHub repo</a>.',
         ['C'],
+    ),
+    blog_post.BlogPost(
+        '',
+        'Parsing Command Line Options in Bash',
+        'Coming soon.... At some point everyone does it. Why not do it well? Based on <a href="https://github.com/KevinWMatthews/bash-arg_parse" class="in-text-link">this GitHub repo</a>.',
+        ['bash'],
     ),
 ]
 
