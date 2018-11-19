@@ -5,79 +5,97 @@ all_blog_posts = [
     blog_post.BlogPost(
         'hello-world',
         'Hello, World!',
-        'Introduction to this blog.',
+        '''Introduction to this blog.''',
         ['C'],
     ),
     blog_post.BlogPost(
         'c-exit-callbacks',
         'Exit Callbacks using C stdlib',
-        'Construct from this skeleton <a href="https://github.com/KevinWMatthews/c-terminate_program" class="in-text-link">this GitHub repo</a>.',
+        '''Construct from this skeleton
+        <a href="https://github.com/KevinWMatthews/c-terminate_program" class="in-text-link">
+        this GitHub repo</a>.''',
         ['C', 'stdlib'],
     ),
     blog_post.BlogPost(
         '',
         'Test-Driven Design on AVR',
-        'Work in progress... based on <a href="https://github.com/KevinWMatthews/c-libATtiny861" class="in-text-link">this GitHub repo</a>.',
+        '''Work in progress... based on
+        <a href="https://github.com/KevinWMatthews/c-libATtiny861" class="in-text-link">
+        this GitHub repo</a>.''',
         ['C', 'TDD', 'AVR'],
     ),
     blog_post.BlogPost(
         '',
         'C Memory Semantics',
-        'Coming soon.... Dive under the hood. Based on <a href="https://youtu.be/-dc5vqt2tgA" class="in-text-link">this awesome video</a>.',
+        '''Coming soon.... Dive under the hood. Based on
+        <a href="https://youtu.be/-dc5vqt2tgA" class="in-text-link">
+        this awesome video</a>.''',
         ['C', 'Memory'],
     ),
     blog_post.BlogPost(
         '',
         'Rust Memory Semantics',
-        'Coming soon.... Explore how Rust\'s default move semantics differ from C\'s default copy.',
+        '''Coming soon.... Explore how Rust's default move semantics differ from C's default copy.''',
         ['Rust', 'Memory'],
     ),
     blog_post.BlogPost(
         '',
         'Python Language Practices',
-        'Coming soon... Do you follow this core contributor\'s advice? Based on <a href="https://youtu.be/anrOzOapJ2E" class="in-text-link">this talk</a>.',
+        '''Coming soon... Do you follow this core contributor's advice? Based on
+        <a href="https://youtu.be/anrOzOapJ2E" class="in-text-link">
+        this talk</a>.''',
         ['Python'],
     ),
     blog_post.BlogPost(
         '',
         'CSS Effects',
-        'Coming soon... transitions, animations, and general awesomeness.',
+        '''Coming soon... transitions, animations, and general awesomeness.''',
         ['CSS'],
     ),
     blog_post.BlogPost(
         '',
         'CSS Layout',
-        'Coming soon... Boxen!',
+        '''Coming soon... Boxen!''',
         ['CSS'],
     ),
     blog_post.BlogPost(
         '',
         'TLS in C Using OpenSSL',
-        'Coming soon.... Experimental but functional. Based on <a href="https://github.com/KevinWMatthews/c-tls_demo" class="in-text-link">this GitHub repo</a>.',
+        '''Coming soon.... Experimental but functional. Based on
+        <a href="https://github.com/KevinWMatthews/c-tls_demo" class="in-text-link">
+        this GitHub repo</a>.''',
         ['C', 'Crypto'],
     ),
     blog_post.BlogPost(
         '',
         'Simple C Socket Server',
-        'Coming soon.... There\'s client, too. Based on <a href="https://github.com/KevinWMatthews/c-server_demo" class="in-text-link">this GitHub repo</a>.',
+        '''Coming soon.... There's client, too. Based on
+        <a href="https://github.com/KevinWMatthews/c-server_demo" class="in-text-link">
+        this GitHub repo</a>.''',
         ['C'],
     ),
     blog_post.BlogPost(
         '',
         'Varargs (variadics) in C',
-        'Coming soon.... Closest thing to the splat operator that C can provide. Based on <a href="https://github.com/KevinWMatthews/c-varargs_demo" class="in-text-link">this GitHub repo</a>.',
+        '''Coming soon.... Closest thing to the splat operator that C can provide. Based on
+        <a href="https://github.com/KevinWMatthews/c-varargs_demo" class="in-text-link">
+        this GitHub repo</a>.''',
         ['C'],
     ),
     blog_post.BlogPost(
         '',
         'Parsing Command Line Options in C',
-        'Coming soon.... Better than strcmp() on argv. Based on <a href="https://github.com/KevinWMatthews/c-getopt_demo" class="in-text-link">this GitHub repo</a>.',
+        '''Coming soon.... Better than strcmp() on argv. Based on
+        <a href="https://github.com/KevinWMatthews/c-getopt_demo" class="in-text-link">
+        this GitHub repo</a>.''',
         ['C'],
     ),
     blog_post.BlogPost(
         '',
         'Parsing Command Line Options in Bash',
-        'Coming soon.... At some point everyone does it. Why not do it well? Based on <a href="https://github.com/KevinWMatthews/bash-arg_parse" class="in-text-link">this GitHub repo</a>.',
+        '''Coming soon.... At some point everyone does it. Why not do it well? Based on
+        <a href="https://github.com/KevinWMatthews/bash-arg_parse" class="in-text-link">
+        this GitHub repo</a>.''',
         ['bash'],
     ),
 ]
