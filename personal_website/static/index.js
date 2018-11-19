@@ -64,21 +64,20 @@ function highlightNavLink(current_index) {
 // Colorpickers
 window.addEventListener('load', () => {
   // Set values from CSS. Must wait until styleshees are loaded.
-  let root_style = getComputedStyle(document.documentElement);
-
-  initialize_colorpicker(root_style, 'color_primary', '--primary-color');
-  initialize_colorpicker(root_style, 'color_secondary', '--secondary-color');
-  initialize_colorpicker(root_style, 'color_nav', '--nav-color');
-  initialize_colorpicker(root_style, 'color_text', '--text-color');
-  initialize_colorpicker(root_style, 'color_bg', '--background-color');
+  initialize_colorpicker('color_primary', '--primary-color');
+  initialize_colorpicker('color_secondary', '--secondary-color');
+  initialize_colorpicker('color_nav', '--nav-color');
+  initialize_colorpicker('color_text', '--text-color');
+  initialize_colorpicker('color_bg', '--background-color');
 });
 
-function initialize_colorpicker(root_style, picker_id, css_var) {
+function initialize_colorpicker(picker_id, css_var) {
+  let root_style = getComputedStyle(document.documentElement);
   let hex_color = root_style.getPropertyValue(css_var);
   let picker = document.getElementById(picker_id);
   picker.value = hex_color;
 
-  let root = document.documentElement;
+  let root = document.documentElement;    // Somehow this stays in scope...
   picker.addEventListener('input', (ev) => {
     root.style.setProperty(css_var, ev.target.value);
   });
