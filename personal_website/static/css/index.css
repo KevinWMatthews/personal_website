@@ -214,12 +214,12 @@ nav > button:focus {
     outline: 2px solid var(--secondary-color);
     text-decoration: unerline;
 }
-.card-wrap {
+.card {
     width: 200px;
     height: 300px;
     margin: 2vh 2vh 2vh 2vh;
 }
-.card {
+.card-image-wrap {
     position: relative;
     height: 200px;
     width: 200px;
@@ -252,7 +252,7 @@ nav > button:focus {
 .card-image-alt:hover {
     opacity: 1;
 }
-.card-wrap > .button-link {
+.card > .button-link {
     position: relative;
     display: block;
     width: 50%;

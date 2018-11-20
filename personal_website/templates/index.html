@@ -105,9 +105,9 @@
 
 {# 'language' is tightly-coupled for now: db category, user-facing text #}
 {% macro card(id, language) -%}
-				<div class="card-wrap">
+				<div class="card">
 					<a href="{{ url_for('blog_by_category', category=language) }}" class="button-link">{{ language }}</a>
-					<div class="card">
+					<div class="card-image-wrap">
 						<a class="card-image" id="div_{{ id }}_bg" href="{{ url_for('blog_by_category', category=language) }}" tabindex="-1"></a>
 						<a class="card-image-alt" id="div_{{ id }}_bg_alt" href="{{ url_for('blog_by_category', category=language) }}" tabindex="-1"></a>
 					</div>
