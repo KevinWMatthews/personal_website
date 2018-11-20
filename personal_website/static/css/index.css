@@ -215,14 +215,14 @@ nav > button:focus {
     text-decoration: unerline;
 }
 .card {
-    width: 200px;
+    width: 128px;
     height: 300px;
     margin: 2vh 2vh 2vh 2vh;
 }
 .card-image-wrap {
     position: relative;
-    height: 200px;
-    width: 200px;
+    height: 128px;
+    width: 128px;
 }
 .card-image {
     display: block;
@@ -255,7 +255,7 @@ nav > button:focus {
 .card > .button-link {
     position: relative;
     display: block;
-    width: 50%;
+    width: 75%;
     margin-left: auto;
     margin-right: auto;
 }
