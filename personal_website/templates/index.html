@@ -4,6 +4,8 @@
 
 {% block styles %}
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+	      rel="stylesheet">
 {% endblock styles %}
 
 {% block deferred_scripts %}
@@ -27,6 +29,7 @@
 			<a href="#home" class="local-link nav-current">Home</a>
 			<a href="#blog" class="local-link">Blog</a>
 			<a href="#about" class="local-link">About</a>
+			<i class="material-icons">menu</i>
 			<button type="button" id="btn_show_color">
 				<img id="gear" src="{{ url_for('static', filename='images/gear-icon-45x45.png') }}" alt="">
 				&nbsp;Color
