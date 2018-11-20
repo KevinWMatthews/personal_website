@@ -108,8 +108,8 @@
 				<div class="card-wrap">
 					<a href="{{ url_for('blog_by_category', category=language) }}" class="button-link">{{ language }}</a>
 					<div class="card">
-						<a class="card-bg" id="div_{{ id }}_bg" href="{{ url_for('blog_by_category', category=language) }}" tabindex="-1"></a>
-						<a class="card-bg-alt" id="div_{{ id }}_bg_alt" href="{{ url_for('blog_by_category', category=language) }}" tabindex="-1"></a>
+						<a class="card-image" id="div_{{ id }}_bg" href="{{ url_for('blog_by_category', category=language) }}" tabindex="-1"></a>
+						<a class="card-image-alt" id="div_{{ id }}_bg_alt" href="{{ url_for('blog_by_category', category=language) }}" tabindex="-1"></a>
 					</div>
 				</div>
 {%- endmacro %}

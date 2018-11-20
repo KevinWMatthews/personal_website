@@ -224,7 +224,7 @@ nav > button:focus {
     height: 200px;
     width: 200px;
 }
-.card-bg {
+.card-image {
     display: block;
     height: inherit;
     width: inherit;
@@ -235,10 +235,10 @@ nav > button:focus {
     background-repeat: no-repeat;
     margin-top: 5vh;
 }
-.card-bg:hover {
+.card-image:hover {
     opacity: 0;
 }
-.card-bg-alt {
+.card-image-alt {
     display: block;
     height: inherit;
     width: inherit;
@@ -249,7 +249,7 @@ nav > button:focus {
     background-size: contain;
     background-repeat: no-repeat;
 }
-.card-bg-alt:hover {
+.card-image-alt:hover {
     opacity: 1;
 }
 .card-wrap > .button-link {
