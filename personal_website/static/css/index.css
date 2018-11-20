@@ -86,23 +86,30 @@ footer {
     margin-right: var(--margin);
     border-top: 1px solid var(--nav-color);
 }
-@media screen and (min-width: 800px) {
-    #nav_mobile {
-        display: none;
-    }
-}
-
 nav {
     display: flex;
     position: sticky;
     top: 0px;
-    padding-left: var(--margin);
+    height: 50px;
     padding-right: var(--margin);
+    padding-left: var(--margin);
     text-align: left;
     align-items: center;
     background-color: var(--nav-color);
     border-bottom: 3px solid var(--secondary-color);
     z-index: 1;
+}
+@media screen and (min-width: 800px) {
+    #nav_mobile {
+        display: none;
+    }
+}
+#nav_mobile {
+    padding-left: 3%;
+    padding-right: 3%;
+}
+.mdi {
+    font-size: 48px;
 }
 h1 {
     font-size: 26pt;
@@ -145,8 +152,8 @@ button::-moz-focus-inner {
 nav > a, nav > button {
     display: flex;
     font-size: 24px;
-    padding-right: 3vh;
-    padding-left: 3vh;
+    padding-right: 2vw;
+    padding-left: 2vw;
     height: 100%;
     color: var(--background-color);
     transition: all 0.5s;

@@ -3,9 +3,9 @@
 {% block title %}{% endblock title %}
 
 {% block styles %}
-	<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 	      rel="stylesheet">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
 {%- endblock styles %}
 
 {% block deferred_scripts %}
@@ -36,7 +36,7 @@
 		</nav>
 
 		<nav id="nav_mobile">
-			<i class="material-icons">menu</i>
+			<i class="material-icons mdi">menu</i>
 		</nav>
 
 		<section id="blog">
