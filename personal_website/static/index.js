@@ -1,7 +1,7 @@
 // Execute after CSS is loaded
 let nav_height = 0;
 window.addEventListener('load', () => {
-  nav_height = document.getElementById('nav').getBoundingClientRect().height;
+  nav_height = document.getElementById('nav_top').getBoundingClientRect().height;
 });
 
 
