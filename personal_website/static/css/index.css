@@ -86,7 +86,7 @@ footer {
     margin-right: var(--margin);
     border-top: 1px solid var(--nav-color);
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
     #nav_mobile {
         display: none;
     }

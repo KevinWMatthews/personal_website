@@ -6,11 +6,11 @@
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 	      rel="stylesheet">
-{% endblock styles %}
+{%- endblock styles %}
 
 {% block deferred_scripts %}
 	<script defer src="{{ url_for('static', filename='index.js') }}"></script>
-{% endblock deferred_scripts %}
+{%- endblock deferred_scripts %}
 
 {% block navbar %}{# Navbar is in the content of the page #}{% endblock navbar %}
 
