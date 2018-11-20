@@ -214,10 +214,20 @@ nav > button:focus {
     outline: 2px solid var(--secondary-color);
     text-decoration: unerline;
 }
+
+@media screen and (max-width: 1024px) {
+    #blog {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    #card_container {
+        width: 100vw;
+    }
+}
 .card {
     width: 128px;
     height: 300px;
-    margin: 2vh 2vh 2vh 2vh;
+    margin: 2vh 2vw 2vh 2vw;
 }
 .card-image-wrap {
     position: relative;
