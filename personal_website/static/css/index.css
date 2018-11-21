@@ -18,7 +18,7 @@
         "about"
         "footer";
     grid-template-rows:
-        [home] 100vh
+        [home] minmax(100vh, auto)
         [navbar] 7vh
         [blog] minmax(100vh, auto)
         [about] minmax(100vh, auto)
@@ -66,6 +66,33 @@ footer {
     grid-area: bg;
 }
 
+.grid-home {
+    display: grid;
+    grid-template-areas:
+        "intro"
+        "learn_more";
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+@media screen and (max-height: 300px) {
+    .grid-home {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+.intro {
+    grid-area: intro;
+}
+.learn-more {
+    grid-area: learn_more;
+}
+#intro {
+    font-size: 42px;
+}
+#learn_more {
+    margin-bottom: 10vh;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -98,6 +125,11 @@ nav {
     background-color: var(--nav-color);
     border-bottom: 3px solid var(--secondary-color);
     z-index: 1;
+}
+@media screen and (max-width: 800px) {
+    #nav_top {
+        display: none;
+    }
 }
 @media screen and (min-width: 800px) {
     #nav_mobile {
@@ -196,11 +228,6 @@ nav > button:focus {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-}
-.intro {
-    font-size: 42px;
-    margin-top: 15%;
-    color: var(--text-color);
 }
 .local-link:hover, .local-link:focus {
     text-decoration: none;
