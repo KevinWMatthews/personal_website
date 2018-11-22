@@ -158,6 +158,9 @@ nav {
 .mdi {
     font-size: 48px;
 }
+.material-icons {
+    color: var(--background-color);
+}
 h1 {
     font-size: 26pt;
     color: var(--text-color);
