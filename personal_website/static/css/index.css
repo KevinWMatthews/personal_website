@@ -135,17 +135,21 @@ nav {
     flex-direction: column;
     width: 100vw;
     padding-left: 1vw;
-    background-color: cyan;
     align-items: flex-start;
 }
 .nav_mobile a {
     display: block;
+    font-size: 24px;
+    padding: 0.3rem 0 0.3rem 0;
 }
 .nav_mobile button {
     position: inherit;
     right: auto;
     display: block;
+    padding: 0.3rem 0 0.3rem 0;
+    border: none;
 }
+
 .toggle {
     display: block;
 }
@@ -216,7 +220,11 @@ nav > a {
     align-items: center;
     font-size: 24px;
 }
-nav > button {
+nav a, nav button {
+    background-color: var(--nav-color);
+    color: var(--background-color);
+}
+nav button {
     position: absolute;
     right: var(--margin);
     padding-top: 0;
@@ -225,13 +233,13 @@ nav > button {
     color: var(--background-color);
     border: none;
 }
-nav > a:hover, nav > a:focus {
+nav a:hover, nav a:focus {
     color: var(--secondary-color);
 }
-nav > button:hover {
+nav button:hover {
     color: var(--secondary-color);
 }
-nav > button:focus {
+nav button:focus {
     color: var(--secondary-color);
     outline: none;
 }
