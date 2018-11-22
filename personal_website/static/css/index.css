@@ -285,7 +285,7 @@ nav button:focus {
     text-decoration: unerline;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 600px) {
     #blog {
         margin-left: 0;
         margin-right: 0;
