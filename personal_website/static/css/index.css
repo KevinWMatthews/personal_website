@@ -459,11 +459,3 @@ nav > button:focus {
 #div_linkedin:hover {
     background-image: url('../images/In-White-34px-R.png');
 }
-#btn_show_color {
-    /* Reduce padding on left to account for specific gear image */
-    padding-left: 2vh;
-}
-#gear {
-    width: 4vh;
-    height: 4vh;
-}
