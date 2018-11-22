@@ -41,7 +41,7 @@ footer {
 }
 .grid-about {
     display: grid;
-    grid-template-columns: minmax(0, 70vh);
+    grid-template-columns: minmax(0, 70vw);
     justify-content: center;
 }
 .grid-color-modal {
