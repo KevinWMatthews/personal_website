@@ -27,13 +27,13 @@
 nav {
     grid-area: navbar;
 }
-section #home {
+section#home {
     grid-area: home;
 }
-section #blog {
+section#blog {
     grid-area: blog;
 }
-section #about {
+section#about {
     grid-area: about;
 }
 footer {
