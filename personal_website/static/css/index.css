@@ -156,14 +156,14 @@ nav {
 .hide {
     display: none;
 }
-@media screen and (max-width: 800px) {
-    #nav_mobile {
-        /* display: none; */
+@media screen and (max-width: 799px) {
+    #nav_top {
+        display: none;
     }
 }
 @media screen and (min-width: 800px) {
     #nav_mobile {
-        /* display: none; */
+        display: none;
     }
 }
 .mdi {
