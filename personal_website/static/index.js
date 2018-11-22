@@ -101,11 +101,13 @@ function initialize_colorpicker(picker_id, css_var) {
 }
 
 // Modal show/hide
-let modal_show = document.getElementById('btn_show_color');
-modal_show.addEventListener('click', (ev) => {
-  modal.style.display = 'block';
-  modal.style.backgroundColor = 'rgba(0, 0, 0, 0.25)';
-});
+let modal_show_buttons = document.getElementsByClassName('btn_show_color');
+for (modal_show of modal_show_buttons) {
+  modal_show.addEventListener('click', (ev) => {
+    modal.style.display = 'block';
+    modal.style.backgroundColor = 'rgba(0, 0, 0, 0.25)';
+  });
+}
 
 let modal = document.getElementById('modal_colorpicker');
 window.addEventListener('click', (ev) => {
