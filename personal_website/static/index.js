@@ -1,8 +1,14 @@
-// Nav bar show/hide
+// Mobile nav bar show/hide
 let mobile_menu = document.getElementById('mobile_menu');
+let menu_toggle = document.querySelector('.nav_mobile .toggle');
 mobile_menu.addEventListener('click', () => {
-  let toggle = document.querySelector('.nav_mobile .toggle');
-  toggle.classList.toggle('hide');
+  menu_toggle.classList.toggle('hide');
+});
+
+window.addEventListener('click', (ev) => {
+  if (ev.target != mobile_menu) {
+    menu_toggle.classList.add('hide');
+  }
 });
 
 // Execute after CSS is loaded
