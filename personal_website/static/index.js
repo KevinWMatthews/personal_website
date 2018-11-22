@@ -1,16 +1,3 @@
-// Mobile nav bar show/hide
-let mobile_menu = document.getElementById('mobile_menu');
-let menu_toggle = document.querySelector('.nav_mobile .toggle');
-mobile_menu.addEventListener('click', () => {
-  menu_toggle.classList.toggle('hide');
-});
-
-window.addEventListener('click', (ev) => {
-  if (ev.target != mobile_menu) {
-    menu_toggle.classList.add('hide');
-  }
-});
-
 // Execute after CSS is loaded
 let nav_height = 0;
 window.addEventListener('load', () => {
@@ -105,6 +92,19 @@ function initialize_colorpicker(picker_id, css_var) {
     modal.style.backgroundColor = 'rgba(0, 0, 0, 0.0)';
   })
 }
+
+// Mobile nav bar show/hide
+let mobile_menu = document.getElementById('mobile_menu');
+let menu_toggle = document.querySelector('.nav_mobile .toggle');
+mobile_menu.addEventListener('click', () => {
+  menu_toggle.classList.toggle('hide');
+});
+
+window.addEventListener('click', (ev) => {
+  if (ev.target != mobile_menu) {
+    menu_toggle.classList.add('hide');
+  }
+});
 
 // Modal show/hide
 let modal_show_buttons = document.getElementsByClassName('btn_show_color');
