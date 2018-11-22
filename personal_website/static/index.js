@@ -1,3 +1,11 @@
+// Nav bar show/hide
+let nav_mobile = document.getElementById('nav_mobile');
+nav_mobile.addEventListener('click', () => {
+  let toggle = nav_mobile.querySelector('.toggle');
+  toggle.classList.toggle('hide');
+  console.log(toggle.classList);
+});
+
 // Execute after CSS is loaded
 let nav_height = 0;
 window.addEventListener('load', () => {
