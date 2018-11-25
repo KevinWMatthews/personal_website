@@ -3,22 +3,22 @@ from flask import render_template, request, redirect, url_for
 
 blog_card_c = {
     'text': 'C',
-    'url': 'https://www.kevinwmatthews.com/blog/category/c',
+    'url': 'https://blog.kevinwmatthews.com/category/c',
     'id': 'c',
 }
 blog_card_python = {
     'text': 'Python',
-    'url': 'https://www.kevinwmatthews.com/blog/category/python',
+    'url': 'https://blog.kevinwmatthews.com/category/python',
     'id': 'python',
 }
 blog_card_rust = {
     'text': 'Rust',
-    'url': 'https://www.kevinwmatthews.com/blog/category/rust',
+    'url': 'https://blog.kevinwmatthews.com/category/rust',
     'id': 'rust',
 }
 blog_card_css = {
     'text': 'CSS',
-    'url': 'https://www.kevinwmatthews.com/blog/category/css',
+    'url': 'https://blog.kevinwmatthews.com/category/css',
     'id': 'css',
 }
 cards = [
