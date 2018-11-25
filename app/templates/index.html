@@ -59,10 +59,15 @@
 				<h1>Blog</h1>
 			</div>
 			<div class="flex" id="card_container">
-				{{ card('c', 'C') }}
-				{{ card('python', 'Python') }}
-				{{ card('rust', 'Rust') }}
-				{{ card('css', 'CSS') }}
+				{% for card in cards %}
+				<div class="card">
+					<a href="{{ card.url }}" class="button-link">{{ card.text }}</a>
+					<div class="card-image-wrap">
+						<a class="card-image" id="div_{{ card.id }}_bg" href="{{ card.url }}" tabindex="-1"></a>
+						<a class="card-image-alt" id="div_{{ card.id }}_bg_alt" href="{{ card.url }}" tabindex="-1"></a>
+					</div>
+				</div>
+				{% endfor %}
 			</div>
 		</section>
 
@@ -123,14 +128,3 @@
 			<p class="footnote">&copy;2018 by Kevin Matthews</p>
 		</footer>
 {% endblock footer %}
-
-{# 'language' is tightly-coupled for now: db category, user-facing text #}
-{% macro card(id, language) -%}
-				<div class="card">
-					<a href="{{ url_for('blog_by_category', category=language) }}" class="button-link">{{ language }}</a>
-					<div class="card-image-wrap">
-						<a class="card-image" id="div_{{ id }}_bg" href="{{ url_for('blog_by_category', category=language) }}" tabindex="-1"></a>
-						<a class="card-image-alt" id="div_{{ id }}_bg_alt" href="{{ url_for('blog_by_category', category=language) }}" tabindex="-1"></a>
-					</div>
-				</div>
-{%- endmacro %}
