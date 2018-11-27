@@ -5,12 +5,14 @@
         "home"
         "navbar"
         "about"
+        "projects"
         "blog"
         "footer";
     grid-template-rows:
         [home] minmax(100vh, auto)
         [navbar] auto
         [about] minmax(100vh, auto)
+        [projects] minmax(100vh, auto)
         [blog] minmax(100vh, auto)
         [footer] 25vh;
 }
@@ -25,6 +27,9 @@ section#blog {
 }
 section#about {
     grid-area: about;
+}
+section#projects {
+    grid-area: projects;
 }
 footer {
     grid-area: footer;
