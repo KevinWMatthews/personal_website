@@ -5,3 +5,4 @@ app = Flask(__name__)
 app.config.from_object(Config)
 
 from app.views import index
+from app.views import errors
