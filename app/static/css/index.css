@@ -29,7 +29,7 @@ section#about {
 footer {
     grid-area: footer;
 }
-.grid-about {
+article {
     display: grid;
     grid-template-columns: minmax(0, 70vw);
     justify-content: center;
