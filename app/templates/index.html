@@ -30,23 +30,6 @@
 
 {% include "_navbar.html" %}
 
-		<section id="blog">
-			<div>
-				<h1>Blog</h1>
-			</div>
-			<div class="flex" id="card_container">
-				{% for card in cards %}
-				<div class="card">
-					<a href="{{ card.url }}" class="button-link">{{ card.text }}</a>
-					<div class="card-image-wrap">
-						<a class="card-image" id="div_{{ card.id }}_bg" href="{{ card.url }}" tabindex="-1"></a>
-						<a class="card-image-alt" id="div_{{ card.id }}_bg_alt" href="{{ card.url }}" tabindex="-1"></a>
-					</div>
-				</div>
-				{% endfor %}
-			</div>
-		</section>
-
 		<section id="about">
 			<h1>About</h1>
 			<article>
@@ -75,6 +58,23 @@
 					programming, design patterns, and a variety of things I've learned.</p>
 				<p>Enjoy!</p>
 			</article>
+		</section>
+
+		<section id="blog">
+			<div>
+				<h1>Blog</h1>
+			</div>
+			<div class="flex" id="card_container">
+				{% for card in cards %}
+				<div class="card">
+					<a href="{{ card.url }}" class="button-link">{{ card.text }}</a>
+					<div class="card-image-wrap">
+						<a class="card-image" id="div_{{ card.id }}_bg" href="{{ card.url }}" tabindex="-1"></a>
+						<a class="card-image-alt" id="div_{{ card.id }}_bg_alt" href="{{ card.url }}" tabindex="-1"></a>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
 		</section>
 
 		<div id="modal_colorpicker" class="modal">
