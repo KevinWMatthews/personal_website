@@ -86,9 +86,11 @@ p {
 a {
     text-decoration: none;
     outline: none;
+    color: var(--primary-color);
 }
 a:hover, a:focus {
     text-decoration: underline;
+    color: var(--secondary-color);
 }
 button {
     color: var(--primary-color);
