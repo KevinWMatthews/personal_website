@@ -4,14 +4,14 @@
     grid-template-areas:
         "home"
         "navbar"
-        "blog"
         "about"
+        "blog"
         "footer";
     grid-template-rows:
         [home] minmax(100vh, auto)
         [navbar] auto
-        [blog] minmax(100vh, auto)
         [about] minmax(100vh, auto)
+        [blog] minmax(100vh, auto)
         [footer] 25vh;
 }
 nav {
