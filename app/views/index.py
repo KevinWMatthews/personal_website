@@ -33,9 +33,6 @@ blog_card_docker = {
 }
 cards = [
     blog_card_c,
-    blog_card_python,
-    blog_card_rust,
-    blog_card_css,
     blog_card_cmake,
     blog_card_docker,
 ]
