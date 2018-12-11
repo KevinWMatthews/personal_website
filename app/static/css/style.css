@@ -376,6 +376,12 @@ nav button:focus {
 #div_cmake_bg_alt {
     background-image: url('../images/cmake-128x128.png');
 }
+#div_docker_bg {
+    background-image: url('../images/docker-285x163-greyscale.png');
+}
+#div_docker_bg_alt {
+    background-image: url('../images/docker-285x163.png');
+}
 #div_github {
     background-image: url('../images/GitHub-Mark-32px.png');
 }
