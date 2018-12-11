@@ -21,11 +21,17 @@ blog_card_css = {
     'url': 'https://blog.kevinwmatthews.com/tags/css',
     'id': 'css',
 }
+blog_card_cmake = {
+    'text': 'CMake',
+    'url': 'https://blog.kevinwmatthews.com/tags/cmake',
+    'id': 'cmake',
+}
 cards = [
     blog_card_c,
     blog_card_python,
     blog_card_rust,
     blog_card_css,
+    blog_card_cmake,
 ]
 
 @app.route('/', methods=['GET'])

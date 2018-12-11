@@ -370,6 +370,12 @@ nav button:focus {
 #div_css_bg_alt {
     background-image: url('../images/css3-logo-91x128.png');
 }
+#div_cmake_bg {
+    background-image: url('../images/cmake-128x128-greyscale.png');
+}
+#div_cmake_bg_alt {
+    background-image: url('../images/cmake-128x128.png');
+}
 #div_github {
     background-image: url('../images/GitHub-Mark-32px.png');
 }
