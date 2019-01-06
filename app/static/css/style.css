@@ -171,9 +171,6 @@ nav button:focus {
     justify-content: center;
     align-items: center;
 }
-.local-link:hover, .local-link:focus {
-    text-decoration: none;
-}
 
 @media screen and (max-width: 600px) {
     #blog {
