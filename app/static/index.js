@@ -6,7 +6,7 @@ window.addEventListener('load', () => {
 
 
 // For all in-document links, scroll manually to avoid changing the page's URL
-let links = document.getElementsByClassName('local-link');
+let links = document.getElementsByClassName('scrolling-link');
 for (link of links) {
   link.addEventListener('click', function(ev) {
     ev.preventDefault();
