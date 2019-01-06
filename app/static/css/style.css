@@ -36,6 +36,7 @@ nav {
     padding-left: var(--margin);
     text-align: left;
     align-items: center;
+    color: var(--background-color);
     background-color: var(--nav-color);
     border-bottom: 3px solid var(--secondary-color);
     z-index: 1;
@@ -124,6 +125,7 @@ nav a, nav button {
     display: flex;
     font-size: 24px;
     color: var(--background-color);
+    background-color: var(--nav-color);
     outline: none;
     transition: all 0.5s;
 }
@@ -133,7 +135,6 @@ nav > a, nav > button {
     height: 100%;
     padding-right: 1rem;
     padding-left: 1rem;
-    background-color: var(--nav-color);
 }
 /*  Mobile nav bar */
 .nav_mobile a, .nav_mobile button {
