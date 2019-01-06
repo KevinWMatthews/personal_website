@@ -155,25 +155,25 @@ nav > button {
     border: none;
 }
 nav a:hover, nav a:focus {
-    color: var(--highlight-color);
+    color: var(--primary-color);
 }
 nav button:hover {
-    color: var(--highlight-color);
+    color: var(--primary-color);
     background-color: inherit;
 }
 nav button:focus {
-    color: var(--highlight-color);
+    color: var(--primary-color);
     background-color: inherit;
     outline: none;
 }
 .nav-current {
-    color: var(--highlight-color);
+    color: var(--primary-color);
 }
 .nav-current:hover {
-    color: var(--highlight-color);
+    color: var(--primary-color);
 }
 .nav-current:focus {
-    color: var(--highlight-color);
+    color: var(--primary-color);
 }
 .flex {
     display: flex;
