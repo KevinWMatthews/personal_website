@@ -23,7 +23,9 @@
 					 I'm a software developer.</p>
 				</div>
 				 <div class="flex">
-					 <a href="#about" id="btn_learn_more" class="button-link local-link">Learn more</a>
+					 <a href="#about" id="btn_learn_more" class="button-link local-link">
+						 Learn more&nbsp;<i class="material-icons">arrow_downward</i>
+					 </a>
 				 </div>
 			</div>
 		</section>
@@ -43,7 +45,9 @@
 				be proud of what I deploy.</p>
 			</article>
 			<div class="flex">
-				<a href="#projects" id="btn_projects" class="button-link local-link">Projects</a>
+				<a href="#projects" id="btn_projects" class="button-link local-link">
+					Projects&nbsp;<i class="material-icons">arrow_downward</i>
+				</a>
 			</div>
 		</section>
 
@@ -58,7 +62,9 @@
 					a blog to share projects that I've made on the side.</p>
 			</article>
 			<div class="flex">
-				<a href="#blog" id="btn_blog" class="button-link local-link">Blog</a>
+				<a href="#blog" id="btn_blog" class="button-link local-link">
+					Blog&nbsp;<i class="material-icons">arrow_downward</i>
+				</a>
 			</div>
 		</section>
 
@@ -70,12 +76,16 @@
 				<p>Navigate to the blog home page or browse an individual subject.</p>
 			</article>
 			<div class="bottom-padding flex">
-				<a href="https://blog.kevinwmatthews.com" class="button-link">{{ "{{" }} blog_name_here {{ "}}" }}</a>
+				<a href="https://blog.kevinwmatthews.com" class="button-link">
+					{{ "{{" }} blog_name_here {{ "}}" }}&nbsp;<i class="material-icons">arrow_forward</i>
+				</a>
 			</div>
 			<div class="flex" id="card_container">
 				{%- for card in cards %}
 				<div class="card">
-					<a href="{{ card.url }}" class="button-link">{{ card.text }}</a>
+					<a href="{{ card.url }}" class="button-link">
+						{{ card.text }}&nbsp;<i class="material-icons">arrow_forward</i>
+					</a>
 					<div class="card-image-wrap">
 						<a class="card-image" id="div_{{ card.id }}_bg" href="{{ card.url }}" tabindex="-1"></a>
 						<a class="card-image-alt" id="div_{{ card.id }}_bg_alt" href="{{ card.url }}" tabindex="-1"></a>
@@ -113,6 +123,8 @@
 
 {% block footer %}
 			<div class="footer-wrap">
-				<a href="#home" class="button-link local-link">Top</a>
+				<a href="#home" class="button-link local-link">
+					Top&nbsp;<i class="material-icons">arrow_upward</i>
+				</a>
 			</div>
 {%- endblock footer %}
