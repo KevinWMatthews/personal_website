@@ -300,7 +300,7 @@ nav button:focus {
 .modal-title {
     font-weight: bold;
 }
-.modal-header .close {
+.close {
     position: absolute;
     top: 0;
     right: 0;
@@ -309,10 +309,7 @@ nav button:focus {
     font-size: 24px;
     font-weight: bold;
 }
-.modal-footer .close {
-}
-.close:hover,
-.close:focus {
+.close:hover, .close:focus {
     color: black;
     cursor: pointer;
 }
