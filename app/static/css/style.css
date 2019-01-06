@@ -112,6 +112,16 @@ button:focus, .button:focus {
 button::-moz-focus-inner {
     border:0;
 }
+.external-link {
+    color: var(--highlight-color);
+    background-color: var(--background-color);
+    border-color: var(--highlight-color);
+}
+.external-link:hover {
+    color: var(--background-color);
+    background-color: var(--highlight-color);
+    border-color: var(--highlight-color);
+}
 /* Affects both top and mobile nav bar */
 nav a, nav button {
     display: flex;
@@ -245,8 +255,6 @@ nav button:focus {
     transition: 0.5s ease-in-out;
 }
 .icon-image:hover {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
     transition-delay: 0.1s;
 }
 .footnote {
