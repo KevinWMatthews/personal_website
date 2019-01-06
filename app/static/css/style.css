@@ -70,7 +70,7 @@ nav {
         display: none;
     }
 }
-.mdi {
+#mobile_menu {
     font-size: 48px;
 }
 .material-icons {
