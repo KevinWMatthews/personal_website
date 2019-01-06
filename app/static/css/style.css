@@ -116,8 +116,8 @@ button::-moz-focus-inner {
 nav a, nav button {
     display: flex;
     font-size: 24px;
-    background-color: var(--nav-color);
     color: var(--background-color);
+    outline: none;
     transition: all 0.5s;
 }
 /* Top nav bar */
@@ -126,6 +126,7 @@ nav > a, nav > button {
     height: 100%;
     padding-right: 1rem;
     padding-left: 1rem;
+    background-color: var(--nav-color);
 }
 /*  Mobile nav bar */
 .nav_mobile a, .nav_mobile button {
@@ -136,31 +137,30 @@ nav > a, nav > button {
     position: inherit;
     border: none;
 }
-nav button {
-    border: none;
-}
 nav > button {
     position: absolute;
     right: var(--margin);
     padding-top: 0;
     padding-bottom: 0;
+    border: none;
 }
 nav a:hover, nav a:focus {
     color: var(--highlight-color);
 }
 nav button:hover {
     color: var(--highlight-color);
+    background-color: inherit;
 }
 nav button:focus {
     color: var(--highlight-color);
+    background-color: inherit;
     outline: none;
 }
 .nav-current {
-    background-color: var(--primary-color);
-    color: var(--background-color);
+    color: var(--highlight-color);
 }
 .nav-current:hover {
-    background-color: var(--primary-color);
+    color: var(--highlight-color);
 }
 .nav-current:focus {
     color: var(--highlight-color);
