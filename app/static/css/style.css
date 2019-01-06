@@ -3,7 +3,7 @@
     /* For ease and speed of parsing, remove all whitespace. */
     --background-color:#f8f8ff;
     --primary-color:#696969;
-    --highlight-color:#a9a9a9;
+    --secondary-color:#a9a9a9;
     --text-color:#000000;
     --nav-color:#112233;
     --margin: 10%;
@@ -37,7 +37,7 @@ nav {
     text-align: left;
     align-items: center;
     background-color: var(--nav-color);
-    border-bottom: 3px solid var(--highlight-color);
+    border-bottom: 3px solid var(--secondary-color);
     z-index: 1;
 }
 .nav_top {
@@ -107,20 +107,20 @@ button:hover, .button:hover {
     background-color: var(--primary-color);
 }
 button:focus, .button:focus {
-    outline: 2px solid var(--highlight-color);
+    outline: 2px solid var(--secondary-color);
 }
 button::-moz-focus-inner {
     border:0;
 }
 .external-link {
-    color: var(--highlight-color);
+    color: var(--secondary-color);
     background-color: var(--background-color);
-    border-color: var(--highlight-color);
+    border-color: var(--secondary-color);
 }
 .external-link:hover {
     color: var(--background-color);
-    background-color: var(--highlight-color);
-    border-color: var(--highlight-color);
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
 }
 /* Affects both top and mobile nav bar */
 nav a, nav button {
@@ -242,7 +242,7 @@ nav button:focus {
     position: relative;
 }
 .icon-link:focus {
-    outline: 2px solid var(--highlight-color);
+    outline: 2px solid var(--secondary-color);
 }
 .icon-image {
     width: 64px;
