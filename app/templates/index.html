@@ -17,15 +17,15 @@
 {% block content %}
 
 		<section id="home">
-			<div class="grid-home">
-				<div class="intro">
+			<div>
+				<div>
 					<p id="intro">Hello! I'm Kevin.<br>
 					 I'm a software developer.</p>
-				 </div>
-				 <div class="learn-more flex">
-					 <a href="#about" id="learn_more" class="button-link local-link">Learn more</a>
-				 </div>
 				</div>
+				 <div class="flex">
+					 <a href="#about" id="btn_learn_more" class="button-link local-link">Learn more</a>
+				 </div>
+			</div>
 		</section>
 
 {% include "_navbar.html" %}
@@ -35,36 +35,42 @@
 			<article>
 				<p>Kevin here - embedded developer by day, web developer by night, aspiring
 					polyglot.</p>
-				<p>My daily work is in C and Python but I've used and studied C++,
-					Ruby, JavaScript, and am diving into Rust.</p>
+				<p>My daily work is in C, Python, and JavaScript but I've used and studied
+					C++, Ruby, and am diving into Rust.</p>
 				<p>I'm hooked on fast feedback loops, automated tests, and solutions
 					that are designed to evolve.</p>
 				<p>I strive to craft thoughtful, clean, testable code because I like to
 				be proud of what I deploy.</p>
 			</article>
+			<div class="flex">
+				<a href="#projects" id="btn_projects" class="button-link local-link">Projects</a>
+			</div>
 		</section>
 
 		<section id="projects">
 			<h1>Projects</h1>
-			<article class="grid-projects">
+			<article>
 				<p>I work on embedded systems professionally, thus far on VoIP endpoints,
 					NFC (RFID) devices, and water chemistry controllers.</p>
 				<p>I've developed for bare-metal, FreeRTOS, and Linux-based devices and
 					built a custom Linux distro using Buldroot.</p>
 				<p>All of this work is proprietary, so I'm creating
-					<a href="https://blog.kevinwmatthews.com/">a blog</a> to share projects
-					that I've made on the side.</p>
-				<p>Here is <a href="https://kevinwmatthews.github.io">an overview</a>
-					of what I've done so far.</p>
-				<p>You'll find explorations into test-driven design, design patterns,
-					language semantics, and projects that I find interesting.</p>
-				<p>Enjoy!</p>
+					a blog to share projects that I've made on the side.</p>
 			</article>
+			<div class="flex">
+				<a href="#blog" id="btn_blog" class="button-link local-link">Blog</a>
+			</div>
 		</section>
 
-		<section id="blog">
-			<div>
-				<h1>Blog</h1>
+		<section class="grid-blog" id="blog">
+			<h1>Blog</h1>
+			<article>
+				<p>The blog features explorations into test-driven design, design patterns,
+					language semantics, and projects that I find interesting.</p>
+				<p>Navigate to the blog home page or browse an individual subject.</p>
+			</article>
+			<div class="bottom-padding flex">
+				<a href="https://blog.kevinwmatthews.com" class="button-link">{{ "{{" }} blog_name_here {{ "}}" }}</a>
 			</div>
 			<div class="flex" id="card_container">
 				{%- for card in cards %}

@@ -3,7 +3,7 @@
     /* For ease and speed of parsing, remove all whitespace. */
     --background-color:#f8f8ff;
     --primary-color:#696969;
-    --secondary-color:#a9a9a9;
+    --highlight-color:#a9a9a9;
     --text-color:#000000;
     --nav-color:#112233;
     --margin: 10%;
@@ -37,7 +37,7 @@ nav {
     text-align: left;
     align-items: center;
     background-color: var(--nav-color);
-    border-bottom: 3px solid var(--secondary-color);
+    border-bottom: 3px solid var(--highlight-color);
     z-index: 1;
 }
 .nav_top {
@@ -85,13 +85,8 @@ p {
 }
 a {
     text-decoration: none;
-    outline: none;
-    color: var(--primary-color);
 }
-a:hover, a:focus {
-    text-decoration: underline;
-    color: var(--secondary-color);
-}
+
 button {
     color: var(--primary-color);
     box-sizing: border-box;
@@ -111,7 +106,7 @@ button:hover {
     cursor: pointer;
 }
 button:focus {
-    outline: 2px solid var(--secondary-color);
+    outline: 2px solid var(--highlight-color);
 }
 button::-moz-focus-inner {
     border:0;
@@ -151,13 +146,13 @@ nav > button {
     padding-bottom: 0;
 }
 nav a:hover, nav a:focus {
-    color: var(--secondary-color);
+    color: var(--highlight-color);
 }
 nav button:hover {
-    color: var(--secondary-color);
+    color: var(--highlight-color);
 }
 nav button:focus {
-    color: var(--secondary-color);
+    color: var(--highlight-color);
     outline: none;
 }
 .nav-current {
@@ -168,7 +163,7 @@ nav button:focus {
     background-color: var(--primary-color);
 }
 .nav-current:focus {
-    color: var(--secondary-color);
+    color: var(--highlight-color);
 }
 .flex {
     display: flex;
@@ -191,14 +186,14 @@ nav button:focus {
     padding-bottom: 0.8rem;
     padding-left: 1.1rem;
     border: 1px solid var(--primary-color);
-    transition: color 0.5s, background-color 0.5s, opacity 0.5s;
+    transition: color 0.5s, background-color 0.5s;
 }
 .button-link:hover {
     color: var(--background-color);
     background-color: var(--primary-color);
 }
 .button-link:focus {
-    outline: 2px solid var(--secondary-color);
+    outline: 2px solid var(--highlight-color);
     text-decoration: unerline;
 }
 
@@ -264,7 +259,7 @@ nav button:focus {
     position: relative;
 }
 .icon-link:focus {
-    outline: 2px solid var(--secondary-color);
+    outline: 2px solid var(--highlight-color);
 }
 .icon-image {
     width: 64px;

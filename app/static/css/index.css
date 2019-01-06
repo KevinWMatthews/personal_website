@@ -38,6 +38,7 @@ article {
     display: grid;
     grid-template-columns: minmax(0, 70vw);
     justify-content: center;
+    padding-bottom: 5vh;
 }
 .grid-color-modal {
     display: grid;
@@ -61,29 +62,9 @@ article {
     grid-area: bg;
 }
 
-.grid-home {
-    display: grid;
-    grid-template-areas:
-        "intro"
-        "learn_more";
-    margin-top: 10vh;
-    margin-bottom: 10vh;
-}
-@media screen and (max-height: 300px) {
-    .grid-home {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-}
-.intro {
-    grid-area: intro;
-}
-.learn-more {
-    grid-area: learn_more;
+.bottom-padding {
+    padding-bottom: 5vh;
 }
 #intro {
     font-size: 42px;
-}
-#learn_more {
-    margin-bottom: 10vh;
 }
