@@ -356,17 +356,17 @@ nav button:focus {
 #div_docker_bg_alt {
     background-image: url('../images/docker-285x163.png');
 }
-#div_github {
+#span_github {
     background-image: url('../images/GitHub-Mark-32px.png');
 }
-#div_github:hover {
+#span_github:hover {
     background-image: url('../images/GitHub-Mark-Light-32px.png');
 }
-#div_linkedin {
+#span_linkedin {
     background-image: url('../images/In-Black-34px-R.png');
     /* Compensate for the "registered" symbol when centering horizontally */
     background-position: 68%;
 }
-#div_linkedin:hover {
+#span_linkedin:hover {
     background-image: url('../images/In-White-34px-R.png');
 }
