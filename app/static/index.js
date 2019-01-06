@@ -65,10 +65,7 @@ function highlightNavLink(current_index) {
 window.addEventListener('load', () => {
   // Set values from CSS. Must wait until styleshees are loaded.
   initialize_colorpicker('color_primary', '--primary-color');
-  initialize_colorpicker('color_secondary', '--secondary-color');
-  initialize_colorpicker('color_nav', '--nav-color');
-  initialize_colorpicker('color_text', '--text-color');
-  initialize_colorpicker('color_bg', '--background-color');
+  initialize_colorpicker('color_highlight', '--highlight-color');
 });
 
 function initialize_colorpicker(picker_id, css_var) {
