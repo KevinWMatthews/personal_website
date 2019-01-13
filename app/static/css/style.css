@@ -233,6 +233,10 @@ nav button:focus {
 .card-image-alt:hover {
     opacity: 1;
 }
+.card > .button {
+    min-width: 128px;
+    justify-content: center;
+}
 .footer-wrap {
     margin-top: 5vh;
 }
