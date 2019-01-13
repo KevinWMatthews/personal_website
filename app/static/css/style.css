@@ -4,7 +4,7 @@
     --background-color:#f8f8ff;
     --primary-color:#696969;
     --secondary-color:#696969;
-    --text-color:#000000;
+    --text-color:#494e52;
     --nav-color:#112233;
     --margin: 10%;
 }
@@ -80,6 +80,10 @@ h1 {
 }
 p {
     color: var(--text-color);
+    font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
+        "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+    font-size: 1.25em;
+    line-height: 1.5;
 }
 a {
     text-decoration: none;
