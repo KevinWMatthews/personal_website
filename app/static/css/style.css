@@ -184,13 +184,25 @@ nav button:focus {
         width: 100vw;
     }
 }
+.card-grid {
+    display: grid;
+    justify-items: center;
+    row-gap: 2vh;
+    grid-template-areas:
+        "card-image"
+        "card-button"
+        ;
+}
+.card-image-wrap {
+    grid-area: card-image;
+}
+.card-button {
+    grid-area: card-button;
+}
 .card {
-    width: 128px;
-    height: 300px;
     margin: 2vh 2vw 2vh 2vw;
 }
 .card-image-wrap {
-    position: relative;
     height: 128px;
     width: 128px;
 }
@@ -203,7 +215,6 @@ nav button:focus {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    margin-top: 5vh;
 }
 .card-image:hover {
     opacity: 0;
@@ -221,11 +232,6 @@ nav button:focus {
 }
 .card-image-alt:hover {
     opacity: 1;
-}
-.card > .button {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
 }
 .footer-wrap {
     margin-top: 5vh;
