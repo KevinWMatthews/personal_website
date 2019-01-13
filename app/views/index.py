@@ -8,32 +8,32 @@ blog_card_home = {
 }
 blog_card_c = {
     'text': 'C',
-    'url': 'https://blog.kevinwmatthews.com/tags/c',
+    'url': 'https://blog.kevinwmatthews.com/tags/#c',
     'id': 'c',
 }
 blog_card_python = {
     'text': 'Python',
-    'url': 'https://blog.kevinwmatthews.com/tags/python',
+    'url': 'https://blog.kevinwmatthews.com/tags/#python',
     'id': 'python',
 }
 blog_card_rust = {
     'text': 'Rust',
-    'url': 'https://blog.kevinwmatthews.com/tags/rust',
+    'url': 'https://blog.kevinwmatthews.com/tags/#rust',
     'id': 'rust',
 }
 blog_card_css = {
     'text': 'CSS',
-    'url': 'https://blog.kevinwmatthews.com/tags/css',
+    'url': 'https://blog.kevinwmatthews.com/tags/#css',
     'id': 'css',
 }
 blog_card_cmake = {
     'text': 'CMake',
-    'url': 'https://blog.kevinwmatthews.com/tags/cmake',
+    'url': 'https://blog.kevinwmatthews.com/tags/#cmake',
     'id': 'cmake',
 }
 blog_card_docker = {
     'text': 'Docker',
-    'url': 'https://blog.kevinwmatthews.com/tags/docker',
+    'url': 'https://blog.kevinwmatthews.com/tags/#docker',
     'id': 'docker',
 }
 cards = [
