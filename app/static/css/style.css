@@ -80,10 +80,14 @@ h1 {
 }
 p {
     color: var(--text-color);
+    text-align: left;
     font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
         "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
     font-size: 1.25em;
     line-height: 1.5;
+}
+footer > p {
+    text-align: center;
 }
 a {
     text-decoration: none;

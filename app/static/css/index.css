@@ -40,6 +40,9 @@ article {
     justify-content: center;
     padding-bottom: 5vh;
 }
+h1, h2, h3, h4 {
+    text-align: center;
+}
 .grid-color-modal {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -63,4 +66,5 @@ article {
 }
 #intro {
     font-size: 42px;
+    text-align: center;
 }
