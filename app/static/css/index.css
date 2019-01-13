@@ -61,10 +61,6 @@ article {
 .color-bg {
     grid-area: bg;
 }
-
-.bottom-padding {
-    padding-bottom: 5vh;
-}
 #intro {
     font-size: 42px;
 }

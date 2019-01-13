@@ -1,6 +1,11 @@
 from app import app
 from flask import render_template, request, redirect, url_for
 
+blog_card_home = {
+    'text': 'All Posts',
+    'url': 'https://blog.kevinwmatthews.com',
+    'id': 'all_posts',
+}
 blog_card_c = {
     'text': 'C',
     'url': 'https://blog.kevinwmatthews.com/tags/c',
@@ -32,6 +37,7 @@ blog_card_docker = {
     'id': 'docker',
 }
 cards = [
+    blog_card_home,
     blog_card_c,
     blog_card_cmake,
     blog_card_docker,

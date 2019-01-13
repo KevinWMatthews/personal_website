@@ -317,6 +317,12 @@ nav button:focus {
     color: black;
     cursor: pointer;
 }
+#div_all_posts_bg {
+    background-image: url('../images/blog-logo-greyscale.png');
+}
+#div_all_posts_bg_alt {
+    background-image: url('../images/blog-logo.png');
+}
 #div_c_bg {
     background-image: url('../images/c-logo-119x128-blk.png');
 }
