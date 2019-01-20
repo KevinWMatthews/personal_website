@@ -64,7 +64,105 @@ h1, h2, h3, h4 {
 .color-bg {
     grid-area: bg;
 }
+
+.card-grid {
+    display: grid;
+    justify-items: center;
+    row-gap: 2vh;
+    grid-template-areas:
+        "card-image"
+        "card-button"
+        ;
+}
+.card-image-wrap {
+    grid-area: card-image;
+}
+.card-button {
+    grid-area: card-button;
+}
+.card {
+    margin: 2vh 2vw 2vh 2vw;
+}
+.card-image-wrap {
+    height: 128px;
+    width: 128px;
+}
+.card-image {
+    display: block;
+    height: inherit;
+    width: inherit;
+    opacity: 1;
+    transition: opacity 1s;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.card-image:hover {
+    opacity: 0;
+}
+.card-image-alt {
+    display: block;
+    height: inherit;
+    width: inherit;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: opacity 1s;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.card-image-alt:hover {
+    opacity: 1;
+}
+.card > .button {
+    min-width: 128px;
+    justify-content: center;
+}
+
 #intro {
     font-size: 42px;
     text-align: center;
+}
+
+#div_all_posts_bg {
+    background-image: url('../images/blog-logo-greyscale.png');
+}
+#div_all_posts_bg_alt {
+    background-image: url('../images/blog-logo.png');
+}
+#div_c_bg {
+    background-image: url('../images/c-logo-119x128-blk.png');
+}
+#div_c_bg_alt {
+    background-image: url('../images/c-logo-119x128.png');
+}
+#div_python_bg {
+    background-image: url('../images/python-logo-128x128-blk.png');
+}
+#div_python_bg_alt {
+    background-image: url('../images/python-logo-128x128.png');
+}
+#div_rust_bg {
+    background-image: url('../images/rust-logo-128x128-blk-v2.png');
+}
+#div_rust_bg_alt {
+    background-image: url('../images/rust-logo-128x128.png');
+}
+#div_css_bg {
+    background-image: url('../images/css3-logo-91x128-blk.png');
+}
+#div_css_bg_alt {
+    background-image: url('../images/css3-logo-91x128.png');
+}
+#div_cmake_bg {
+    background-image: url('../images/cmake-128x128-greyscale.png');
+}
+#div_cmake_bg_alt {
+    background-image: url('../images/cmake-128x128.png');
+}
+#div_docker_bg {
+    background-image: url('../images/docker-285x163-greyscale.png');
+}
+#div_docker_bg_alt {
+    background-image: url('../images/docker-285x163.png');
 }
