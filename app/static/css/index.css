@@ -134,6 +134,13 @@ canvas {
     color: white;
     text-align: center;
 }
+#btn_learn_more {
+    color: var(--background-color);
+    background-color: inherit;
+}
+#btn_learn_more:hover {
+    background-color: var(--primary-color);
+}
 
 #div_all_posts_bg {
     background-image: url('../images/blog-logo-greyscale.png');
