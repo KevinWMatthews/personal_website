@@ -130,13 +130,15 @@ canvas {
 }
 
 #intro {
+    display: inline-block;
     font-size: 42px;
     color: white;
     text-align: center;
+    background-color: var(--canvas-color);
 }
 #btn_learn_more {
     color: var(--background-color);
-    background-color: inherit;
+    background-color: var(--canvas-color);
 }
 #btn_learn_more:hover {
     background-color: var(--primary-color);
