@@ -9,6 +9,7 @@
 
 {% block deferred_scripts %}
 	<script defer src="{{ url_for('static', filename='index.js') }}"></script>
+	<script defer src="{{ url_for('static', filename='canvas.js') }}"></script>
 {%- endblock deferred_scripts %}
 
 {% block navbar %}{# Navbar is in the content of the page #}{% endblock navbar %}
@@ -18,6 +19,8 @@
 
 		<section id="home">
 			<div>
+				<div id="canvas_wrap">
+				</div>
 				<div>
 					<p id="intro">Hello! I'm Kevin.<br>
 					 I'm a software developer.</p>
