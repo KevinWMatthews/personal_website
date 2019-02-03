@@ -74,7 +74,7 @@ function initialize_colorpicker(picker_id, css_var) {
   let picker = document.getElementById(picker_id);
   picker.value = hex_color;
 
-  let root = document.documentElement;    // Somehow this stays in scope...
+  let root = document.documentElement;
   picker.addEventListener('input', (ev) => {
     root.style.setProperty(css_var, ev.target.value);
   });
