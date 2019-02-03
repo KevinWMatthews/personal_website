@@ -21,8 +21,7 @@ window.addEventListener('load', () => {
 });
 
 function create_canvas() {
-  let canvas = document.createElement('canvas');
-  canvas.id = 'canvas';
+  let canvas = document.getElementById('canvas');
   canvas.width = document.documentElement.clientWidth;
   canvas.height = document.documentElement.clientHeight;
 
