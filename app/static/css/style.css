@@ -2,6 +2,7 @@
     /* JavaScript treats all characters between ':' and ';' as the color value */
     /* For ease and speed of parsing, remove all whitespace. */
     --background-color:#ffffff;
+    /* Default values should also be set in colorpicker's HTML */
     --primary-color:#696969;
     --secondary-color:#696969;
     --text-color:#494e52;

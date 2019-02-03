@@ -4,7 +4,6 @@ window.addEventListener('load', () => {
   nav_height = document.getElementById('nav_top').getBoundingClientRect().height;
 });
 
-
 // For all in-document links, scroll manually to avoid changing the page's URL
 let links = document.getElementsByClassName('scrolling-link');
 for (link of links) {
@@ -69,12 +68,10 @@ window.addEventListener('load', () => {
 });
 
 function initialize_colorpicker(picker_id, css_var) {
-  let root_style = getComputedStyle(document.documentElement);
-  let hex_color = root_style.getPropertyValue(css_var);
   let picker = document.getElementById(picker_id);
-  picker.value = hex_color;
-
   let root = document.documentElement;
+  root.style.setProperty(css_var, picker.value);
+
   picker.addEventListener('input', (ev) => {
     root.style.setProperty(css_var, ev.target.value);
   });
