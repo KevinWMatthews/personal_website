@@ -63,7 +63,7 @@ function render_all_squares() {
   let rgb = hex_to_rgb(colorpicker.value);
   for (square of squares.colored_squares) {
     ctx.clearRect(square.x, square.y, square_size, square_size);
-    ctx.fillStyle = rgb_add_a(rgb, square.opacity);
+    ctx.fillStyle = css_rgba(rgb, square.opacity);
     ctx.fillRect(square.x, square.y, square_size, square_size);
   }
 }
@@ -82,7 +82,7 @@ function get_next_square_x(squares_in_row, size) {
 function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
-  ctx.fillStyle = hex_to_rgba(current_color, squares.opacity);
+  ctx.fillStyle = css_rgba(current_color, squares.opacity);
 
   new_square = {
     x: squares.x,
@@ -113,9 +113,10 @@ function random_from_0_to_max(max) {
   return Math.trunc(random);
 }
 
-function hex_to_rgba(hex, opacity) {
-  let rgb = hex_to_rgb(hex);
-  return rgb_add_a(rgb, opacity);
+function css_rgba(hex, opacity) {
+  let rgba = hex_to_rgb(hex);
+  rgba.a = opacity;
+  return rgba_to_css_rgba(rgba);
 }
 
 function hex_to_rgb(hex) {
@@ -127,6 +128,6 @@ function hex_to_rgb(hex) {
   return {r: r, g: g, b: b};
 }
 
-function rgb_add_a(rgb, opacity) {
-  return `rgba(${rgb.r}, ${rgb.g}, ${rgb.b}, ${opacity/10})`;
+function rgba_to_css_rgba(rgba) {
+  return `rgba(${rgba.r}, ${rgba.g}, ${rgba.b}, ${rgba.a/10})`;
 }
