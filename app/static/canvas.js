@@ -102,7 +102,7 @@ function draw() {
   row.push(opaque_square);
 
 
-  if (iterthing.increment()) {
+  if (iterthing.increment_maybe_wrap()) {
     y_pos += square_size;
   }
   if (iterthing.is_finished()) {
@@ -192,7 +192,7 @@ function IterThing(n_per_row, n_rows) {
   },
 
   // Returns true on wrap
-  this.increment = function() {
+  this.increment_maybe_wrap = function() {
     this.n += 1;
     if (!this.row_finished()) {
       return false;
