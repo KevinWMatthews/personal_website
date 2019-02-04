@@ -68,6 +68,13 @@ function render_all_squares() {
   }
 }
 
+function get_next_opacity(opacity) {
+  if (opacity >= 10) {
+    return 1;
+  }
+  return opacity + 1;
+}
+
 function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
@@ -82,10 +89,7 @@ function draw() {
   // x, y, width, height
   ctx.fillRect(squares.x, squares.y, square_size, square_size);
 
-  squares.opacity += 1;
-  if (squares.opacity >= 10) {
-    squares.opacity = 1;
-  }
+  squares.opacity = get_next_opacity(squares.opacity);
 
   squares.x = square_size * random_from_0_to_max(squares.squares_in_row);
   if (squares.nth_square_in_row >= 10) {
