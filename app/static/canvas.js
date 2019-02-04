@@ -82,10 +82,13 @@ function get_next_square_x(squares_in_row, size) {
   return random_from_0_to_max(squares_in_row) * square_size;
 }
 
+let row = new Row();
+
 function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   let opaque_square = new OpaqueSquare(squares.x, squares.y, square_size, squares.opacity);
+  row.push(sq);
 
   ctx.fillStyle = css_rgba(current_color, squares.opacity);
 
@@ -137,6 +140,13 @@ function rgba_to_css_rgba(rgba) {
   return `rgba(${rgba.r}, ${rgba.g}, ${rgba.b}, ${rgba.a/10})`;
 }
 
+
+function Row() {
+  this.squares = new Array;
+  this.push = function(square) {
+    this.squares.push(square);
+  }
+}
 
 function Square(x, y, size) {
   this.x = x;
