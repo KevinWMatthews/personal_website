@@ -43,8 +43,8 @@ function initialize_squares() {
   squares.colored_squares = [];
   squares.nth_square_in_row = 0;
 
-  iterthing.max_n = squares.squares_in_row;
-  iterthing.n = 0;
+  design = new Design(canvas.width, canvas.height, square_size, 10);
+  iterthing.max_n = design.fill_per_row;
 }
 
 function connect_to_colorpicker() {
@@ -96,22 +96,26 @@ let iterthing = {
   }
 };
 
+let design;
 let opacity = 0;
 let x_pos = 0;
 let y_pos = 0;
 function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
-  opacity = get_next_opacity(opacity);
-  x_pos = get_next_square_x(iterthing.max_n, square_size);
-
+  opacity = get_next_opacity(opacity);  // where should this live?
+  x_pos = design.get_random_x();
   let opaque_square = new OpaqueSquare(x_pos, y_pos, square_size, opacity);
   row.push(opaque_square);
+
   iterthing.n += 1;
   if (iterthing.row_finished()) {
     interval.stop();
     return;
   }
+
+  let fill_style = css_rgba(current_color, opaque_square.opacity);
+  render_square(ctx, opaque_square, fill_style);
   return;
 
   ctx.fillStyle = css_rgba(current_color, squares.opacity);
@@ -164,6 +168,20 @@ function rgba_to_css_rgba(rgba) {
   return `rgba(${rgba.r}, ${rgba.g}, ${rgba.b}, ${rgba.a/10})`;
 }
 
+function Design(width, height, square_size, fill_per_row) {
+  this.canvas_width = width;
+  this.canvas_height = height;
+  this.square_size = square_size;
+  this.fill_per_row = fill_per_row;
+
+  this.squares_in_row = this.canvas_width / this.square_size;
+  this.rows = this.canvas_height / this.square_size;
+
+  this.get_random_x = function() {
+    let random = Math.random() * this.squares_in_row;
+    return Math.trunc(random) * this.square_size;
+  }
+}
 
 function Row() {
   this.squares = new Array;
@@ -184,4 +202,9 @@ function OpaqueSquare(x, y, size, opacity) {
   this.y = y;
   this.size = size;
   this.opacity = opacity;
+}
+
+function render_square(context, square, style) {
+  context.fillStyle = style;
+  context.fillRect(square.x, square.y, square.size, square.size);
 }
