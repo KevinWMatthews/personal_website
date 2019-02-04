@@ -59,11 +59,11 @@ function connect_to_colorpicker() {
 }
 
 function render_all_squares() {
-  let colorpicker = document.getElementById('color_secondary');
-  current_color = colorpicker.value;
-
   let ctx = document.getElementById('canvas').getContext('2d');
+  let colorpicker = document.getElementById('color_secondary');
   let hex_color = colorpicker.value;
+  current_color = hex_color;
+
   for (square of squares.colored_squares) {
     ctx.clearRect(square.x, square.y, square_size, square_size);
     ctx.fillStyle = css_rgba(hex_color, square.opacity);
