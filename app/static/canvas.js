@@ -216,12 +216,6 @@ function Row() {
   }
 }
 
-function Square(x, y, size) {
-  this.x = x;
-  this.y = y;
-  this.size = size;
-}
-
 function OpacityCounter() {
   this.min = 1;
   this.max = 10;
@@ -235,6 +229,12 @@ function OpacityCounter() {
   }
 }
 
+function Square(x, y, size) {
+  this.x = x;
+  this.y = y;
+  this.size = size;
+}
+
 // Inherit from square? Pass in a square that already exists?
 function OpaqueSquare(x, y, size, opacity) {
   this.x = x;
@@ -243,6 +243,7 @@ function OpaqueSquare(x, y, size, opacity) {
   this.opacity = opacity;
 }
 
+// Should this live on the square?
 function render_square(context, square, style) {
   context.fillStyle = style;
   context.fillRect(square.x, square.y, square.size, square.size);
