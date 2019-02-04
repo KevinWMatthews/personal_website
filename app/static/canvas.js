@@ -14,19 +14,21 @@ let interval = {
 
 // Must be added after the colorpickers are initialized... risky.
 window.addEventListener('load', () => {
-  create_canvas();
+  resize_canvas();
   initialize_squares();
   connect_to_colorpicker();
   interval.start();
 });
 
-function create_canvas() {
+window.addEventListener('resize', () => {
+  resize_canvas();
+  render_all_squares();
+})
+
+function resize_canvas() {
   let canvas = document.getElementById('canvas');
   canvas.width = document.documentElement.clientWidth;
   canvas.height = document.documentElement.clientHeight;
-
-  let div = document.getElementById('canvas_wrap');
-  div.appendChild(canvas);
 }
 
 function initialize_squares() {
@@ -47,18 +49,23 @@ function connect_to_colorpicker() {
   current_color = colorpicker.value;
 
   colorpicker.addEventListener('input', function() {
-    current_color = colorpicker.value;
-
-    let ctx = document.getElementById('canvas').getContext('2d');
-    let rgb = hex_to_rgb(colorpicker.value);
-    for (square of squares.colored_squares) {
-      ctx.clearRect(square.x, square.y, square_size, square_size);
-      ctx.fillStyle = rgb_add_a(rgb, square.opacity);
-      ctx.fillRect(square.x, square.y, square_size, square_size);
-    }
+    render_all_squares();
   });
 
   //TODO add change event for safari
+}
+
+function render_all_squares() {
+  let colorpicker = document.getElementById('color_secondary');
+  current_color = colorpicker.value;
+
+  let ctx = document.getElementById('canvas').getContext('2d');
+  let rgb = hex_to_rgb(colorpicker.value);
+  for (square of squares.colored_squares) {
+    ctx.clearRect(square.x, square.y, square_size, square_size);
+    ctx.fillStyle = rgb_add_a(rgb, square.opacity);
+    ctx.fillRect(square.x, square.y, square_size, square_size);
+  }
 }
 
 function draw() {
