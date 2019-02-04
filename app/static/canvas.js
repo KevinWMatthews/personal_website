@@ -45,6 +45,7 @@ function initialize_squares() {
 
   design = new Design(canvas.width, canvas.height, square_size);
   iterthing = new IterThing(10, design.rows)
+  opacity_counter = new OpacityCounter();
 }
 
 function connect_to_colorpicker() {
@@ -89,6 +90,7 @@ let row = new Row();
 
 let design;
 let iterthing;
+let opacity_counter;
 
 let opacity = 0;
 let x_pos = 0;
@@ -96,7 +98,7 @@ let y_pos = 0;
 function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
-  opacity = get_next_opacity(opacity);  // where should this live?
+  opacity = opacity_counter.next_opacity();
   x_pos = design.get_random_x();
   let opaque_square = new OpaqueSquare(x_pos, y_pos, square_size, opacity);
   row.push(opaque_square);
@@ -218,6 +220,19 @@ function Square(x, y, size) {
   this.x = x;
   this.y = y;
   this.size = size;
+}
+
+function OpacityCounter() {
+  this.min = 1;
+  this.max = 10;
+  this.current = 0;
+  this.next_opacity = function() {
+    this.current += 1;
+    if (this.current > this.max) {
+      this.current = this.min;
+    }
+    return this.current;
+  }
 }
 
 // Inherit from square? Pass in a square that already exists?
