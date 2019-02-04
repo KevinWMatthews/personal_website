@@ -52,7 +52,10 @@ function connect_to_colorpicker() {
     window.requestAnimationFrame(render_all_squares);
   });
 
-  //TODO add change event for safari
+  // For Safari
+  colorpicker.addEventListener('change', function() {
+    window.requestAnimationFrame(render_all_squares);
+  });
 }
 
 function render_all_squares() {
