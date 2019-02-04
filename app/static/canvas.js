@@ -43,9 +43,8 @@ function initialize_squares() {
   squares.colored_squares = [];
   squares.nth_square_in_row = 0;
 
-  design = new Design(canvas.width, canvas.height, square_size, 10);
-  iterthing.max_n = design.fill_per_row;
-  iterthing.max_rows = design.rows;
+  design = new Design(canvas.width, canvas.height, square_size);
+  iterthing = new IterThing(10, design.rows)
 }
 
 function connect_to_colorpicker() {
@@ -88,31 +87,9 @@ function get_next_square_x(squares_in_row, size) {
 
 let row = new Row();
 
-// Make a more general iterator.
-let iterthing = {
-  n: 0,
-  max_n: 0,
-  max_rows: 0,
-  n_rows_shown: 0,
-  row_finished: function() {
-    return this.n >= this.max_n;
-  },
-  // Returns true on wrap
-  increment: function() {
-    this.n += 1;
-    if (!this.row_finished()) {
-      return false;
-    }
-    this.n_rows_shown += 1;
-    this.n = 0;
-    return true;
-  },
-  is_finished: function() {
-    return this.n_rows_shown > this.max_rows;
-  }
-};
-
 let design;
+let iterthing;
+
 let opacity = 0;
 let x_pos = 0;
 let y_pos = 0;
@@ -187,11 +164,10 @@ function rgba_to_css_rgba(rgba) {
   return `rgba(${rgba.r}, ${rgba.g}, ${rgba.b}, ${rgba.a/10})`;
 }
 
-function Design(width, height, square_size, fill_per_row) {
+function Design(width, height, square_size) {
   this.canvas_width = width;
   this.canvas_height = height;
   this.square_size = square_size;
-  this.fill_per_row = fill_per_row;
 
   this.squares_in_row = this.canvas_width / this.square_size;
   this.rows = this.canvas_height / this.square_size;
@@ -200,6 +176,35 @@ function Design(width, height, square_size, fill_per_row) {
     let random = Math.random() * this.squares_in_row;
     return Math.trunc(random) * this.square_size;
   }
+}
+
+function IterThing(n_per_row, n_rows) {
+  // Opacity is not configurable
+  this.max_n = n_per_row;
+  this.max_rows = n_rows;
+
+  this.n = 0;
+  this.n_rows_shown = 0;
+
+  // Returns true if all n in row are shown
+  this.row_finished = function() {
+    return this.n >= this.max_n;
+  },
+
+  // Returns true on wrap
+  this.increment = function() {
+    this.n += 1;
+    if (!this.row_finished()) {
+      return false;
+    }
+    this.n_rows_shown += 1;
+    this.n = 0;
+    return true;
+  };
+  // Returns true if all rows are shown
+  this.is_finished = function() {
+    return this.n_rows_shown > this.max_rows;
+  };
 }
 
 function Row() {
