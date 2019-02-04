@@ -85,6 +85,8 @@ function get_next_square_x(squares_in_row, size) {
 function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
+  let sq = new Square(squares.x, squares.y, square_size);
+
   ctx.fillStyle = css_rgba(current_color, squares.opacity);
 
   new_square = {
@@ -133,4 +135,11 @@ function hex_to_rgb(hex) {
 
 function rgba_to_css_rgba(rgba) {
   return `rgba(${rgba.r}, ${rgba.g}, ${rgba.b}, ${rgba.a/10})`;
+}
+
+
+function Square(x, y, size) {
+  this.x = x;
+  this.y = y;
+  this.size = size;
 }
