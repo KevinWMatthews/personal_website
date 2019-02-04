@@ -22,7 +22,7 @@ window.addEventListener('load', () => {
 
 window.addEventListener('resize', () => {
   resize_canvas();
-  render_all_squares();
+  window.requestAnimationFrame(render_all_squares);
 })
 
 function resize_canvas() {
@@ -49,7 +49,7 @@ function connect_to_colorpicker() {
   current_color = colorpicker.value;
 
   colorpicker.addEventListener('input', function() {
-    render_all_squares();
+    window.requestAnimationFrame(render_all_squares);
   });
 
   //TODO add change event for safari
