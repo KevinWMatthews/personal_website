@@ -75,6 +75,10 @@ function get_next_opacity(opacity) {
   return opacity + 1;
 }
 
+function get_next_square_x(squares_in_row, size) {
+  return random_from_0_to_max(squares_in_row) * square_size;
+}
+
 function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
@@ -90,8 +94,8 @@ function draw() {
   ctx.fillRect(squares.x, squares.y, square_size, square_size);
 
   squares.opacity = get_next_opacity(squares.opacity);
+  squares.x = get_next_square_x(squares.squares_in_row, square_size);
 
-  squares.x = square_size * random_from_0_to_max(squares.squares_in_row);
   if (squares.nth_square_in_row >= 10) {
     squares.nth_square_in_row = 0;
     squares.y += square_size;
