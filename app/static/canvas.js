@@ -63,10 +63,10 @@ function render_all_squares() {
   current_color = colorpicker.value;
 
   let ctx = document.getElementById('canvas').getContext('2d');
-  let rgb = hex_to_rgb(colorpicker.value);
+  let hex_color = colorpicker.value;
   for (square of squares.colored_squares) {
     ctx.clearRect(square.x, square.y, square_size, square_size);
-    ctx.fillStyle = css_rgba(rgb, square.opacity);
+    ctx.fillStyle = css_rgba(hex_color, square.opacity);
     ctx.fillRect(square.x, square.y, square_size, square_size);
   }
 }
