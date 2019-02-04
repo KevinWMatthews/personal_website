@@ -42,6 +42,9 @@ function initialize_squares() {
   squares.y = 0;
   squares.colored_squares = [];
   squares.nth_square_in_row = 0;
+
+  iterthing.max_n = squares.squares_in_row;
+  iterthing.n = 0;
 }
 
 function connect_to_colorpicker() {
@@ -84,11 +87,32 @@ function get_next_square_x(squares_in_row, size) {
 
 let row = new Row();
 
+// Make a more general iterator.
+let iterthing = {
+  n: 0,
+  max_n: 0,
+  row_finished: function() {
+    return this.n >= this.max_n;
+  }
+};
+
+let opacity = 0;
+let x_pos = 0;
+let y_pos = 0;
 function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
-  let opaque_square = new OpaqueSquare(squares.x, squares.y, square_size, squares.opacity);
-  row.push(sq);
+  opacity = get_next_opacity(opacity);
+  x_pos = get_next_square_x(iterthing.max_n, square_size);
+
+  let opaque_square = new OpaqueSquare(x_pos, y_pos, square_size, opacity);
+  row.push(opaque_square);
+  iterthing.n += 1;
+  if (iterthing.row_finished()) {
+    interval.stop();
+    return;
+  }
+  return;
 
   ctx.fillStyle = css_rgba(current_color, squares.opacity);
 
