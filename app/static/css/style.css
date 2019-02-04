@@ -108,23 +108,24 @@ button, .button {
     padding-bottom: 0.8rem;
     padding-left: 1.1rem;
     align-items: center;
-    color: var(--primary-color);
+    color: var(--text-color);
     background-color: var(--background-color);
-    border: 2px solid var(--primary-color);
-    transition: color 0.5s, background-color 0.5s;
+    border: 2px solid var(--text-color);
+    transition: color 0.5s, background-color 0.5s, border-color 0.5s;
 }
 button:hover, .button:hover {
     cursor: pointer;
     color: var(--background-color);
     background-color: var(--primary-color);
+    border-color: var(--primary-color);
 }
 button::-moz-focus-inner {
     border:0;
 }
 .external-link {
-    color: var(--secondary-color);
+    color: var(--text-color);
     background-color: var(--background-color);
-    border-color: var(--secondary-color);
+    border-color: var(--text-color);
 }
 .external-link:hover {
     color: var(--background-color);
