@@ -45,6 +45,7 @@ function initialize_squares() {
 
   design = new Design(canvas.width, canvas.height, square_size, 10);
   iterthing.max_n = design.fill_per_row;
+  max_rows = design.rows;
 }
 
 function connect_to_colorpicker() {
@@ -95,6 +96,8 @@ let iterthing = {
     return this.n >= this.max_n;
   }
 };
+let max_rows = 0;
+let n_rows_shown = 0;
 
 let design;
 let opacity = 0;
@@ -110,8 +113,13 @@ function draw() {
 
   iterthing.n += 1;
   if (iterthing.row_finished()) {
-    interval.stop();
-    return;
+    n_rows_shown += 1;
+    iterthing.n = 0;
+    y_pos += square_size;
+    if (n_rows_shown >= max_rows) {
+      interval.stop();
+      return;
+    }
   }
 
   let fill_style = css_rgba(current_color, opaque_square.opacity);
