@@ -36,13 +36,14 @@
 		<section id="about">
 			<h1>About</h1>
 			<article>
-				<div class="div_about">
-					<!-- <img id="me" src="{{ url_for('static', filename='images/me_crater_lake.jpg') }}" alt="Picture of me at Crater Lake"> -->
+				<div class="content_graphic">
 					<video autoplay loop poster="{{ url_for('static', filename='images/me_on_a_bike.jpg') }}">
 			      <source src="{{ url_for('static', filename='video/test.mov') }}" type="video/webm" />
 			      <source src="{{ url_for('static', filename='video/test.mov') }}" type="video/mp4" />
 						Sneaky video of me.
 			    </video>
+				</div>
+				<div class="content_text">
 					<p>Embedded developer by day, aspiring polyglot by night, a bit of web
 						development on the side.</p>
 					<p>My daily work is on embedded Linux systems in C, with a web interface
@@ -62,8 +63,10 @@
 		<section id="projects">
 			<h1>Projects</h1>
 			<article>
-				<div class="div_projects">
+				<div class="content_graphic">
 					<img src="{{ url_for('static', filename='images/c_code.png') }}" alt="Picture of code">
+				</div>
+				<div class="content_text">
 					<p>I have developed professionally for bare-metal, FreeRTOS, and embedded
 						Linux devices and have built a custom Linux distro using Buldroot.
 						These systems include VoIP endpoints,

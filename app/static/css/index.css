@@ -36,8 +36,13 @@ footer {
 }
 article {
     display: grid;
-    grid-template-columns: minmax(0, 70vw);
+    /* grid-template-columns: minmax(0, 70vw); */
     justify-content: center;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 5%;
+    grid-template-areas:
+      "content_graphic content_text";
     padding-bottom: 5vh;
 }
 h1, h2, h3, h4 {
@@ -75,18 +80,10 @@ canvas {
     grid-area: bg;
 }
 img {
-    float: left;
-    width: 45%;
-    padding-right: 5%;
+    width: 100%;
 }
 video {
-    float: left;
-    width: 45%;
-    padding-top: 5%;
-    padding-right: 5%;
-}
-div .div_about {
-    padding-left: 5%;
+    width: 100%;
 }
 .card-grid {
     display: grid;
