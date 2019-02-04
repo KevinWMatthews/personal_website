@@ -37,7 +37,12 @@
 			<h1>About</h1>
 			<article>
 				<div class="div_about">
-					<img id="me" src="{{ url_for('static', filename='images/me_crater_lake.jpg') }}" alt="Picture of me at Crater Lake">
+					<!-- <img id="me" src="{{ url_for('static', filename='images/me_crater_lake.jpg') }}" alt="Picture of me at Crater Lake"> -->
+					<video autoplay loop poster="{{ url_for('static', filename='images/me_on_a_bike.jpg') }}">
+			      <source src="{{ url_for('static', filename='video/test.mov') }}" type="video/webm" />
+			      <source src="{{ url_for('static', filename='video/test.mov') }}" type="video/mp4" />
+						Sneaky video of me.
+			    </video>
 					<p>Embedded developer by day, aspiring polyglot by night, a bit of web
 						development on the side.</p>
 					<p>My daily work is on embedded Linux systems in C, with a web interface
