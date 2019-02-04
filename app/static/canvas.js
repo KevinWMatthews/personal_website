@@ -85,7 +85,7 @@ function get_next_square_x(squares_in_row, size) {
 function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
-  let sq = new Square(squares.x, squares.y, square_size);
+  let opaque_square = new OpaqueSquare(squares.x, squares.y, square_size, squares.opacity);
 
   ctx.fillStyle = css_rgba(current_color, squares.opacity);
 
@@ -142,4 +142,12 @@ function Square(x, y, size) {
   this.x = x;
   this.y = y;
   this.size = size;
+}
+
+// Inherit from square? Pass in a square that already exists?
+function OpaqueSquare(x, y, size, opacity) {
+  this.x = x;
+  this.y = y;
+  this.size = size;
+  this.opacity = opacity;
 }
