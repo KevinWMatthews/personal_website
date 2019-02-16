@@ -44,8 +44,8 @@ function initialize_squares() {
   squares.nth_square_in_row = 0;
 
   pattern = new Pattern(canvas.width, canvas.height, square_size);
-  iterthing = new IterThing(10, pattern.rows)
   opacity_counter = new OpacityCounter();
+  iterthing = new IterThing(10, pattern)
 }
 
 function connect_to_colorpicker() {
@@ -181,10 +181,9 @@ function Pattern(width, height, square_size) {
   }
 }
 
-function IterThing(n_per_row, n_rows) {
+function IterThing(n_per_row, pattern) {
   // Opacity is not configurable
   this.max_n = n_per_row;
-  this.max_rows = n_rows;
 
   this.n = 0;
   this.n_rows_shown = 0;
@@ -206,7 +205,7 @@ function IterThing(n_per_row, n_rows) {
   };
   // Returns true if all rows are shown
   this.is_finished = function() {
-    return this.n_rows_shown > this.max_rows;
+    return this.n_rows_shown > pattern.rows;
   };
 }
 
