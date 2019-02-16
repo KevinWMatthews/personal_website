@@ -43,8 +43,8 @@ function initialize_squares() {
   squares.colored_squares = [];
   squares.nth_square_in_row = 0;
 
-  design = new Design(canvas.width, canvas.height, square_size);
-  iterthing = new IterThing(10, design.rows)
+  pattern = new Pattern(canvas.width, canvas.height, square_size);
+  iterthing = new IterThing(10, pattern.rows)
   opacity_counter = new OpacityCounter();
 }
 
@@ -89,7 +89,7 @@ function get_next_square_x(squares_in_row, size) {
 // Store all rows
 let row = new Row();
 
-let design;
+let pattern;
 let iterthing;
 let opacity_counter;
 
@@ -100,7 +100,7 @@ function draw() {
   var ctx = document.getElementById('canvas').getContext('2d');
 
   opacity = opacity_counter.next_opacity();
-  x_pos = design.get_random_x();
+  x_pos = pattern.get_random_x();
   let opaque_square = new OpaqueSquare(x_pos, y_pos, square_size, opacity);
   row.push(opaque_square);
 
@@ -167,7 +167,7 @@ function rgba_to_css_rgba(rgba) {
   return `rgba(${rgba.r}, ${rgba.g}, ${rgba.b}, ${rgba.a/10})`;
 }
 
-function Design(width, height, square_size) {
+function Pattern(width, height, square_size) {
   this.canvas_width = width;
   this.canvas_height = height;
   this.square_size = square_size;
