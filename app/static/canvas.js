@@ -86,6 +86,7 @@ function get_next_square_x(squares_in_row, size) {
   return random_from_0_to_max(squares_in_row) * square_size;
 }
 
+// Store all rows
 let row = new Row();
 
 let design;
