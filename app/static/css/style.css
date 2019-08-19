@@ -3,8 +3,8 @@
     /* For ease and speed of parsing, remove all whitespace. */
     --background-color:#ffffff;
     /* Default values should also be set in colorpicker's HTML */
-    --primary-color:#696969;
     --secondary-color:#696969;
+    --primary-color:#696969;
     --text-color:#494e52;
     --nav-color:#112233;
     --margin: 10%;
@@ -40,7 +40,7 @@ nav {
     align-items: center;
     color: var(--background-color);
     background-color: var(--nav-color);
-    border-bottom: 3px solid var(--secondary-color);
+    border-bottom: 3px solid var(--primary-color);
     z-index: 1;
 }
 .nav_top {
@@ -116,8 +116,8 @@ button, .button {
 button:hover, .button:hover {
     cursor: pointer;
     color: var(--background-color);
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
 }
 button::-moz-focus-inner {
     border:0;
@@ -129,8 +129,8 @@ button::-moz-focus-inner {
 }
 .external-link:hover {
     color: var(--background-color);
-    background-color: var(--secondary-color);
-    border-color: var(--secondary-color);
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
 }
 /* Affects both top and mobile nav bar */
 nav a, nav button {
@@ -165,20 +165,20 @@ nav > button {
     border: none;
 }
 nav a:hover {
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 nav button:hover {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     background-color: inherit;
 }
 nav button:focus {
     outline: none;
 }
 .nav-current {
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 .nav-current:hover {
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 .flex {
     display: flex;

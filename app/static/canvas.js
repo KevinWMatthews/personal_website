@@ -45,7 +45,7 @@ function initialize_squares() {
 }
 
 function connect_to_colorpicker() {
-  let colorpicker = document.getElementById('color_secondary');
+  let colorpicker = document.getElementById('color_primary');
   current_color = colorpicker.value;
 
   colorpicker.addEventListener('input', function() {
@@ -60,7 +60,7 @@ function connect_to_colorpicker() {
 
 function render_all_squares() {
   let ctx = document.getElementById('canvas').getContext('2d');
-  let colorpicker = document.getElementById('color_secondary');
+  let colorpicker = document.getElementById('color_primary');
   let hex_color = colorpicker.value;
   current_color = hex_color;
 

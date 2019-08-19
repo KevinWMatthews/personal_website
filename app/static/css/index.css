@@ -151,7 +151,7 @@ video {
     background-color: var(--canvas-color);
 }
 #btn_learn_more:hover {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
 }
 
 #div_all_posts_bg {
