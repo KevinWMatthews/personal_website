@@ -40,6 +40,8 @@ cards = [
     blog_card_home,
     blog_card_c,
     blog_card_cmake,
+    blog_card_python,
+    blog_card_rust,
     blog_card_docker,
 ]
 
