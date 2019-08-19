@@ -37,11 +37,8 @@
 			<h1>About</h1>
 			<article>
 				<div class="content_graphic">
-					<video autoplay loop poster="{{ url_for('static', filename='images/me_on_a_bike.jpg') }}">
-			      <source src="{{ url_for('static', filename='video/test.mov') }}" type="video/webm" />
-			      <source src="{{ url_for('static', filename='video/test.mov') }}" type="video/mp4" />
-						Sneaky video of me.
-			    </video>
+					<img src="{{ url_for('static', filename='images/me_at_red_rocks.jpg') }}"
+						alt="Picture of me at Red Rocks">
 				</div>
 				<div class="content_text">
 					<p>Embedded developer by day, aspiring polyglot by night, a bit of web
