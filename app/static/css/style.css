@@ -92,6 +92,9 @@ p {
 footer > p {
     text-align: center;
 }
+p.center {
+    text-align: center;
+}
 a {
     text-decoration: none;
 }
