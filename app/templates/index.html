@@ -37,8 +37,9 @@
 			<h1>About</h1>
 			<article>
 				<div class="content_graphic">
-					<img src="{{ url_for('static', filename='images/me_at_red_rocks.jpg') }}"
-						alt="Picture of me at Red Rocks">
+					<img id="img_me"
+						src="{{ url_for('static', filename='images/me_at_red_rocks.jpg') }}"
+						alt="Picture of me at Red Rocks" hidden>
 				</div>
 				<div class="content_text">
 					<p>Embedded developer by day, aspiring polyglot by night, a bit of web
@@ -64,7 +65,9 @@
 			<h1>Projects</h1>
 			<article>
 				<div class="content_graphic">
-					<img src="{{ url_for('static', filename='images/c_code.png') }}" alt="Picture of code">
+					<img id="imgCode"
+						src="{{ url_for('static', filename='images/c_code.png') }}"
+						alt="Picture of code" hidden>
 				</div>
 				<div class="content_text">
 					<p>I have developed professionally for bare-metal, FreeRTOS, and embedded

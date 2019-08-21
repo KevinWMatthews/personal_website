@@ -65,7 +65,16 @@ window.addEventListener('load', () => {
   // Set values from CSS. Must wait until styleshees are loaded.
   initialize_colorpicker('color_primary', '--primary-color');
   initialize_colorpicker('color_secondary', '--secondary-color');
+  show_images();
 });
+
+function show_images() {
+    let images = document.getElementsByTagName('img');
+    for (image of images) {
+        console.log(image);
+        image.hidden = false;
+    }
+}
 
 function initialize_colorpicker(picker_id, css_var) {
   let picker = document.getElementById(picker_id);
