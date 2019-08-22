@@ -53,6 +53,7 @@ footer {
         grid-template-areas:
           "content_graphic content_text";
         justify-content: center;
+        align-items: center;
         padding-bottom: 5vh;
     }
 }
