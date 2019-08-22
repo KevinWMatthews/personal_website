@@ -63,12 +63,12 @@ nav {
 .hide {
     display: none;
 }
-@media screen and (max-width: 799px) {
+@media screen and (max-width: 1024px) {
     #nav_top {
         display: none;
     }
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1025px) {
     #nav_mobile {
         display: none;
     }
